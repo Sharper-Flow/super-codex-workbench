@@ -1,5 +1,6 @@
 # Super Codex Workbench 🚀
-## Batteries‑Included for Codex CLI
+
+Use plain-English prompts to turn ideas into data and reports. No coding required to start.
 
 
 <p align="center">
@@ -19,40 +20,46 @@
 
 <p align="center"><em>Made with ❤️ for friends by <strong>Sharper Flow LLC</strong></em></p>
 
-Turn ideas into data, reports, and APIs — fast. An agent‑first, prompt‑driven workspace for Codex CLI.
+Use plain-English prompts to turn ideas into data and reports. No coding required to start.
 
 |  Feature Highlights| | |
 | --- | --- | --- |
-| 🚀 Agent‑first, prompt‑driven experience | Faster from prompt to outputs | Build and scaffold directly from prompts in Codex CLI |
-| 🚣 Project‑centric flow | Keep work organized and reproducible | Everything lands under the active project |
-| 📦 Reliable warehouse | Trustworthy storage with fast SQL | CSV/JSONL/Parquet with instant DuckDB views |
-| 📝 Elegant reporting | Share clear, polished outputs | Jinja2 HTML → PDF and Excel export |
-| 🌐 Web context built‑in | Pull relevant docs and pages fast | Context7 (docs/code) + Firecrawl (crawl/summarize) |
-| 🌈 Great logs | Understand progress and issues quickly | Rich + Loguru for readable diagnostics |
-| 🛣️ Guided workflows | Onboard and deliver quickly | First‑project setup and MCP web report flow |
-| 🧰 Quality gates | Maintain clean, typed code | uv‑managed deps, Ruff lint, Mypy typing |
-| 🪟 Windows‑friendly | Smooth setup on Windows/WSL2 | One‑shot provisioning (Terminal, Nerd Font, WSL2, zsh) |
-| 🔌 Extensible | Add new services easily | Configure MCP servers/APIs and scaffold clients |
+| 🚀 Agent‑first, prompt‑driven experience | You ask; it builds fast | Build from prompts in Codex CLI |
+| 🚣 Project‑centric flow | Keep everything tidy and repeatable | Everything stays under your active project |
+| 📦 Built-in data store (warehouse) | Store data safely; query quickly | Loads CSV/JSON; gives ready-to-query views |
+| 📝 Elegant reporting | Share clean, polished outputs | Make HTML reports; export to PDF and Excel |
+| 🌐 Web context built-in | Pull the right docs and pages | Finds docs/code and crawls sites for you |
+| 🌈 Great logs | Skim progress; spot issues fast | Readable progress messages and summaries |
+| 🛣️ Guided workflows | Get results with guided steps | Guided flows for setup and web reports |
+| 🧰 Quality gates | Keep things neat behind the scenes | Manages dependencies and checks code quality |
+| 🪟 Windows-friendly | Works great on Windows (WSL2) | One-shot setup with sensible defaults |
+| 🔌 Extensible | Add new integrations in minutes | Plug in services via MCP plugins |
 
 ## Who Is This For?
-- 🙋‍♂️ Newcomers who want a safe, guided path to build data + reports
-- ⚡ Power users who value structure, repeatability, and speed
-- 🤝 Teams who want a standard way for agents to work locally
+- Analysts, PMs, ops — comfortable with tools, not code
+- Power users who want repeatable results without wiring everything
+- Teams that want a simple, standard way to work locally
 
 ## How It Works (In 60 Seconds)
-1) Choose a project (resume or create). Everything lands under that name.
-2) Ingest data via the Warehouse API (CSV/JSONL/Parquet; partition by date/source).
-3) Query with DuckDB SQL on auto‑registered views (`ds_<dataset>`).
-4) Report with Jinja2 HTML → export to PDF/Excel under `projects/<current>/reports`.
+1) Pick a project. Everything you do lives there.
+2) Bring in data (or let the agent fetch it).
+3) Ask for a report; get HTML, PDF, or Excel.
+
+## Try MCP (Plugins)
+- MCP are "plugins" for AI tools — connect to services in a click.
+- Prompts:
+  - Find an MCP for <your need> on mcp.so
+  - Will an MCP help us <your goal>?
+  - Install the <X> MCP server
 
 ## Actions at a Glance (Prompts)
-- 🔧 “Set up the workspace with a demo project and run the guided first‑project workflow.”
-- 🗂️ “Show my projects and resume ‘demo’ (or create it if missing).”
-- 🗃️ “Show me recent outputs for the ‘demo’ project.”
-- 🧠 “Preview the events dataset using a simple SQL query.”
-- 🌐 “Crawl https://example.com, summarize the top pages, and generate a quick report.”
-- 📝 “Render a sample HTML report and export it to PDF under the current project.”
-- 📦 “Run the repository checks and fix any formatting or typing issues.”
+- 🔧 Set up a demo and run the guided first-project workflow
+- 🗂️ Show my projects and resume demo (or create it)
+- 🗃️ Show recent outputs for the demo project
+- 🧠 Preview the events dataset with a simple SQL
+- 🌐 Crawl a website, summarize top pages, and generate a report
+- 📝 Render a sample HTML report and export to PDF
+- 📦 Run checks and fix formatting/typing issues
 
 ## Showcase
 - Windows Terminal theme (CodexDarkGrey) + Nerd Font
@@ -64,4 +71,5 @@ Turn ideas into data, reports, and APIs — fast. An agent‑first, prompt‑dri
   ![Sample report preview](docs/images/report-preview.svg)
 
 ## Notes
-Talk to the agent — we’ve done the heavy lifting. Technical details (setup, MCP, coding rules, git checkpoints) live in `AGENTS.md`.
+No coding required — but you can peek under the hood anytime.
+Want the technical bits? See `AGENTS.md`.
