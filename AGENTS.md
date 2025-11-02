@@ -203,6 +203,21 @@ Scope: Applies to the entire directory tree rooted at the repository's top‑lev
 - You can also call MCP servers via `workbench/mcp_clients.py` wrappers when building custom steps.
 - Never commit real secrets. Update `.env.example` if new variables are required, but keep values blank.
 
+### Add Additional MCP Servers / APIs
+- Research the target API:
+  - Use Context7: “Find official docs for <Service> API.”
+  - Use Firecrawl: “Crawl <docs base url> and summarize auth, endpoints, and rate limits.”
+- Configure MCP server (if available for the service):
+  - `./scripts/mcp-add.sh <name> <sse-url> <APIKEY_ENV>` (updates `mcp.config.json`)
+  - Add env vars to `.env` and `.env.example`: `<NAME>_API_KEY`, `<NAME>_MCP_URL` or `<NAME>_BASE_URL`
+- Create a client stub:
+  - File: `workbench/clients/<name>.py` using `httpx` + strict Pydantic models
+  - Read config from env: `<NAME>_BASE_URL`, `<NAME>_API_KEY`
+  - Provide 1–2 example functions (e.g., `get_status()`, `list_items()`)
+- Add CLI validation:
+  - Optionally add a Typer command to test connectivity and write results to the warehouse.
+- Document minimal usage in README prompts (only if essential for users); keep technical detail here.
+
 ## Mandatory Environment Rule (Python)
 - ALWAYS use the local virtualenv at the repo root (`./.venv`).
   - Interactive shells: run `. .venv/bin/activate` before any commands.

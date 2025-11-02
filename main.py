@@ -21,6 +21,7 @@ reports_app = typer.Typer(help="Reporting commands")
 projects_app = typer.Typer(help="Projects management commands")
 mcp_app = typer.Typer(help="MCP helper commands")
 workflow_app = typer.Typer(help="Sample end-to-end workflows")
+integrations_app = typer.Typer(help="Scaffold and manage external API clients")
 
 
 @app.callback()
@@ -694,6 +695,7 @@ app.add_typer(reports_app, name="reports")
 app.add_typer(projects_app, name="projects")
 app.add_typer(mcp_app, name="mcp")
 app.add_typer(workflow_app, name="workflow")
+app.add_typer(integrations_app, name="integrations")
 
 
 if __name__ == "__main__":

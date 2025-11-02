@@ -3,10 +3,7 @@
 <!-- Banner -->
 <p align="center">
   <img src="docs/images/repo-banner.svg" alt="Super Codex Workbench banner" width="720" />
-</p>
-
-<!-- Badges -->
-<p align="center">
+<br/>
   <a href="./LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge"></a>
   <a href="https://astral.sh/uv/"><img alt="uv" src="https://img.shields.io/badge/deps-managed%20by%20uv-2D3748?style=for-the-badge&logo=python&logoColor=white"></a>
   <a href="https://github.com/astral-sh/ruff"><img alt="Ruff" src="https://img.shields.io/badge/lint-Ruff-ff3860?style=for-the-badge&logo=ruff&logoColor=white"></a>
@@ -19,44 +16,143 @@
 
 <p align="center"><em>Made with ❤️ for friends by <strong>Sharper Flow LLC</strong></em></p>
 
-Turn ideas into data, reports, and APIs — fast. This workspace is purpose‑built for
-Codex CLI users who want an agent‑first, fully provisioned environment with clear rules,
-great logging, warehouse patterns, and out‑of‑the-box workflows.
+Turn ideas into data, reports, and APIs — fast. This repo is an agent‑first workbench for
+Codex CLI: strict tooling, clean patterns, and ready‑made workflows with optional MCP context.
 
-## What Is It?
-- A ready‑to‑use workspace where Codex CLI can gather data, store it safely, and turn it into
-  clean reports. Think: “one folder where everything just works.”
-- Comes prewired with a data warehouse (CSV/JSONL/Parquet), SQL via DuckDB, HTML→PDF, Excel,
-  strict Python tooling, and optional MCP‑backed web context (Firecrawl + Context7).
+## Highlights
+- ✅ Batteries‑included: uv deps, Ruff + Mypy, Pandas/DuckDB, Jinja2, HTML→PDF.
+- 🗂️ Project‑aware: all outputs under `projects/<name>/...` with easy resume.
+- 📦 Warehouse API: CSV/JSONL/Parquet with DuckDB SQL views (`ds_<dataset>`).
+- 🌐 MCP‑ready: Firecrawl + Context7 helpers and a crawl→report workflow.
+- 🧪 Friendly dev rig: logs, checks, and sample flows that “just work”.
 
-## Why This Instead of Starting From Scratch?
-- 🧰 Everything you need is included and consistent — no yak shaving.
-- 🧱 Safe, simple patterns for storing data and outputs (per‑project folders).
-- 🌈 Great logs by default, so debugging is friendly.
-- 🪟 Windows‑friendly onboarding with one script.
+## Quick Start
+- Prereqs: install `uv` and ensure it’s on PATH.
+- One‑time setup (creates venv, syncs deps, initializes folders):
 
-## Who Is This For?
-- New to programming and want a guided, safe place to explore data + reports.
-- Power users who want a structured, repeatable environment for day‑to‑day work.
-- Teams who plan to standardize how agents (Codex CLI) interact with a local workspace.
+```bash
+bash ./scripts/setup.sh -y -p demo
+uv run python main.py -v diagnose
+```
 
-## How It Works (In 60 Seconds)
-1) Pick a project: `projects create` or `projects resume`. Everything you do lives under that name.
-2) Ingest data: write datasets via the Warehouse API (CSV/JSONL/Parquet, partitioned by date/source).
-3) Query: use DuckDB SQL against auto-registered views (`ds_<dataset>`).
-4) Report: render HTML with Jinja2 and export to PDF/Excel. Outputs land under `projects/<current>/reports`.
+- Guided first project (lands data, runs SQL, renders HTML/PDF):
 
-## Actions at a Glance
-- 🔧 Setup once (prompt): “Set up the workspace for me with a demo project and run the guided first‑project workflow.”
-- 🗂️ Project context (prompt): “Show my projects and resume ‘demo’ (or create it if missing).”
-- 🧠 Query warehouse (prompt): “Preview the latest rows for the events dataset using DuckDB SQL.”
-- 🌐 MCP web context (prompt): “Crawl https://example.com, summarize the top pages, and generate a quick report.”
-- 📦 Code quality (prompt): “Run the repository checks and fix any formatting or typing issues.”
+```bash
+uv run python main.py workflow first-project --name demo
+```
 
-## Operate With Codex CLI
-- Talk to Codex CLI with clear prompts (examples above). Technical details live in `AGENTS.md`.
+## Usage
 
- 
+### Projects
+- Create and set current:
+  ```bash
+  uv run python main.py projects create --name demo --desc "Demo project"
+  uv run python main.py projects context --json
+  ```
+- Resume later:
+  ```bash
+  uv run python main.py projects resume --name demo
+  uv run python main.py projects list
+  ```
+
+### Warehouse (data)
+- Register a dataset with partitions and write a sample batch:
+  ```bash
+  uv run python main.py warehouse register --name events_demo --format csv --partitioning date,source
+  uv run python main.py warehouse write-sample --name events_demo --partition date=2025-01-01,source=seed
+  uv run python main.py warehouse show --name events_demo --limit 5
+  ```
+- Run SQL via DuckDB over auto‑views (`ds_<dataset>`); save to CSV/Parquet:
+  ```bash
+  uv run python main.py warehouse sql --query "select event, count(*) as n from ds_events_demo group by event" --limit 10 --output projects/demo/artifacts/events_agg.csv
+  # Parquet requires pyarrow
+  uv add pyarrow
+  uv run python main.py warehouse sql --query "select * from ds_events_demo" --limit 1000 --output projects/demo/artifacts/events.parquet
+  ```
+
+### Reports
+- Render HTML with Jinja2 (project templates override global ones):
+  ```bash
+  uv run python main.py reports render-html --template sample.html.j2 --title "My Report" --output projects/demo/reports/html/sample.html
+  ```
+- Export HTML→PDF (tries WeasyPrint, then pdfkit if available):
+  ```bash
+  uv run python main.py reports export-pdf --html projects/demo/reports/html/sample.html --output projects/demo/reports/pdf/sample.pdf
+  # If no backend installed, pick one:
+  uv add weasyprint    # or: uv add pdfkit  (and install system wkhtmltopdf)
+  ```
+
+### Workflows
+- End‑to‑end demo (lands data → SQL → HTML → PDF under current project):
+  ```bash
+  uv run python main.py workflow sample
+  ```
+- First‑project guide (creates/selects project and runs the demo):
+  ```bash
+  uv run python main.py workflow first-project --name demo [--with-mcp]
+  ```
+
+### MCP (optional, recommended)
+- Set env vars in `.env` (see `.env.example`) then verify:
+  ```bash
+  uv run python main.py mcp info
+  uv run python main.py check-mcp
+  ```
+- Crawl the web with Firecrawl and generate a report:
+  ```bash
+  # Requires FIRECRAWL_API_KEY in .env
+  uv run python main.py workflow mcp-web --url https://example.com --limit 5
+  ```
+- Add an MCP server entry (helper script):
+  ```bash
+  ./scripts/mcp-add.sh firecrawl https://your-firecrawl-sse-endpoint FIRECRAWL_API_KEY
+  ```
+
+## Examples
+
+### 1) Project → Warehouse → Report
+- Initialize, create project, land data, run SQL, export outputs:
+  ```bash
+  bash ./scripts/setup.sh -y -p demo
+  uv run python main.py projects resume --name demo
+  uv run python main.py warehouse write-sample --name events_demo --partition date=2025-01-01,source=seed
+  uv run python main.py warehouse sql --query "select event, count(*) n from ds_events_demo group by event" --output projects/demo/artifacts/agg.csv
+  uv run python main.py reports render-html --template sample.html.j2 --output projects/demo/reports/html/agg.html --title "Events Aggregation"
+  uv run python main.py reports export-pdf --html projects/demo/reports/html/agg.html --output projects/demo/reports/pdf/agg.pdf
+  ```
+
+### 2) MCP Crawl → HTML/PDF Report
+- With Firecrawl configured, crawl and render a site summary:
+  ```bash
+  uv run python main.py workflow mcp-web --url https://example.com --limit 5 --c7-query "site:example.com key topics"
+  ```
+
+### 3) HTML→PDF Backends
+- If HTML→PDF fails, install a backend:
+  ```bash
+  # Option A: WeasyPrint (may need system deps)
+  uv add weasyprint
+  # Option B: pdfkit + wkhtmltopdf
+  uv add pdfkit && sudo apt-get install -y wkhtmltopdf
+  ```
+
+## Troubleshooting
+- ⚠️ `uv` not found: install via `curl -LsSf https://astral.sh/uv/install.sh | sh` and ensure `~/.local/bin` on PATH.
+- ⚠️ Parquet write fails: `uv add pyarrow` to enable `DataFrame.to_parquet`.
+- ⚠️ HTML→PDF fails: install `weasyprint` or `pdfkit` + system `wkhtmltopdf` (see above).
+- ⚠️ No current project: create/resume with `projects create` or `projects resume`.
+- ⚠️ MCP not configured: set `FIRECRAWL_API_KEY` and optionally `CONTEXT7_API_KEY` in `.env`, then `uv run python main.py mcp info`.
+
+## Dev Workflow
+- Run checks (format, lint, types):
+  ```bash
+  ./scripts/check.sh
+  ```
+- Make local git checkpoints (conventional commits encouraged):
+  ```bash
+  ./scripts/git-save.sh "docs: refresh README with detailed usage"
+  # optional: ./scripts/git-push.sh
+  ```
 
 ## Showcase
 - Windows Terminal theme (CodexDarkGrey) + Nerd Font
@@ -67,34 +163,14 @@ great logging, warehouse patterns, and out‑of‑the-box workflows.
 
   ![Sample report preview](docs/images/report-preview.svg)
 
-## Get Started (Talk to Codex CLI)
-Ask Codex CLI:
-- “Run the setup and create a project named ‘demo’. Then verify the environment.”
-- “Run the first‑project workflow for ‘demo’ and place outputs under that project.”
-- “Show me diagnostics and confirm MCP configuration status.”
+## Reference
+- Full agent/operator guidance lives in `AGENTS.md` (strongly recommended for Codex CLI usage).
+- Quick commands (from repo root):
+  - Setup once: `bash ./scripts/setup.sh -y -p demo`
+  - Diagnose: `uv run python main.py -v diagnose`
+  - First project: `uv run python main.py workflow first-project --name demo`
+  - MCP crawl: `uv run python main.py workflow mcp-web --url https://example.com --limit 5`
+  - Checks: `./scripts/check.sh`
 
-- ## Example Prompt Script
-- “Set up the workspace with a demo project and run the guided first‑project workflow.”
-- “Resume the ‘demo’ project and show me recent outputs.”
-- “Preview the events dataset using a simple SQL query.”
-- “Render a sample HTML report and export it to PDF under the current project.”
-- Environment:
-  - Copy `.env.example` to `.env` and set keys.
-  - Load `.env` in your code using `python-dotenv` as needed.
-
- 
-
- 
-
-What you get out‑of‑the‑box
-- ✅ Strict Python project with `uv` dependency management
-- 📦 Warehouse API (CSV/JSONL/Parquet) + DuckDB SQL views (`ds_<dataset>`)
-- 🧱 Project contexts with resumable manifests under `projects/`
-- 📝 Jinja2 templates + HTML→PDF (WeasyPrint/pdfkit)
-- 📊 Excel generation via Pandas + openpyxl
-- 🧭 MCP‑ready hooks for Context7 + Firecrawl
-- 🌈 Rich+Loguru logging with `-v`/`-vv` verbosity
-
- 
-
- 
+## License
+MIT — see `LICENSE`.
