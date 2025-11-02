@@ -1,0 +1,29 @@
+{
+  "mcpServers": {
+    "context7": {
+      "transport": {
+        "type": "sse",
+        "url": "${CONTEXT7_MCP_URL}"
+      },
+      "credentials": {
+        "apiKey": "${CONTEXT7_API_KEY}"
+      },
+      "metadata": {
+        "description": "Context7 docs/code search MCP server"
+      }
+    },
+    "firecrawl": {
+      "transport": {
+        "type": "sse",
+        "url": "${FIRECRAWL_MCP_URL}"
+      },
+      "credentials": {
+        "apiKey": "${FIRECRAWL_API_KEY}"
+      },
+      "metadata": {
+        "description": "Firecrawl crawling/scraping MCP server"
+      }
+    }
+  }
+}
+

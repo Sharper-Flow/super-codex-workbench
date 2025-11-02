@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f2428"/>
+      <stop offset="100%" stop-color="#242b31"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="960" height="540" fill="url(#g)"/>
+  <rect x="40" y="40" width="880" height="60" rx="8" fill="#111418" opacity="0.9"/>
+  <circle cx="70" cy="70" r="8" fill="#f97583"/>
+  <circle cx="95" cy="70" r="8" fill="#ffea7f"/>
+  <circle cx="120" cy="70" r="8" fill="#85e89d"/>
+  <text x="160" y="77" font-family="Segoe UI, system-ui, -apple-system, Roboto, Arial" font-size="22" fill="#d1d5da">Windows Terminal · CodexDarkGrey</text>
+
+  <rect x="40" y="120" width="880" height="360" rx="10" fill="#0f1317" opacity="0.85"/>
+  <text x="60" y="160" font-family="Consolas, 'CaskaydiaCove Nerd Font', monospace" font-size="18" fill="#79b8ff">demo@WSL2:/workspace$</text>
+  <text x="260" y="160" font-family="Consolas, 'CaskaydiaCove Nerd Font', monospace" font-size="18" fill="#d1d5da"> uv run python main.py hello --name Codex</text>
+  <text x="60" y="195" font-family="Consolas, 'CaskaydiaCove Nerd Font', monospace" font-size="18" fill="#85e89d">Hello from Codex Workbench, Codex!</text>
+
+  <text x="60" y="235" font-family="Consolas, 'CaskaydiaCove Nerd Font', monospace" font-size="18" fill="#56d4dd">demo@WSL2:/workspace$</text>
+  <text x="260" y="235" font-family="Consolas, 'CaskaydiaCove Nerd Font', monospace" font-size="18" fill="#d1d5da"> uv run python main.py warehouse sql --query "select 1 as x"</text>
+  <text x="60" y="270" font-family="Consolas, 'CaskaydiaCove Nerd Font', monospace" font-size="18" fill="#d1d5da">   x</text>
+  <text x="60" y="300" font-family="Consolas, 'CaskaydiaCove Nerd Font', monospace" font-size="18" fill="#d1d5da">0  1</text>
+
+  <text x="60" y="350" font-family="Consolas, 'CaskaydiaCove Nerd Font', monospace" font-size="18" fill="#b392f0">Font:</text>
+  <text x="120" y="350" font-family="Consolas, 'CaskaydiaCove Nerd Font', monospace" font-size="18" fill="#d1d5da"> CaskaydiaCove Nerd Font</text>
+  <text x="60" y="380" font-family="Consolas, 'CaskaydiaCove Nerd Font', monospace" font-size="18" fill="#b392f0">Scheme:</text>
+  <text x="140" y="380" font-family="Consolas, 'CaskaydiaCove Nerd Font', monospace" font-size="18" fill="#d1d5da"> CodexDarkGrey</text>
+</svg>
+

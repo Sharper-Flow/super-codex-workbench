@@ -1,0 +1,14 @@
+{
+  "uv_installed": true,
+  "venv_ready": true,
+  "deps_synced": true,
+  "env_file_present": true,
+  "folders_initialized": true,
+  "mcp_firecrawl_configured": false,
+  "mcp_context7_optional": true,
+  "mcp_context7_configured": false,
+  "project_created": true,
+  "ran_diagnostics": true,
+  "ran_sample_workflow": false,
+  "ran_first_project_workflow": false
+}

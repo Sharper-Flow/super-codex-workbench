@@ -1,0 +1,61 @@
+# General OS cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*.tmp
+*.log
+
+# Environment files
+.env
+.env.*
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+dist/
+build/
+*.egg-info/
+wheels/
+
+# Virtual envs
+.venv/
+venv/
+env/
+
+# Node / JS
+node_modules/
+*.tsbuildinfo
+.parcel-cache/
+.yarn/
+
+# Editors / IDEs
+.idea/
+.vscode/
+
+# Data warehouse outputs (keep structure, ignore data files)
+warehouse/datasets/
+!warehouse/datasets/.gitkeep
+
+# Reports (keep structure)
+reports/**
+!reports/**/.gitkeep
+
+# Data scratch (keep structure)
+data/**
+!data/**/.gitkeep
+
+# Logs (keep structure)
+logs/**
+!logs/**/.gitkeep
+
+# Projects (user-local state; keep structure)
+projects/**
+!projects/.gitkeep

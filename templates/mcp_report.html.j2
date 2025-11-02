@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ title or 'MCP Web Report' }}</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 2rem; }
+      h1 { color: #1f6feb; }
+      h2 { margin-top: 2rem; }
+      a { color: #0969da; text-decoration: none; }
+      .muted { color: #6e7781; }
+      .card { border: 1px solid #d0d7de; border-radius: 6px; padding: 12px; margin: 8px 0; }
+    </style>
+  </head>
+  <body>
+    <h1>{{ title or 'MCP Web Report' }}</h1>
+    <p class="muted">Generated at {{ generated_at }}</p>
+    {% if url %}<p class="muted">Seed URL: <a href="{{ url }}">{{ url }}</a></p>{% endif %}
+
+    <h2>Firecrawl Pages</h2>
+    {% if pages and pages|length %}
+      {% for p in pages %}
+        <div class="card">
+          <div><a href="{{ p.url }}">{{ p.title or p.url }}</a></div>
+          {% if p.snippet %}<div class="muted">{{ p.snippet }}</div>{% endif %}
+        </div>
+      {% endfor %}
+    {% else %}
+      <p class="muted">No pages returned.</p>
+    {% endif %}
+
+    <h2>Context7 Results</h2>
+    {% if context7 and context7|length %}
+      {% for d in context7 %}
+        <div class="card">
+          <div><a href="{{ d.url }}">{{ d.title or d.url }}</a></div>
+          {% if d.snippet %}<div class="muted">{{ d.snippet }}</div>{% endif %}
+        </div>
+      {% endfor %}
+    {% else %}
+      <p class="muted">No Context7 results.</p>
+    {% endif %}
+  </body>
+  </html>
+

@@ -1,0 +1,14 @@
+{
+  "datasets": {
+    "events": {
+      "format": "csv",
+      "partitioning": [
+        "date"
+      ]
+    },
+    "events_demo": {
+      "format": "csv",
+      "partitioning": []
+    }
+  }
+}
