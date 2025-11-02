@@ -29,20 +29,18 @@ Use plain-English prompts to turn ideas into data and reports. No coding require
 - 🤝 Teams that want a simple, standard way to work locally
 
 ## How It Works (In 60 Seconds)
-Use it with Codex CLI — supercharged ⚡. Learn more: [Codex CLI](AGENTS.md).
+### ⚡ This project supercharges Codex CLI.
+  > You'll need an existing ChatGPT Plus or Pro Subscription - Learn more: [Codex CLI](AGENTS.md).
 
-1) Pick a project — your work lives there.
-   - Prompts:
-     - Show my projects and resume demo
-     - Create a project named sales-2024
+1) Create or resume a project — your work is foldered automatically.
+     - `"Show my 2026 projections project and resume demo"`
+     - `"Create a project named sales-2024"`
 2) Bring in data — or ask the agent to fetch it.
-   - Prompts:
-     - Ingest data/sales.csv as dataset sales (date=2024-10-01)
-     - Crawl https://example.com/docs and save the top pages
+     - `"Ingest data/sales.csv as dataset sales (date=2024-10-01)"`
+     - `"Crawl https://example.com/docs and save the top pages"`
 3) Ask for outputs — get HTML, PDF, or Excel.
-   - Prompts:
-     - Make a datatable on all Japanese car makes and models from 1991
-     - Render a PDF report summarizing the top 10 makes with charts
+     - `"Make a datatable on all Japanese car makes and models from 1991"`
+     - `"Render a PDF report summarizing the top 10 makes with charts"`
 
 ## What You Can Build
 - 📊 Sales insights app — Ingest weekly CSVs, run Python transforms, and generate an HTML+PDF dashboard with highlights.
@@ -50,7 +48,7 @@ Use it with Codex CLI — supercharged ⚡. Learn more: [Codex CLI](AGENTS.md).
 - 🧠 Docs summarizer — Crawl product docs with MCP, extract key points, and publish a one‑pager brief.
 - 📈 KPI tracker — Append telemetry to the warehouse daily, run DuckDB SQL, and render a monthly report.
 - 🔍 Data quality bot — Validate new batches, raise issues with details, and export a fix‑list for teams.
-    - 🧪 Experiment notebook — Join datasets, run simple Python analyses, and export a shareable report for stakeholders.
+- 🧪 Experiment notebook — Join datasets, run simple Python analyses, and export a shareable report for stakeholders.
 
 ## Feature Highlights
 
@@ -89,18 +87,18 @@ Use it with Codex CLI — supercharged ⚡. Learn more: [Codex CLI](AGENTS.md).
 - MCP are "plugins" for AI tools — connect to services in a click.
 - 🔎 Browse MCP servers: https://mcp.so/ — pick one to add via Codex CLI.
 - Prompts:
-  - Find an MCP for <your need>
-  - Will an MCP help us `<your goal>?
-  - Install the <X> MCP server
+  - `"Find an MCP for <your need>"`
+  - `"Will an MCP help us <your goal>?"`
+  - `"Install the <X> MCP server"`
 
 ## Actions at a Glance (Prompts)
-- 🔧 Set up a demo and run the guided first-project workflow
-- 🗂️ Show my projects and resume demo (or create it)
-- 🗃️ Show recent outputs for the demo project
-- 🧠 Preview the events dataset with a simple SQL
-- 🌐 Crawl a website, summarize top pages, and generate a report
-- 📝 Render a sample HTML report and export to PDF
-- 📦 Run checks and fix formatting/typing issues
+- 🔧 `"Set up a demo and run the guided first-project workflow"`
+- 🗂️ `"Show my projects and resume demo (or create it)"`
+- 🗃️ `"Show recent outputs for the demo project"`
+- 🧠 `"Preview the events dataset with a simple SQL"`
+- 🌐 `"Crawl a website, summarize top pages, and generate a report"`
+- 📝 `"Render a sample HTML report and export to PDF"`
+- 📦 `"Run checks and fix formatting/typing issues"`
 
 ---
 
