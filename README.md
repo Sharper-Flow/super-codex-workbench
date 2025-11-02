@@ -26,133 +26,71 @@ Codex CLI: strict tooling, clean patterns, and ready‑made workflows with optio
 - 🌐 MCP‑ready: Firecrawl + Context7 helpers and a crawl→report workflow.
 - 🧪 Friendly dev rig: logs, checks, and sample flows that “just work”.
 
-## Quick Start
-- Prereqs: install `uv` and ensure it’s on PATH.
-- One‑time setup (creates venv, syncs deps, initializes folders):
+## Quick Start (Users)
+- Target audience: first‑time Codex CLI users. You won’t run Python commands — you will prompt Codex CLI and it will operate this repo for you.
 
-```bash
-bash ./scripts/setup.sh -y -p demo
-uv run python main.py -v diagnose
-```
+### Windows (Recommended)
+- 1) Prepare Windows + WSL2 (Admin PowerShell):
+  ```powershell
+  # From the repo folder on Windows
+  powershell -ExecutionPolicy Bypass -File .\scripts\windows-setup.ps1 -ProvisionWSL -DefaultProfile Ubuntu
+  ```
+  - Installs Windows Terminal, Nerd Font, WSL2 + Ubuntu, and applies a clean theme.
+  - If prompted to create a UNIX user in Ubuntu, complete that step.
 
-- Guided first project (lands data, runs SQL, renders HTML/PDF):
+- 2) Copy this repo into Ubuntu (WSL2):
+  - Option A (Explorer): open `\\wsl$\Ubuntu\home\<your-username>\` and drag‑drop this repo folder (e.g., `codex`).
+  - Option B (Git in Ubuntu): open an Ubuntu tab, then:
+    ```bash
+    cd ~ && git clone <your-repo-url> codex && cd codex
+    ```
 
-```bash
-uv run python main.py workflow first-project --name demo
-```
+- 3) Install Codex CLI (in Ubuntu)
+  - Follow Codex CLI’s official installation instructions, then verify `codex` runs in Ubuntu.
+  - Open Ubuntu in Windows Terminal, `cd ~/codex`.
 
-## Usage
+- 4) Launch Codex CLI from the repo
+  - Start Codex CLI in this folder and interact using prompts (see “Try These Prompts”).
 
-### Projects
-- Create and set current:
-  ```bash
-  uv run python main.py projects create --name demo --desc "Demo project"
-  uv run python main.py projects context --json
-  ```
-- Resume later:
-  ```bash
-  uv run python main.py projects resume --name demo
-  uv run python main.py projects list
-  ```
+### Linux/macOS
+- Ensure a modern terminal, Git, and Codex CLI are installed.
+- Clone this repo locally and start Codex CLI in the repo folder, then use the prompts below.
 
-### Warehouse (data)
-- Register a dataset with partitions and write a sample batch:
-  ```bash
-  uv run python main.py warehouse register --name events_demo --format csv --partitioning date,source
-  uv run python main.py warehouse write-sample --name events_demo --partition date=2025-01-01,source=seed
-  uv run python main.py warehouse show --name events_demo --limit 5
-  ```
-- Run SQL via DuckDB over auto‑views (`ds_<dataset>`); save to CSV/Parquet:
-  ```bash
-  uv run python main.py warehouse sql --query "select event, count(*) as n from ds_events_demo group by event" --limit 10 --output projects/demo/artifacts/events_agg.csv
-  # Parquet requires pyarrow
-  uv add pyarrow
-  uv run python main.py warehouse sql --query "select * from ds_events_demo" --limit 1000 --output projects/demo/artifacts/events.parquet
-  ```
+## Try These Prompts
+- Setup (one‑time, fully guided):
+  - “Set up the workspace with a demo project and run the guided first‑project workflow.”
+  - “Run diagnostics and verify MCP configuration.”
 
-### Reports
-- Render HTML with Jinja2 (project templates override global ones):
-  ```bash
-  uv run python main.py reports render-html --template sample.html.j2 --title "My Report" --output projects/demo/reports/html/sample.html
-  ```
-- Export HTML→PDF (tries WeasyPrint, then pdfkit if available):
-  ```bash
-  uv run python main.py reports export-pdf --html projects/demo/reports/html/sample.html --output projects/demo/reports/pdf/sample.pdf
-  # If no backend installed, pick one:
-  uv add weasyprint    # or: uv add pdfkit  (and install system wkhtmltopdf)
-  ```
+- Project context:
+  - “List available projects and resume ‘demo’ (or create it if missing).”
+  - “Show the current project and recent projects.”
 
-### Workflows
-- End‑to‑end demo (lands data → SQL → HTML → PDF under current project):
-  ```bash
-  uv run python main.py workflow sample
-  ```
-- First‑project guide (creates/selects project and runs the demo):
-  ```bash
-  uv run python main.py workflow first-project --name demo [--with-mcp]
-  ```
+- Data + SQL:
+  - “Register a dataset named ‘events_demo’, land a small sample batch, and preview the first rows.”
+  - “Run a DuckDB query that counts events by type and save the result to my project artifacts.”
 
-### MCP (optional, recommended)
-- Set env vars in `.env` (see `.env.example`) then verify:
-  ```bash
-  uv run python main.py mcp info
-  uv run python main.py check-mcp
-  ```
-- Crawl the web with Firecrawl and generate a report:
-  ```bash
-  # Requires FIRECRAWL_API_KEY in .env
-  uv run python main.py workflow mcp-web --url https://example.com --limit 5
-  ```
-- Add an MCP server entry (helper script):
-  ```bash
-  ./scripts/mcp-add.sh firecrawl https://your-firecrawl-sse-endpoint FIRECRAWL_API_KEY
-  ```
+- Reports:
+  - “Render a sample HTML report titled ‘My Report’ under the current project.”
+  - “Export that HTML report to PDF; if missing, install a PDF backend and try again.”
 
-## Examples
+- MCP (optional):
+  - “Crawl https://example.com (limit 5) and generate a quick HTML summary report.”
+  - “Also run a Context7 search for ‘site:example.com key topics’ and include results.”
 
-### 1) Project → Warehouse → Report
-- Initialize, create project, land data, run SQL, export outputs:
-  ```bash
-  bash ./scripts/setup.sh -y -p demo
-  uv run python main.py projects resume --name demo
-  uv run python main.py warehouse write-sample --name events_demo --partition date=2025-01-01,source=seed
-  uv run python main.py warehouse sql --query "select event, count(*) n from ds_events_demo group by event" --output projects/demo/artifacts/agg.csv
-  uv run python main.py reports render-html --template sample.html.j2 --output projects/demo/reports/html/agg.html --title "Events Aggregation"
-  uv run python main.py reports export-pdf --html projects/demo/reports/html/agg.html --output projects/demo/reports/pdf/agg.pdf
-  ```
-
-### 2) MCP Crawl → HTML/PDF Report
-- With Firecrawl configured, crawl and render a site summary:
-  ```bash
-  uv run python main.py workflow mcp-web --url https://example.com --limit 5 --c7-query "site:example.com key topics"
-  ```
-
-### 3) HTML→PDF Backends
-- If HTML→PDF fails, install a backend:
-  ```bash
-  # Option A: WeasyPrint (may need system deps)
-  uv add weasyprint
-  # Option B: pdfkit + wkhtmltopdf
-  uv add pdfkit && sudo apt-get install -y wkhtmltopdf
-  ```
+## What The Agent Does
+- Creates a local Python env with `uv` inside this repo when needed.
+- Initializes project folders and selects a current project for outputs.
+- Writes datasets into the warehouse and exposes DuckDB SQL views.
+- Renders HTML and exports PDF/Excel into your project’s `reports/`.
+- Uses MCP (if configured) to crawl the web or fetch context, then compiles a report.
 
 ## Troubleshooting
-- ⚠️ `uv` not found: install via `curl -LsSf https://astral.sh/uv/install.sh | sh` and ensure `~/.local/bin` on PATH.
-- ⚠️ Parquet write fails: `uv add pyarrow` to enable `DataFrame.to_parquet`.
-- ⚠️ HTML→PDF fails: install `weasyprint` or `pdfkit` + system `wkhtmltopdf` (see above).
-- ⚠️ No current project: create/resume with `projects create` or `projects resume`.
-- ⚠️ MCP not configured: set `FIRECRAWL_API_KEY` and optionally `CONTEXT7_API_KEY` in `.env`, then `uv run python main.py mcp info`.
+- ⚠️ Codex CLI not installed: follow its official install guide for Linux/macOS or run it inside Ubuntu (WSL2) on Windows.
+- ⚠️ PDF export fails: ask Codex CLI to install a PDF backend (WeasyPrint or pdfkit + wkhtmltopdf) and re‑run the export step.
+- ⚠️ MCP missing: add `FIRECRAWL_API_KEY` to `.env` (Context7 is optional), then ask Codex CLI to verify MCP.
 
-## Dev Workflow
-- Run checks (format, lint, types):
-  ```bash
-  ./scripts/check.sh
-  ```
-- Make local git checkpoints (conventional commits encouraged):
-  ```bash
-  ./scripts/git-save.sh "docs: refresh README with detailed usage"
-  # optional: ./scripts/git-push.sh
-  ```
+## For Contributors
+- Agent/coder instructions live in `AGENTS.md` (environment discipline, checks, MCP, and tooling). Keep user‑facing README prompt‑oriented.
 
 ## Showcase
 - Windows Terminal theme (CodexDarkGrey) + Nerd Font
