@@ -1,6 +1,6 @@
-# Super Codex Workbench
+# Super Codex Workbench 🚀
+## Batteries‑Included for Codex CLI
 
-Batteries‑included workbench for Codex CLI. 🚀
 
 <p align="center">
   <img src="docs/images/repo-banner.svg" alt="Super Codex Workbench banner" width="720" />
@@ -21,38 +21,18 @@ Batteries‑included workbench for Codex CLI. 🚀
 
 Turn ideas into data, reports, and APIs — fast. An agent‑first, prompt‑driven workspace for Codex CLI.
 
-## Feature Highlights
-
-- 🚀 Agent‑first, prompt‑driven experience
-  - User Benefit — Faster from prompt to outputs
-  - What & How — Build from prompts in Codex CLI
-- 🚣 Project‑centric flow
-  - User Benefit — Organized, reproducible work
-  - What & How — Everything lands under your active project
-- 📦 Reliable warehouse
-  - User Benefit — Trustworthy storage with fast SQL
-  - What & How — CSV/JSONL/Parquet with instant DuckDB views
-- 📝 Elegant reporting
-  - User Benefit — Share clear, polished outputs
-  - What & How — Jinja2 HTML → PDF and Excel export
-- 🌐 Web context built‑in
-  - User Benefit — Pull relevant docs and pages fast
-  - What & How — Context7 (docs/code) + Firecrawl (crawl/summarize)
-- 🌈 Great logs
-  - User Benefit — Understand progress and issues quickly
-  - What & How — Rich + Loguru for readable diagnostics
-- 🛣️ Guided workflows
-  - User Benefit — Onboard and deliver quickly
-  - What & How — First‑project setup and MCP web report flow
-- 🧰 Quality gates
-  - User Benefit — Keep code clean and typed
-  - What & How — uv‑managed deps, Ruff lint, Mypy typing
-- 🪟 Windows‑friendly
-  - User Benefit — Smooth setup on Windows/WSL2
-  - What & How — One‑shot provisioning (Terminal, Nerd Font, WSL2, zsh)
-- 🔌 Extensible
-  - User Benefit — Add new services easily
-  - What & How — Configure MCP servers/APIs; scaffold clients
+|  Feature Highlights| | |
+| --- | --- | --- |
+| 🚀 Agent‑first, prompt‑driven experience | Faster from prompt to outputs | Build and scaffold directly from prompts in Codex CLI |
+| 🚣 Project‑centric flow | Keep work organized and reproducible | Everything lands under the active project |
+| 📦 Reliable warehouse | Trustworthy storage with fast SQL | CSV/JSONL/Parquet with instant DuckDB views |
+| 📝 Elegant reporting | Share clear, polished outputs | Jinja2 HTML → PDF and Excel export |
+| 🌐 Web context built‑in | Pull relevant docs and pages fast | Context7 (docs/code) + Firecrawl (crawl/summarize) |
+| 🌈 Great logs | Understand progress and issues quickly | Rich + Loguru for readable diagnostics |
+| 🛣️ Guided workflows | Onboard and deliver quickly | First‑project setup and MCP web report flow |
+| 🧰 Quality gates | Maintain clean, typed code | uv‑managed deps, Ruff lint, Mypy typing |
+| 🪟 Windows‑friendly | Smooth setup on Windows/WSL2 | One‑shot provisioning (Terminal, Nerd Font, WSL2, zsh) |
+| 🔌 Extensible | Add new services easily | Configure MCP servers/APIs and scaffold clients |
 
 ## Who Is This For?
 - 🙋‍♂️ Newcomers who want a safe, guided path to build data + reports
@@ -65,25 +45,14 @@ Turn ideas into data, reports, and APIs — fast. An agent‑first, prompt‑dri
 3) Query with DuckDB SQL on auto‑registered views (`ds_<dataset>`).
 4) Report with Jinja2 HTML → export to PDF/Excel under `projects/<current>/reports`.
 
-## Try MCP
-- 🔎 Explore servers: https://mcp.so/
-- Try prompts:
-  - "Find an MCP for <your need> on mcp.so"
-  - "Will an MCP help us <your goal>?"
-  - "Install the <X> MCP server"
-
 ## Actions at a Glance (Prompts)
 - 🔧 “Set up the workspace with a demo project and run the guided first‑project workflow.”
 - 🗂️ “Show my projects and resume ‘demo’ (or create it if missing).”
-- 🧠 “Preview the latest rows for the events dataset using DuckDB SQL.”
+- 🗃️ “Show me recent outputs for the ‘demo’ project.”
+- 🧠 “Preview the events dataset using a simple SQL query.”
 - 🌐 “Crawl https://example.com, summarize the top pages, and generate a quick report.”
+- 📝 “Render a sample HTML report and export it to PDF under the current project.”
 - 📦 “Run the repository checks and fix any formatting or typing issues.”
-
-## Example Prompt Script
-- “Set up the workspace with a demo project and run the guided first‑project workflow.”
-- “Resume the ‘demo’ project and show me recent outputs.”
-- “Preview the events dataset using a simple SQL query.”
-- “Render a sample HTML report and export it to PDF under the current project.”
 
 ## Showcase
 - Windows Terminal theme (CodexDarkGrey) + Nerd Font
@@ -95,17 +64,4 @@ Turn ideas into data, reports, and APIs — fast. An agent‑first, prompt‑dri
   ![Sample report preview](docs/images/report-preview.svg)
 
 ## Notes
-Talk to the agent — we’ve done the heavy lifting.
-Agents and contributors: see `AGENTS.md` for setup, MCP usage, coding rules, and git checkpoints.
-
-## Project Structure
-- `apps/` — app‑specific logic (prefix dataset names to avoid collisions)
-- `data/` — ad‑hoc inputs and scratch during tasks
-- `reports/` — user‑facing outputs (HTML/PDF/Excel) and templates
-- `warehouse/` — curated datasets managed by the Warehouse API
-- `scripts/` — helper scripts for setup, checks, and git checkpoints
-- `logs/` — structured logs for task runs
-
-## License & Contributing
-- License: MIT — see `LICENSE`.
-- Contributing: Issues and PRs welcome. Keep diffs minimal, avoid secrets, and follow the style in `AGENTS.md`.
+Talk to the agent — we’ve done the heavy lifting. Technical details (setup, MCP, coding rules, git checkpoints) live in `AGENTS.md`.
