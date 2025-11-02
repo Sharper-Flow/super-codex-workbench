@@ -26,34 +26,34 @@ Use plain-English prompts to turn ideas into data and reports. No coding require
 
 - 🚀 Agent‑first, prompt‑driven experience
   - 👩‍💻 — You ask; it builds fast
-  - What & How — [![Codex CLI](https://img.shields.io/badge/Codex_CLI-Prompts-1F6FEB?style=flat-square)](AGENTS.md)
+  - What & How — [![Codex CLI](https://img.shields.io/badge/Codex_CLI-Prompts-1F6FEB?style=for-the-badge)](AGENTS.md)
 - 🚣 Project‑centric flow
   - 👮‍♂️ — Keep everything tidy and repeatable
-  - What & How — [![Projects](https://img.shields.io/badge/Projects-Organized-4A5568?style=flat-square)](#how-it-works-in-60-seconds)
+  - What & How — [![Projects](https://img.shields.io/badge/Projects-Organized-4A5568?style=for-the-badge)](#how-it-works-in-60-seconds)
 - 📦 Built‑in data store (warehouse)
   - 👩‍🔬 — Store data safely; query quickly
-  - What & How — [![DuckDB](https://img.shields.io/badge/DuckDB-SQL-FFCB05?style=flat-square)](https://duckdb.org/) [![Pandas](https://img.shields.io/badge/Pandas-Data-150458?style=flat-square)](https://pandas.pydata.org/)
+  - What & How — [![DuckDB](https://img.shields.io/badge/DuckDB-SQL-FFCB05?style=for-the-badge)](https://duckdb.org/) [![Pandas](https://img.shields.io/badge/Pandas-Data-150458?style=for-the-badge)](https://pandas.pydata.org/)
 - 📝 Elegant reporting
   - 👩‍🎨 — Share clean, polished outputs
-  - What & How — [![Jinja2](https://img.shields.io/badge/Jinja2-Templates-000000?style=flat-square)](https://github.com/pallets/jinja) [![WeasyPrint](https://img.shields.io/badge/PDF-WeasyPrint-EE1F25?style=flat-square)](https://weasyprint.org/) [![Excel](https://img.shields.io/badge/Excel-OpenPyXL-217346?style=flat-square)](https://openpyxl.readthedocs.io/)
+  - What & How — [![Jinja2](https://img.shields.io/badge/Jinja2-Templates-000000?style=for-the-badge)](https://github.com/pallets/jinja) [![WeasyPrint](https://img.shields.io/badge/PDF-WeasyPrint-EE1F25?style=for-the-badge)](https://weasyprint.org/) [![Excel](https://img.shields.io/badge/Excel-OpenPyXL-217346?style=for-the-badge)](https://openpyxl.readthedocs.io/)
 - 🌐 Web context built‑in
   - 🕵️‍♂️ — Pull the right docs and pages
-  - What & How — [![Context7](https://img.shields.io/badge/Context7-Docs%2FCode-0EA5E9?style=flat-square)](https://context7.dev/) [![Firecrawl](https://img.shields.io/badge/Firecrawl-Web_Fetch-F97316?style=flat-square)](https://firecrawl.dev/)
+  - What & How — [![Context7](https://img.shields.io/badge/Context7-Docs%2FCode-0EA5E9?style=for-the-badge)](https://context7.dev/) [![Firecrawl](https://img.shields.io/badge/Firecrawl-Web_Fetch-F97316?style=for-the-badge)](https://firecrawl.dev/)
 - 🌈 Great logs
   - 👩‍🏫 — Skim progress; spot issues fast
-  - What & How — [![Rich](https://img.shields.io/badge/Rich-Logs-6E56CF?style=flat-square)](https://github.com/Textualize/rich) [![Loguru](https://img.shields.io/badge/Loguru-Logger-0B84F3?style=flat-square)](https://github.com/Delgan/loguru)
+  - What & How — [![Rich](https://img.shields.io/badge/Rich-Logs-6E56CF?style=for-the-badge)](https://github.com/Textualize/rich) [![Loguru](https://img.shields.io/badge/Loguru-Logger-0B84F3?style=for-the-badge)](https://github.com/Delgan/loguru)
 - 🛣️ Guided workflows
   - 👩‍🚒 — Get results with guided steps
-  - What & How — [![Workflows](https://img.shields.io/badge/Workflows-Guided-2563EB?style=flat-square)](#actions-at-a-glance-prompts)
+  - What & How — [![Workflows](https://img.shields.io/badge/Workflows-Guided-2563EB?style=for-the-badge)](#actions-at-a-glance-prompts)
 - 🧰 Quality gates
   - 🧑‍🏭 — Keep things neat behind the scenes
-  - What & How — [![uv](https://img.shields.io/badge/uv-Dependencies-2D3748?style=flat-square)](https://github.com/astral-sh/uv) [![Ruff](https://img.shields.io/badge/Ruff-Lint-ff3860?style=flat-square)](https://github.com/astral-sh/ruff) [![Mypy](https://img.shields.io/badge/Mypy-Types-5383EC?style=flat-square)](https://github.com/python/mypy)
+  - What & How — [![uv](https://img.shields.io/badge/uv-Dependencies-2D3748?style=for-the-badge)](https://github.com/astral-sh/uv) [![Ruff](https://img.shields.io/badge/Ruff-Lint-ff3860?style=for-the-badge)](https://github.com/astral-sh/ruff) [![Mypy](https://img.shields.io/badge/Mypy-Types-5383EC?style=for-the-badge)](https://github.com/python/mypy)
 - 🪟 Windows‑friendly
   - 👷 — Works great on Windows (WSL2)
-  - What & How — [![WSL2](https://img.shields.io/badge/Windows-WSL2-00BCF2?style=flat-square)](https://learn.microsoft.com/windows/wsl/) [![Windows Terminal](https://img.shields.io/badge/Windows_Terminal-Theme-4A4A4A?style=flat-square)](https://github.com/microsoft/terminal)
+  - What & How — [![WSL2](https://img.shields.io/badge/Windows-WSL2-00BCF2?style=for-the-badge)](https://learn.microsoft.com/windows/wsl/) [![Windows Terminal](https://img.shields.io/badge/Windows_Terminal-Theme-4A4A4A?style=for-the-badge)](https://github.com/microsoft/terminal)
 - 🔌 Extensible
   - 👨‍🚀 — Add new integrations in minutes
-  - What & How — [![MCP](https://img.shields.io/badge/MCP-Plugins-0EA5E9?style=flat-square)](https://mcp.so/)
+  - What & How — [![MCP](https://img.shields.io/badge/MCP-Plugins-0EA5E9?style=for-the-badge)](https://mcp.so/)
 
 ## Who Is This For?
 - Analysts, PMs, ops — comfortable with tools, not code
