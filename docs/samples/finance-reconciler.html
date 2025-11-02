@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8" />
+<title>Finance Reconciler (Sample)</title>
+<style>
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 2rem; }
+  h1 { font-size: 1.25rem; }
+  table { border-collapse: collapse; width: 560px; }
+  th, td { border: 1px solid #e5e7eb; padding: 6px 8px; }
+  th { background: #f3f4f6; text-align: left; }
+  td.num { text-align: right; }
+  .bad { color: #dc2626; font-weight: 600; }
+  .ok { color: #16a34a; font-weight: 600; }
+</style>
+<h1>Finance Reconciler — Mismatches</h1>
+<table>
+  <thead>
+    <tr><th>Invoice</th><th class="num">Bank</th><th class="num">Invoice</th><th>Status</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>INV-1007</td><td class="num">$4,250</td><td class="num">$4,200</td><td class="bad">Mismatch</td></tr>
+    <tr><td>INV-1011</td><td class="num">$3,990</td><td class="num">$3,990</td><td class="ok">Matched</td></tr>
+  </tbody>
+  </table>
+</html>

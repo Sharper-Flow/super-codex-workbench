@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8" />
+<title>Experiment Notebook (Sample)</title>
+<style>
+  body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 2rem; max-width: 760px; }
+  h1 { font-size: 1.25rem; }
+  table { border-collapse: collapse; width: 420px; }
+  th, td { border: 1px solid #e5e7eb; padding: 6px 8px; }
+  th { background: #f3f4f6; text-align: left; }
+  td.num { text-align: right; }
+  code { background: #f3f4f6; padding: 2px 4px; border-radius: 4px; }
+</style>
+<h1>Experiment Notebook — AB Test</h1>
+<p>Simple analysis with joined datasets. Visuals omitted for brevity.</p>
+<table>
+  <thead>
+    <tr><th>Variant</th><th class="num">Mean</th><th class="num">p-value</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>A</td><td class="num">4.12</td><td class="num">—</td></tr>
+    <tr><td>B</td><td class="num">4.36</td><td class="num">0.047</td></tr>
+  </tbody>
+</table>
+<p>Reproduce: <code>SELECT variant, AVG(metric) AS mean FROM results GROUP BY 1;</code></p>
+</html>

@@ -28,8 +28,7 @@ Use plain-English prompts to turn ideas into data and reports. No coding require
 - ⚡ Power users who want repeatable results without wiring everything manually
 - 🤝 Teams that want a simple, standard way to work locally
 
-## How It Works (In 60 Seconds)
-### ⚡ This project supercharges Codex CLI.
+## ⚡ Supercharge Codex CLI with a Batteries-Included Workspace All Set Up.
   > You'll need an existing ChatGPT Plus or Pro Subscription - Learn more: [Codex CLI](AGENTS.md).
 
 1) Create or resume a project — your work is foldered automatically.
@@ -42,13 +41,7 @@ Use plain-English prompts to turn ideas into data and reports. No coding require
      - `"Make a datatable on all Japanese car makes and models from 1991"`
      - `"Render a PDF report summarizing the top 10 makes with charts"`
 
-## What You Can Build
-- 📊 Sales insights app — Ingest weekly CSVs, run Python transforms, and generate an HTML+PDF dashboard with highlights.
-- 🧾 Finance reconciler — Combine bank exports with invoices, flag mismatches, and email a PDF summary automatically.
-- 🧠 Docs summarizer — Crawl product docs with MCP, extract key points, and publish a one‑pager brief.
-- 📈 KPI tracker — Append telemetry to the warehouse daily, run DuckDB SQL, and render a monthly report.
-- 🔍 Data quality bot — Validate new batches, raise issues with details, and export a fix‑list for teams.
-- 🧪 Experiment notebook — Join datasets, run simple Python analyses, and export a shareable report for stakeholders.
+
 
 ## Feature Highlights
 
@@ -112,6 +105,57 @@ Use plain-English prompts to turn ideas into data and reports. No coding require
 
   ![Sample report preview](docs/images/report-preview.svg)
   Sample HTML report preview
+
+### Use Case Samples (What You Can Build)
+
+- 📊 Sales insights app — Ingest weekly CSVs, run Python transforms, and generate an HTML+PDF dashboard with highlights.
+  - Samples: [HTML](docs/samples/sales-insights.html)
+  - Preview:
+
+    | Product | Units | Revenue | WoW |
+    | --- | ---:| ---:| ---:|
+    | Widget A | 1,240 | $24,800 | +8% |
+    | Widget B | 980 | $19,600 | -3% |
+
+- 🧾 Finance reconciler — Combine bank exports with invoices, flag mismatches, and email a PDF summary automatically.
+  - Samples: [HTML](docs/samples/finance-reconciler.html)
+  - Preview:
+
+    | Invoice | Bank | Invoice | Status |
+    | --- | ---:| ---:| --- |
+    | INV-1007 | $4,250 | $4,200 | Mismatch |
+    | INV-1011 | $3,990 | $3,990 | Matched |
+
+- 🧠 Docs summarizer — Crawl product docs with MCP, extract key points, and publish a one‑pager brief.
+  - Samples: [HTML](docs/samples/docs-summarizer.html)
+  - Preview: “Summarized 12 pages, 3 themes, 5 action items.”
+
+- 📈 KPI tracker — Append telemetry to the warehouse daily, run DuckDB SQL, and render a monthly report.
+  - Samples: [HTML](docs/samples/kpi-tracker.html)
+  - Preview:
+
+    | KPI | Value |
+    | --- | ---:|
+    | MRR | $82,450 |
+    | Activation rate | 34% |
+
+- 🔍 Data quality bot — Validate new batches, raise issues with details, and export a fix‑list for teams.
+  - Samples: [HTML](docs/samples/data-quality-bot.html)
+  - Preview:
+
+    | Dataset | Row | Issue | Severity |
+    | --- | ---:| --- | --- |
+    | events | 1024 | missing user_id | high |
+    | orders | 77 | invalid price format | medium |
+
+- 🧪 Experiment notebook — Join datasets, run simple Python analyses, and export a shareable report for stakeholders.
+  - Samples: [HTML](docs/samples/experiment-notebook.html)
+  - Preview:
+
+    | Variant | Mean | p-value |
+    | --- | ---:| ---:|
+    | A | 4.12 | — |
+    | B | 4.36 | 0.047 |
 
 ## Notes
 No coding required — but you can peek under the hood anytime.
