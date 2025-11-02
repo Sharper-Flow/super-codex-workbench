@@ -25,35 +25,35 @@ Use plain-English prompts to turn ideas into data and reports. No coding require
 ## Feature Highlights
 
 - 🚀 Agent‑first, prompt‑driven experience
-  - User Benefit — You ask; it builds fast
-  - What & How — Build from prompts in Codex CLI
+  - 👤 — You ask; it builds fast
+  - What & How — [![Codex CLI](https://img.shields.io/badge/Codex_CLI-Prompts-1F6FEB?style=flat-square)](AGENTS.md)
 - 🚣 Project‑centric flow
-  - User Benefit — Keep everything tidy and repeatable
-  - What & How — Everything stays under your active project
+  - 👤 — Keep everything tidy and repeatable
+  - What & How — [![Projects](https://img.shields.io/badge/Projects-Organized-4A5568?style=flat-square)](#how-it-works-in-60-seconds)
 - 📦 Built‑in data store (warehouse)
-  - User Benefit — Store data safely; query quickly
-  - What & How — Load CSV/JSON; get ready‑to‑query views
+  - 👤 — Store data safely; query quickly
+  - What & How — [![DuckDB](https://img.shields.io/badge/DuckDB-SQL-FFCB05?style=flat-square)](https://duckdb.org/) [![Pandas](https://img.shields.io/badge/Pandas-Data-150458?style=flat-square)](https://pandas.pydata.org/)
 - 📝 Elegant reporting
-  - User Benefit — Share clean, polished outputs
-  - What & How — Make HTML reports; export to PDF and Excel
+  - 👤 — Share clean, polished outputs
+  - What & How — [![Jinja2](https://img.shields.io/badge/Jinja2-Templates-000000?style=flat-square)](https://github.com/pallets/jinja) [![WeasyPrint](https://img.shields.io/badge/PDF-WeasyPrint-EE1F25?style=flat-square)](https://weasyprint.org/) [![Excel](https://img.shields.io/badge/Excel-OpenPyXL-217346?style=flat-square)](https://openpyxl.readthedocs.io/)
 - 🌐 Web context built‑in
-  - User Benefit — Pull the right docs and pages
-  - What & How — Finds docs/code and crawls sites for you
+  - 👤 — Pull the right docs and pages
+  - What & How — [![Context7](https://img.shields.io/badge/Context7-Docs%2FCode-0EA5E9?style=flat-square)](https://context7.dev/) [![Firecrawl](https://img.shields.io/badge/Firecrawl-Web_Fetch-F97316?style=flat-square)](https://firecrawl.dev/)
 - 🌈 Great logs
-  - User Benefit — Skim progress; spot issues fast
-  - What & How — Readable progress messages and summaries
+  - 👤 — Skim progress; spot issues fast
+  - What & How — [![Rich](https://img.shields.io/badge/Rich-Logs-6E56CF?style=flat-square)](https://github.com/Textualize/rich) [![Loguru](https://img.shields.io/badge/Loguru-Logger-0B84F3?style=flat-square)](https://github.com/Delgan/loguru)
 - 🛣️ Guided workflows
-  - User Benefit — Get results with guided steps
-  - What & How — Guided flows for setup and web reports
+  - 👤 — Get results with guided steps
+  - What & How — [![Workflows](https://img.shields.io/badge/Workflows-Guided-2563EB?style=flat-square)](#actions-at-a-glance-prompts)
 - 🧰 Quality gates
-  - User Benefit — Keep things neat behind the scenes
-  - What & How — Manage dependencies and check code quality
+  - 👤 — Keep things neat behind the scenes
+  - What & How — [![uv](https://img.shields.io/badge/uv-Dependencies-2D3748?style=flat-square)](https://github.com/astral-sh/uv) [![Ruff](https://img.shields.io/badge/Ruff-Lint-ff3860?style=flat-square)](https://github.com/astral-sh/ruff) [![Mypy](https://img.shields.io/badge/Mypy-Types-5383EC?style=flat-square)](https://github.com/python/mypy)
 - 🪟 Windows‑friendly
-  - User Benefit — Works great on Windows (WSL2)
-  - What & How — One‑shot setup with sensible defaults
+  - 👤 — Works great on Windows (WSL2)
+  - What & How — [![WSL2](https://img.shields.io/badge/Windows-WSL2-00BCF2?style=flat-square)](https://learn.microsoft.com/windows/wsl/) [![Windows Terminal](https://img.shields.io/badge/Windows_Terminal-Theme-4A4A4A?style=flat-square)](https://github.com/microsoft/terminal)
 - 🔌 Extensible
-  - User Benefit — Add new integrations in minutes
-  - What & How — Plug in services via MCP plugins
+  - 👤 — Add new integrations in minutes
+  - What & How — [![MCP](https://img.shields.io/badge/MCP-Plugins-0EA5E9?style=flat-square)](https://mcp.so/)
 
 ## Who Is This For?
 - Analysts, PMs, ops — comfortable with tools, not code
