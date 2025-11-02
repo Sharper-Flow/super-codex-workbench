@@ -74,19 +74,11 @@ great logging, warehouse patterns, and out‑of‑the-box workflows.
 
   ![Sample report preview](docs/images/report-preview.svg)
 
-## Getting Started (WSL2 Ubuntu)
-- Prefer working inside Linux home (e.g., `/home/<user>/...`) for performance.
-- Ensure LF endings in editors; avoid CRLF.
-- To open Windows Explorer here: `explorer.exe .`
-- To open a file in Windows default app: `wslview <file>` (install with `sudo apt install wslu` if missing).
-- On Windows (optional): Run `scripts/windows-setup.ps1` as Administrator to install Windows Terminal, CaskaydiaCove Nerd Font, Starship, enable WSL2, install Ubuntu LTS, and apply a dark grey theme. Example:
-  - Open PowerShell (Admin) and run: `Set-ExecutionPolicy Bypass -Scope Process -Force; cd <repo>\codex\scripts; .\windows-setup.ps1 -ProvisionWSL -DefaultProfile Ubuntu`
-  - With `-ProvisionWSL`, the script also configures zsh (Oh My Zsh, autosuggestions, syntax highlighting), fzf keybindings, Starship prompt, and attempts to set zsh as default.
-
-- Quickstart (Prompts for Codex CLI)
-  - “Run the setup script and create a project named ‘demo’. Then verify the environment.”
-  - “Run the first‑project workflow for ‘demo’ and place outputs under that project.”
-  - “Show me diagnostics and confirm MCP configuration status.”
+## Get Started (Talk to Codex CLI)
+Ask Codex CLI:
+- “Run the setup and create a project named ‘demo’. Then verify the environment.”
+- “Run the first‑project workflow for ‘demo’ and place outputs under that project.”
+- “Show me diagnostics and confirm MCP configuration status.”
 
 - ## Example Prompt Script
 - “Set up the workspace with a demo project and run the guided first‑project workflow.”

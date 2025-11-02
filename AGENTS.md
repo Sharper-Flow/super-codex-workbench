@@ -201,3 +201,20 @@ Scope: Applies to the entire directory tree rooted at the repository's top‑lev
 - Request elevation/approval when the environment requires it for installs or networked tasks.
 - Avoid destructive commands (e.g., `rm -rf`) unless explicitly asked and justified.
 - Keep changes atomic and reversible; summarize intent for larger edits.
+
+## Host & OS Setup (Windows, WSL2, Linux)
+- Windows first‑time setup (Admin PowerShell):
+  - Run `scripts/windows-setup.ps1` with desired flags, e.g. `-ProvisionWSL -DefaultProfile Ubuntu`.
+  - This installs Windows Terminal, Nerd Font, Starship, enables WSL2, installs Ubuntu LTS, applies a dark theme, and provisions zsh + plugins inside WSL.
+- WSL2 notes:
+  - Work inside Linux home (e.g., `/home/<user>/<repo>`), avoid `/mnt/c` for performance.
+  - Ensure LF line endings; if using git on Windows, consider `git config core.autocrlf input` in WSL.
+- Linux/macOS:
+  - Ensure `uv` is installed and on PATH; agent may install via official script if allowed.
+- After host prep, run repo setup from the repo root: `bash ./scripts/setup.sh -y -p <project>`.
+
+## “Get Started” Prompts (for Users via Codex CLI)
+- “Set up the workspace with a demo project and run the guided first‑project workflow.”
+- “Resume the ‘demo’ project and show me recent outputs.”
+- “Preview the events dataset using a simple SQL query.”
+- “Render a sample HTML report and export it to PDF under the current project.”
