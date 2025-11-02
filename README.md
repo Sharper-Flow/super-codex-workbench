@@ -29,9 +29,20 @@ Use plain-English prompts to turn ideas into data and reports. No coding require
 - 🤝 Teams that want a simple, standard way to work locally
 
 ## How It Works (In 60 Seconds)
+Use it with Codex CLI — supercharged ⚡. Learn more: [Codex CLI](AGENTS.md).
+
 1) Pick a project — your work lives there.
+   - Prompts:
+     - Show my projects and resume demo
+     - Create a project named sales-2024
 2) Bring in data — or ask the agent to fetch it.
+   - Prompts:
+     - Ingest data/sales.csv as dataset sales (date=2024-10-01)
+     - Crawl https://example.com/docs and save the top pages
 3) Ask for outputs — get HTML, PDF, or Excel.
+   - Prompts:
+     - Make a datatable on all Japanese car makes and models from 1991
+     - Render a PDF report summarizing the top 10 makes with charts
 
 ## What You Can Build
 - 📊 Sales insights app — Ingest weekly CSVs, run Python transforms, and generate an HTML+PDF dashboard with highlights.
@@ -79,7 +90,7 @@ Use plain-English prompts to turn ideas into data and reports. No coding require
 - 🔎 Browse MCP servers: https://mcp.so/ — pick one to add via Codex CLI.
 - Prompts:
   - Find an MCP for <your need>
-  - Will an MCP help us <your goal>?
+  - Will an MCP help us `<your goal>?
   - Install the <X> MCP server
 
 ## Actions at a Glance (Prompts)
