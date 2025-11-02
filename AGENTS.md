@@ -1,8 +1,8 @@
 # AGENTS.md
 
-Purpose: Guidance for AI agents and contributors working inside `codex/`.
+Purpose: Guidance for AI agents and contributors working inside this repository (repo root).
 
-Scope: Applies to the entire directory tree rooted at `codex/`.
+Scope: Applies to the entire directory tree rooted at the repository's top‑level folder (whatever it's named on disk).
 
 ## Codex CLI Is The Operator
 - All user interactions occur through Codex CLI. Treat this repo as an agent‑first workbench.
@@ -15,6 +15,76 @@ Scope: Applies to the entire directory tree rooted at `codex/`.
 - Keep within CLI constraints: plain text, short headers (1–3 words), bullets preferred, and no ANSI codes. Emoji are welcome when they add clarity (e.g., ✅, ⚠️, 💡, 🚀).
 - Maintain brevity and substance: prioritize actionable steps, outcomes, and next actions; avoid decorative overload.
 - Still follow the global CLI formatting rules (no tables by default, no heavy markup); combine them with emoji for emphasis.
+
+## Agent Playbook (Do This Every Time)
+
+1) Setup enforcement (repo‑name agnostic)
+- From the repo root, read `setup-requirements.json`. If missing or any required item is false
+  (`uv_installed`, `venv_ready`, `deps_synced`, `env_file_present`, `folders_initialized`), assume a fresh environment and run:
+  - `bash ./scripts/setup.sh -y -p demo` (use a meaningful project name in place of `demo`).
+- After setup, verify:
+  - `uv run python main.py -v diagnose`
+  - `uv run python main.py mcp info`
+
+2) Environment discipline
+- Always run inside `./.venv` using `uv run <cmd>`. Never use system `python`/`pip`.
+- After changing code or deps, run `./scripts/check.sh` and fix all issues (Ruff + Mypy) before proceeding.
+
+3) Project context first
+- Prompt to resume or create a project at session start.
+- Use:
+  - `uv run python main.py projects context --json`
+  - `uv run python main.py projects resume --name <NAME>` or `projects create --name <NAME>`
+- Default all outputs to `projects/<current>/...`; only fall back to top‑level if no project is set.
+
+4) Data handling
+- Use the Warehouse API only; do not write files directly under `warehouse/`.
+- Name datasets clearly; partitions should be meaningful (e.g., `date`, `source`).
+- Query with DuckDB: views are auto‑registered as `ds_<dataset>`.
+- Prefer Parquet for larger outputs; install `pyarrow` if needed.
+
+5) Reporting
+- Template search precedence: `projects/<current>/templates` then `templates/`.
+- Render with:
+  - `uv run python main.py reports render-html --template <tpl> [--output ...]`
+  - `uv run python main.py reports export-pdf [--html ...] [--output ...]`
+- If HTML→PDF fails, install a backend: `weasyprint` or `pdfkit` + `wkhtmltopdf`.
+
+6) MCP usage
+- Firecrawl requires `FIRECRAWL_API_KEY`; Context7 is optional (free tier assumed).
+- Prefer the workflow command for web context:
+  - `uv run python main.py workflow mcp-web --url <URL> [--c7-query <q>] --limit 5`
+
+7) Guided first‑project workflow
+- Kick‑start a new user’s project:
+  - `uv run python main.py workflow first-project --name <NAME> [--with-mcp]`
+- This ensures folders, creates/selects the project, lands sample data, runs SQL, and renders outputs.
+
+8) Response style (always)
+- Use short headers, tight bullets, and tasteful emoji (✅ ⚠️ 💡 🚀) for emphasis.
+- Provide next steps; avoid excessive verbosity.
+
+9) Git checkpoints (mandatory)
+- After completing a task or a logical step, make a local checkpoint:
+  - `./scripts/git-save.sh "<type>: <concise summary>"` (e.g., `feat: add mcp web workflow`)
+- Push regularly if a remote is configured:
+  - `./scripts/git-push.sh`
+- For larger efforts, start a feature branch first:
+  - `./scripts/git-start.sh feature/<slug>`
+- Commit messages: use conventional types when possible (`feat`, `fix`, `docs`, `chore`, `refactor`).
+- Never commit secrets (see `.gitignore`); keep diffs minimal and scoped.
+
+## Quick Command Reference (from repo root)
+- Setup once: `bash ./scripts/setup.sh -y -p demo`
+- Diagnose: `uv run python main.py -v diagnose`
+- Project list: `uv run python main.py projects list`
+- First‑project workflow: `uv run python main.py workflow first-project --name demo`
+- MCP web workflow: `uv run python main.py workflow mcp-web --url https://example.com --limit 5`
+- Warehouse SQL: `uv run python main.py warehouse sql --query "select 1 as x"`
+- Checks: `./scripts/check.sh`
+- Save checkpoint: `./scripts/git-save.sh "chore: checkpoint"`
+- Push branch: `./scripts/git-push.sh`
+- New branch: `./scripts/git-start.sh feature/add-x`
 
 ## Setup Checklist (Do This First)
 - Work under Linux home (e.g., `/home/<user>/codex`) for performance — avoid `/mnt/c`.
@@ -114,7 +184,7 @@ Scope: Applies to the entire directory tree rooted at `codex/`.
 - Never commit real secrets; update `.env.example` when new vars are needed.
 
 ## Mandatory Environment Rule (Python)
-- ALWAYS use the local virtualenv in `codex/.venv`.
+- ALWAYS use the local virtualenv at the repo root (`./.venv`).
   - Interactive shells: run `. .venv/bin/activate` before any commands.
   - Scripts/commands: prefer `uv run <cmd ...>` to auto-use the venv.
 - Do NOT use system `python`/`pip` in this project.
