@@ -57,25 +57,28 @@ Codex CLI: strict tooling, clean patterns, and ready‑made workflows with optio
 - Clone this repo locally and start Codex CLI in the repo folder, then use the prompts below.
 
 ## Try These Prompts
-- Setup (one‑time, fully guided):
-  - “Set up the workspace with a demo project and run the guided first‑project workflow.”
-  - “Run diagnostics and verify MCP configuration.”
+- Start here:
+  - “Set this up for me and make a new ‘demo’ project. Show me where things will be saved.”
+  - “Give me a quick health check and tell me if anything is missing.”
 
-- Project context:
-  - “List available projects and resume ‘demo’ (or create it if missing).”
-  - “Show the current project and recent projects.”
+- Make a data table:
+  - “I want a data table of baseball cards from 2007 Topps with player, team, and card number. Save it in my project.”
+  - “Create a small sample table with 5 rows so I can see how results will look.”
+  - “Clean up duplicates and sort the table by player name.”
 
-- Data + SQL:
-  - “Register a dataset named ‘events_demo’, land a small sample batch, and preview the first rows.”
-  - “Run a DuckDB query that counts events by type and save the result to my project artifacts.”
+- Summaries and exports:
+  - “Show me a quick summary by team (counts and totals) and save it to my project.”
+  - “Make a simple HTML report from that summary and also a PDF version.”
+  - “Export the latest results to an Excel file in my project.”
 
-- Reports:
-  - “Render a sample HTML report titled ‘My Report’ under the current project.”
-  - “Export that HTML report to PDF; if missing, install a PDF backend and try again.”
+- Web + research:
+  - “Create a new automation that crawls websites for the best 3D models for office organization. Summarize the top 5 and link to the sources.”
+  - “Crawl https://example.com and give me a short report of the key pages (limit 5).”
+  - “Search the web for beginner guides on home espresso and include the top links in a report.”
 
-- MCP (optional):
-  - “Crawl https://example.com (limit 5) and generate a quick HTML summary report.”
-  - “Also run a Context7 search for ‘site:example.com key topics’ and include results.”
+- Projects:
+  - “Resume my ‘demo’ project and show me the most recent outputs.”
+  - “Create a fresh project called ‘baseball’ and put all new files under that project.”
 
 ## What The Agent Does
 - Creates a local Python env with `uv` inside this repo when needed.
@@ -102,13 +105,7 @@ Codex CLI: strict tooling, clean patterns, and ready‑made workflows with optio
   ![Sample report preview](docs/images/report-preview.svg)
 
 ## Reference
-- Full agent/operator guidance lives in `AGENTS.md` (strongly recommended for Codex CLI usage).
-- Quick commands (from repo root):
-  - Setup once: `bash ./scripts/setup.sh -y -p demo`
-  - Diagnose: `uv run python main.py -v diagnose`
-  - First project: `uv run python main.py workflow first-project --name demo`
-  - MCP crawl: `uv run python main.py workflow mcp-web --url https://example.com --limit 5`
-  - Checks: `./scripts/check.sh`
+- More technical details live in `AGENTS.md`. If you’re contributing or operating as an agent/coder, start there.
 
 ## License
 MIT — see `LICENSE`.
