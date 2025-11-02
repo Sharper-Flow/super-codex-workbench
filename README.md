@@ -1,6 +1,6 @@
 # Super Codex Workbench 🚀
 
-Use plain-English prompts to turn ideas into data and reports. No coding required to start.
+### A Codex CLI Workspace with 🔋Batteries Included🔋
 
 
 <p align="center">
@@ -20,15 +20,13 @@ Use plain-English prompts to turn ideas into data and reports. No coding require
 
 <p align="center"><em>Made with ❤️ for friends by <strong>Sharper Flow LLC</strong></em></p>
 
-Use plain-English prompts to turn ideas into data and reports. No coding required to start.
-
 
 ## Who Is This For?
 - 📊 Analysts, PMs, and ops who are comfortable with tools — not code
 - ⚡ Power users who want repeatable results without wiring everything manually
 - 🤝 Teams that want a simple, standard way to work locally
 
-## ⚡ Supercharge Codex CLI with a Batteries-Included Workspace All Set Up.
+## ⚡ Supercharge Codex CLI With All the Tools You Need.
   > You'll need an existing ChatGPT Plus or Pro Subscription - Learn more: [Codex CLI](AGENTS.md).
 
 1) Create or resume a project — your work is foldered automatically.
