@@ -1,4 +1,5 @@
-# Super Codex Workbench · Batteries‑Included for Codex CLI 🚀
+# Super Codex Workbench
+# Batteries‑Included for Codex CLI 🚀
 
 <p align="center">
   <img src="docs/images/repo-banner.svg" alt="Super Codex Workbench banner" width="720" />
@@ -20,21 +21,21 @@
 Turn ideas into data, reports, and APIs — fast. An agent‑first, prompt‑driven workspace for Codex CLI.
 
 ## Feature Highlights
-- ✅ Agent‑first, prompt‑driven experience — you ask, it builds
-- 🧱 Project‑centric flow — everything organized under your current project
-- 📦 Reliable warehouse — CSV/JSONL/Parquet with instant DuckDB SQL views
-- 📝 Elegant reporting — Jinja2 HTML → PDF, plus Excel generation
-- 🌐 Web context built‑in — Context7 (docs/code) + Firecrawl (crawl/summarize)
-- 🌈 Great logs — Rich + Loguru for readable progress and diagnostics
-- 🧭 Guided workflows — first‑project setup and MCP web report flow
-- 🧰 Quality gates — uv‑managed deps, Ruff lint, Mypy typing, clean by default
-- 🪟 Windows‑friendly — one‑shot setup (Terminal, Nerd Font, WSL2 Ubuntu, zsh)
-- 🔌 Extensible — add new MCP servers/APIs and scaffold clients in minutes
+🚀 Agent‑first, prompt‑driven experience	you ask, it builds
+🚣 Project‑centric flow	everything organized under your current project
+📦 Reliable warehouse	CSV/JSONL/Parquet with instant DuckDB SQL views
+📝 Elegant reporting	Jinja2 HTML → PDF, plus Excel generation
+🌐 Web context built‑in	Context7 (docs/code) + Firecrawl (crawl/summarize)
+🌈 Great logs	Rich + Loguru for readable progress and diagnostics
+🛣️ Guided workflows	first‑project setup and MCP web report flow
+🧰 Quality gates	uv‑managed deps, Ruff lint, Mypy typing, clean by default
+🪟 Windows‑friendly	one‑shot setup (Terminal, Nerd Font, WSL2 Ubuntu, zsh)
+🔌 Extensible	add new MCP servers/APIs and scaffold clients in minutes
 
 ## Who Is This For?
-- Newcomers who want a safe, guided path to build data + reports
-- Power users who value structure, repeatability, and speed
-- Teams who want a standard way for agents to work locally
+- 🙋‍♂️ Newcomers who want a safe, guided path to build data + reports
+- ⚡ Power users who value structure, repeatability, and speed
+- 🤝 Teams who want a standard way for agents to work locally
 
 ## How It Works (In 60 Seconds)
 1) Choose a project (resume or create). Everything lands under that name.
@@ -66,4 +67,3 @@ Turn ideas into data, reports, and APIs — fast. An agent‑first, prompt‑dri
 
 ## Notes
 Talk to the agent — we’ve done the heavy lifting. Technical details (setup, MCP, coding rules, git checkpoints) live in `AGENTS.md`.
-
