@@ -1,5 +1,5 @@
 # Super Codex Workbench
-# Batteries‑Included for Codex CLI 🚀
+## Batteries‑Included for Codex CLI 🚀
 
 <p align="center">
   <img src="docs/images/repo-banner.svg" alt="Super Codex Workbench banner" width="720" />
@@ -21,16 +21,19 @@
 Turn ideas into data, reports, and APIs — fast. An agent‑first, prompt‑driven workspace for Codex CLI.
 
 ## Feature Highlights
-🚀 Agent‑first, prompt‑driven experience	you ask, it builds
-🚣 Project‑centric flow	everything organized under your current project
-📦 Reliable warehouse	CSV/JSONL/Parquet with instant DuckDB SQL views
-📝 Elegant reporting	Jinja2 HTML → PDF, plus Excel generation
-🌐 Web context built‑in	Context7 (docs/code) + Firecrawl (crawl/summarize)
-🌈 Great logs	Rich + Loguru for readable progress and diagnostics
-🛣️ Guided workflows	first‑project setup and MCP web report flow
-🧰 Quality gates	uv‑managed deps, Ruff lint, Mypy typing, clean by default
-🪟 Windows‑friendly	one‑shot setup (Terminal, Nerd Font, WSL2 Ubuntu, zsh)
-🔌 Extensible	add new MCP servers/APIs and scaffold clients in minutes
+
+| Emoji/Title | Why | What |
+| --- | --- | --- |
+| 🚀 Agent‑first, prompt‑driven experience | Faster from prompt to outputs | Build and scaffold directly from prompts in Codex CLI |
+| 🚣 Project‑centric flow | Keep work organized and reproducible | Everything lands under the active project |
+| 📦 Reliable warehouse | Trustworthy storage with fast SQL | CSV/JSONL/Parquet with instant DuckDB views |
+| 📝 Elegant reporting | Share clear, polished outputs | Jinja2 HTML → PDF and Excel export |
+| 🌐 Web context built‑in | Pull relevant docs and pages fast | Context7 (docs/code) + Firecrawl (crawl/summarize) |
+| 🌈 Great logs | Understand progress and issues quickly | Rich + Loguru for readable diagnostics |
+| 🛣️ Guided workflows | Onboard and deliver quickly | First‑project setup and MCP web report flow |
+| 🧰 Quality gates | Maintain clean, typed code | uv‑managed deps, Ruff lint, Mypy typing |
+| 🪟 Windows‑friendly | Smooth setup on Windows/WSL2 | One‑shot provisioning (Terminal, Nerd Font, WSL2, zsh) |
+| 🔌 Extensible | Add new services easily | Configure MCP servers/APIs and scaffold clients |
 
 ## Who Is This For?
 - 🙋‍♂️ Newcomers who want a safe, guided path to build data + reports
