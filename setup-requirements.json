@@ -5,7 +5,7 @@
   "env_file_present": true,
   "folders_initialized": true,
   "mcp_firecrawl_configured": false,
-  "mcp_context7_optional": true,
+  "mcp_context7_optional": false,
   "mcp_context7_configured": false,
   "project_created": true,
   "ran_diagnostics": true,

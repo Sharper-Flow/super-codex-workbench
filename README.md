@@ -54,16 +54,9 @@ great logging, warehouse patterns, and out‑of‑the-box workflows.
 - 📦 Code quality (prompt): “Run the repository checks and fix any formatting or typing issues.”
 
 ## Operate With Codex CLI
-- Use the agent‑first flow documented in `AGENTS.md` (setup, project context, warehouse, reporting, MCP).
-- Talk to Codex CLI with clear prompts (examples above) — no need to run Python commands directly.
+- Talk to Codex CLI with clear prompts (examples above). Technical details live in `AGENTS.md`.
 
-## Contents
-- `AGENTS.md` — guidance for agents and contributors working in `codex-workbench/`.
-- `.editorconfig` — consistent editor settings (LF, UTF-8, indentation).
-- `.gitignore` — generic ignores for common toolchains.
-- `warehouse/` — canonical datasets managed via the Warehouse API.
-- `apps/` — app-specific code that uses the Warehouse API.
-- `projects/` — named work contexts (resumable), manifest and current pointer.
+ 
 
 ## Showcase
 - Windows Terminal theme (CodexDarkGrey) + Nerd Font
@@ -89,14 +82,9 @@ Ask Codex CLI:
   - Copy `.env.example` to `.env` and set keys.
   - Load `.env` in your code using `python-dotenv` as needed.
 
-## Suggested Workflow
-- Keep tasks small and documented as you go.
-- For scripts, add a one-line usage comment and `chmod +x`.
-- If you add dependencies, document install steps for Ubuntu.
-  - Prefer Parquet for large datasets (`uv add pyarrow`) and use Warehouse API.
+ 
 
-## Python Tooling
-- Ask Codex CLI to “Run the repository checks and fix issues (Ruff + Mypy).”
+ 
 
 What you get out‑of‑the‑box
 - ✅ Strict Python project with `uv` dependency management
@@ -107,14 +95,6 @@ What you get out‑of‑the‑box
 - 🧭 MCP‑ready hooks for Context7 + Firecrawl
 - 🌈 Rich+Loguru logging with `-v`/`-vv` verbosity
 
-## MCP Configuration
-- Edit `mcp.config.json` and set `.env` if you plan to use Firecrawl/Context7 (see `AGENTS.md` for agent rules).
+ 
 
-## Notes
-- This workspace is intentionally lightweight. Add subfolders (`notes/`, `scripts/`, `docs/`) as needs emerge.
- - Logging uses Loguru with Rich formatting and tracebacks. Prefer `logger.info/debug/...` for diagnostics.
-
-Next steps
-- 💡 “Create a new project named ‘research’ and get it ready for reporting.”
-- 🔎 “Pull web context for https://example.com and summarize top pages into a report.”
-- 🧪 “Register a dataset, write a small sample, and run a quick SQL preview.”
+ 

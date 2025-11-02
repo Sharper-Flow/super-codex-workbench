@@ -184,14 +184,14 @@ if grep -Eq '^FIRECRAWL_API_KEY=.+$' .env 2>/dev/null || [[ -n "${FIRECRAWL_API_
   json_set mcp_firecrawl_configured true
 else
   json_set mcp_firecrawl_configured false
-  warn "FIRECRAWL_API_KEY not found in environment or .env; Firecrawl-backed workflows will be limited."
+  warn "FIRECRAWL_API_KEY not found. Firecrawl MCP is required — ask the user to obtain an API key and update .env, then re-run setup."
 fi
 
 if grep -Eq '^CONTEXT7_API_KEY=.+$' .env 2>/dev/null || [[ -n "${CONTEXT7_API_KEY:-}" ]]; then
   json_set mcp_context7_configured true
 else
-  # Optional; free tier assumed
   json_set mcp_context7_configured false
+  warn "CONTEXT7_API_KEY not found. Context7 MCP is required — ask the user to obtain an API key and update .env, then re-run setup."
 fi
 
 # 7) Optional guided first-project workflow

@@ -176,12 +176,32 @@ Scope: Applies to the entire directory tree rooted at the repository's top‑lev
   - Sync: `uv sync`
 - Never use global `pip`/`python` for this project.
 
-## MCP Usage Policy
-- MCP configuration lives in `mcp.config.json`; secrets in `.env` (see `.env.example`).
-  - `CONTEXT7_API_KEY`, `CONTEXT7_MCP_URL`
-  - `FIRECRAWL_API_KEY`, `FIRECRAWL_MCP_URL`
-- Codex CLI may call MCP servers for documentation search, crawling, extraction, and summarization.
-- Never commit real secrets; update `.env.example` when new vars are needed.
+## MCP Servers (Required)
+- MCP integration is required. Both Firecrawl and Context7 must be configured before MCP workflows.
+- Configuration lives in `mcp.config.json`; credentials/URLs come from `.env` (see `.env.example`).
+  - Firecrawl: `FIRECRAWL_API_KEY`, `FIRECRAWL_MCP_URL`
+  - Context7: `CONTEXT7_API_KEY`, `CONTEXT7_MCP_URL`
+- Verify status:
+  - `uv run python main.py mcp info` and `uv run python main.py check-mcp`
+  - If any variable is missing, pause and guide the user to obtain keys.
+
+### Obtain API Keys (Guide the User)
+- Firecrawl
+  - Ask: “Do you already have a Firecrawl API key?” If not: “Create an account at Firecrawl, then copy your API key.”
+  - Once the user provides the key, write it to `.env` as `FIRECRAWL_API_KEY`.
+  - `FIRECRAWL_MCP_URL` should point at the local/hosted MCP server endpoint (check your infra); update `.env` accordingly.
+- Context7
+  - Ask: “Do you already have a Context7 API key?” If not: “Create an account at Context7, then copy your API key.”
+  - Save to `.env` as `CONTEXT7_API_KEY`.
+  - `CONTEXT7_MCP_URL` should point at the MCP server endpoint used by your setup.
+- After updating `.env`, re-run:
+  - `uv run python main.py mcp info` and `uv run python main.py check-mcp`
+  - If still missing or invalid, re‑prompt the user and correct `.env`.
+
+### Use MCP in Workflows
+- Web crawling + report: `uv run python main.py workflow mcp-web --url <URL> [--c7-query <q>] --limit 5`
+- You can also call MCP servers via `workbench/mcp_clients.py` wrappers when building custom steps.
+- Never commit real secrets. Update `.env.example` if new variables are required, but keep values blank.
 
 ## Mandatory Environment Rule (Python)
 - ALWAYS use the local virtualenv at the repo root (`./.venv`).
