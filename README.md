@@ -22,48 +22,16 @@ Use plain-English prompts to turn ideas into data and reports. No coding require
 
 Use plain-English prompts to turn ideas into data and reports. No coding required to start.
 
-## Feature Highlights
-
-- 🚀 Agent‑first, prompt‑driven experience
-  - 👩‍💻 — You ask; it builds fast
-  - What & How — [![Codex CLI](https://img.shields.io/badge/Codex_CLI-Prompts-1F6FEB?style=flat-square)](AGENTS.md)
-- 🚣 Project‑centric flow
-  - 👮‍♂️ — Keep everything tidy and repeatable
-  - What & How — [![Projects](https://img.shields.io/badge/Projects-Organized-4A5568?style=flat-square)](#how-it-works-in-60-seconds)
-- 📦 Built‑in data store (warehouse)
-  - 👩‍🔬 — Store data safely; query quickly
-  - What & How — [![DuckDB](https://img.shields.io/badge/DuckDB-SQL-FFCB05?style=flat-square)](https://duckdb.org/) [![Pandas](https://img.shields.io/badge/Pandas-Data-150458?style=flat-square)](https://pandas.pydata.org/)
-- 📝 Elegant reporting
-  - 👩‍🎨 — Share clean, polished outputs
-  - What & How — [![Jinja2](https://img.shields.io/badge/Jinja2-Templates-000000?style=flat-square)](https://github.com/pallets/jinja) [![WeasyPrint](https://img.shields.io/badge/PDF-WeasyPrint-EE1F25?style=flat-square)](https://weasyprint.org/) [![Excel](https://img.shields.io/badge/Excel-OpenPyXL-217346?style=flat-square)](https://openpyxl.readthedocs.io/)
-- 🌐 Web context built‑in
-  - 🕵️‍♂️ — Pull the right docs and pages
-  - What & How — [![Context7](https://img.shields.io/badge/Context7-Docs%2FCode-0EA5E9?style=flat-square)](https://context7.dev/) [![Firecrawl](https://img.shields.io/badge/Firecrawl-Web_Fetch-F97316?style=flat-square)](https://firecrawl.dev/)
-- 🌈 Great logs
-  - 👩‍🏫 — Skim progress; spot issues fast
-  - What & How — [![Rich](https://img.shields.io/badge/Rich-Logs-6E56CF?style=flat-square)](https://github.com/Textualize/rich) [![Loguru](https://img.shields.io/badge/Loguru-Logger-0B84F3?style=flat-square)](https://github.com/Delgan/loguru)
-- 🛣️ Guided workflows
-  - 👩‍🚒 — Get results with guided steps
-  - What & How — [![Workflows](https://img.shields.io/badge/Workflows-Guided-2563EB?style=flat-square)](#actions-at-a-glance-prompts)
-- 🧰 Quality gates
-  - 🧑‍🏭 — Keep things neat behind the scenes
-  - What & How — [![uv](https://img.shields.io/badge/uv-Dependencies-2D3748?style=flat-square)](https://github.com/astral-sh/uv) [![Ruff](https://img.shields.io/badge/Ruff-Lint-ff3860?style=flat-square)](https://github.com/astral-sh/ruff) [![Mypy](https://img.shields.io/badge/Mypy-Types-5383EC?style=flat-square)](https://github.com/python/mypy)
-- 🪟 Windows‑friendly
-  - 👷 — Works great on Windows (WSL2)
-  - What & How — [![WSL2](https://img.shields.io/badge/Windows-WSL2-00BCF2?style=flat-square)](https://learn.microsoft.com/windows/wsl/) [![Windows Terminal](https://img.shields.io/badge/Windows_Terminal-Theme-4A4A4A?style=flat-square)](https://github.com/microsoft/terminal)
-- 🔌 Extensible
-  - 👨‍🚀 — Add new integrations in minutes
-  - What & How — [![MCP](https://img.shields.io/badge/MCP-Plugins-0EA5E9?style=flat-square)](https://mcp.so/)
 
 ## Who Is This For?
-- Analysts, PMs, ops — comfortable with tools, not code
-- Power users who want repeatable results without wiring everything
-- Teams that want a simple, standard way to work locally
+- 📊 Analysts, PMs, and ops who are comfortable with tools — not code
+- ⚡ Power users who want repeatable results without wiring everything manually
+- 🤝 Teams that want a simple, standard way to work locally
 
 ## How It Works (In 60 Seconds)
-1) Pick a project. Everything you do lives there.
-2) Bring in data (or let the agent fetch it).
-3) Ask for a report; get HTML, PDF, or Excel.
+1) Pick a project — your work lives there.
+2) Bring in data — or ask the agent to fetch it.
+3) Ask for outputs — get HTML, PDF, or Excel.
 
 ## What You Can Build
 - 📊 Sales insights app — Ingest weekly CSVs, run Python transforms, and generate an HTML+PDF dashboard with highlights.
@@ -71,7 +39,40 @@ Use plain-English prompts to turn ideas into data and reports. No coding require
 - 🧠 Docs summarizer — Crawl product docs with MCP, extract key points, and publish a one‑pager brief.
 - 📈 KPI tracker — Append telemetry to the warehouse daily, run DuckDB SQL, and render a monthly report.
 - 🔍 Data quality bot — Validate new batches, raise issues with details, and export a fix‑list for teams.
-- 🧪 Experiment notebook — Join datasets, run simple Python analyses, and export a shareable report for stakeholders.
+    - 🧪 Experiment notebook — Join datasets, run simple Python analyses, and export a shareable report for stakeholders.
+
+## Feature Highlights
+
+- 🚀 Agent‑first, prompt‑driven experience
+  - 👩‍💻 — You ask; it builds fast
+  - What & How — [![Codex CLI](https://img.shields.io/badge/Codex_CLI-Prompts-1F6FEB?style=flat-square&logo=gnubash&logoColor=white)](AGENTS.md)
+- 🚣 Project‑centric flow
+  - 👮‍♂️ — Keep everything tidy and repeatable
+  - What & How — [![Projects](https://img.shields.io/badge/Projects-Organized-4A5568?style=flat-square&logo=openproject&logoColor=white)](#how-it-works-in-60-seconds)
+- 📦 Built‑in data store (warehouse)
+  - 👩‍🔬 — Store data safely; query quickly
+  - What & How — [![DuckDB](https://img.shields.io/badge/DuckDB-SQL-FFCB05?style=flat-square&logo=duckdb&logoColor=white)](https://duckdb.org/) [![Pandas](https://img.shields.io/badge/Pandas-Data-150458?style=flat-square&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+- 📝 Elegant reporting
+  - 👩‍🎨 — Share clean, polished outputs
+  - What & How — [![Jinja2](https://img.shields.io/badge/Jinja2-Templates-000000?style=flat-square&logo=jinja&logoColor=white)](https://github.com/pallets/jinja) [![WeasyPrint](https://img.shields.io/badge/PDF-WeasyPrint-EE1F25?style=flat-square&logo=adobeacrobatreader&logoColor=white)](https://weasyprint.org/) [![Excel](https://img.shields.io/badge/Excel-OpenPyXL-217346?style=flat-square&logo=microsoftexcel&logoColor=white)](https://openpyxl.readthedocs.io/)
+- 🌐 Web context built‑in
+  - 🕵️‍♂️ — Pull the right docs and pages
+  - What & How — [![Context7](https://img.shields.io/badge/Context7-Docs%2FCode-0EA5E9?style=flat-square&logo=readthedocs&logoColor=white)](https://context7.dev/) [![Firecrawl](https://img.shields.io/badge/Firecrawl-Web_Fetch-F97316?style=flat-square&logo=firefoxbrowser&logoColor=white)](https://firecrawl.dev/)
+- 🌈 Great logs
+  - 👩‍🏫 — Skim progress; spot issues fast
+  - What & How — [![Rich](https://img.shields.io/badge/Rich-Logs-6E56CF?style=flat-square&logo=python&logoColor=white)](https://github.com/Textualize/rich) [![Loguru](https://img.shields.io/badge/Loguru-Logger-0B84F3?style=flat-square&logo=python&logoColor=white)](https://github.com/Delgan/loguru)
+- 🛣️ Guided workflows
+  - 👩‍🚒 — Get results with guided steps
+  - What & How — [![Workflows](https://img.shields.io/badge/Workflows-Guided-2563EB?style=flat-square&logo=githubactions&logoColor=white)](#actions-at-a-glance-prompts)
+- 🧰 Quality gates
+  - 🧑‍🏭 — Keep things neat behind the scenes
+  - What & How — [![uv](https://img.shields.io/badge/uv-Dependencies-2D3748?style=flat-square&logo=python&logoColor=white)](https://github.com/astral-sh/uv) [![Ruff](https://img.shields.io/badge/Ruff-Lint-ff3860?style=flat-square&logo=python&logoColor=white)](https://github.com/astral-sh/ruff) [![Mypy](https://img.shields.io/badge/Mypy-Types-5383EC?style=flat-square&logo=python&logoColor=white)](https://github.com/python/mypy)
+- 🪟 Windows‑friendly
+  - 👷 — Works great on Windows (WSL2)
+  - What & How — [![WSL2](https://img.shields.io/badge/Windows-WSL2-00BCF2?style=flat-square&logo=windows&logoColor=white)](https://learn.microsoft.com/windows/wsl/) [![Windows Terminal](https://img.shields.io/badge/Windows_Terminal-Theme-4A4A4A?style=flat-square&logo=windowsterminal&logoColor=white)](https://github.com/microsoft/terminal)
+- 🔌 Extensible
+  - 👨‍🚀 — Add new integrations in minutes
+  - What & How — [![MCP](https://img.shields.io/badge/MCP-Plugins-0EA5E9?style=flat-square&logo=puzzle&logoColor=white)](https://mcp.so/)
 
 ## Try MCP (Plugins)
 - MCP are "plugins" for AI tools — connect to services in a click.
