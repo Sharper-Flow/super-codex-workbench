@@ -47,8 +47,9 @@ Use plain-English prompts to turn ideas into data and reports. No coding require
 
 ## Try MCP (Plugins)
 - MCP are "plugins" for AI tools — connect to services in a click.
+- 🔎 Browse MCP servers: https://mcp.so/ — pick one to add via Codex CLI.
 - Prompts:
-  - Find an MCP for <your need> on mcp.so
+  - Find an MCP for <your need>
   - Will an MCP help us <your goal>?
   - Install the <X> MCP server
 
