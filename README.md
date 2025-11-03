@@ -1,5 +1,5 @@
 <h1 align="center">Super Codex Workbench 🚀</h1>
-<h3 align="center">⚡A Supercharged Codex CLI Workspace with Batteries Included🔋</h3>
+<h3 align="center">⚡A Supercharged Codex CLI Workspace, Batteries-Included🔋</h3>
 
 <p align="center">
   <a href="./LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge"></a>
