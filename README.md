@@ -20,49 +20,53 @@
 - ⚡ Power users who want repeatable results without wiring everything manually
 - 🔨 Pros who want to work fast with the latest toolset, auto‑updated
 
-## 😎 Ready to Upgrade from ChatGPT?
-_Level up from chat-only answers to a working, local workbench that produces and executes real code, reports, databases, and automation._
+## 🥳 Supercharge Codex CLI With All the Tools You Need.
+  > Requires ChatGPT Plus/Pro access — details in `AGENTS.md`.
 
-ChatGPT Can't:
+Level up from chat-only answers to a local, executable workbench that ships real outputs.
 
-1. **🖥️ Execute Commands** — Run shell commands to build, test, and deploy.
-2. **✍️ Write & Build Runnable Code** — Create new files, write code, and run build scripts.
-3. **📂 Access Files** — Read, write, and modify local project files.
-4. **🌱 Understand Your Environment** — Access local env vars and running processes.
-5. **🌐 Access External Resources** — Scrape websites, download files, interact with APIs.
-6. **🗄️ Query Local Data** — Work with local databases, warehouses, and data files.
-7. **🤖 Automate Workflows** — Run complex, multi-step tasks autonomously.
-8. **💡 Add Custom Features** — Define new tools and capabilities for the agent.
-9. **🔒 Ensure Privacy** — Keep sensitive data local (no cloud required).
+### 💥 Why It Beats ChatGPT
+- ✅ Repeatable projects — every run is versioned and reproducible.
+- 🗂️ Real artifacts — files, datasets, HTML/PDF/Excel saved in your project.
+- 🧪 Quality gates — Ruff, Mypy, and environment health checks baked in.
+- 🤖 Autonomy with guardrails — multi‑step workflows, verification, and git checkpoints.
+- 🔒 Local‑first privacy — your code/data/logs stay on your machine.
+- 🔌 Extensible — add MCP integrations and Python deps with one prompt.
 
-### 🚀 [Get Started - Click Here For Instructions](#get-started-now)
+### 🚫 What ChatGPT Can’t (We Do)
+- 🖥️ Execute commands and orchestrate builds/tests.
+- ✍️ Write, run, and refactor real code across files.
+- 📂 Read/write your project, env, and configs.
+- 🗄️ Query local data/DBs and manage a warehouse.
+- 🤖 Automate multi‑step, reliable workflows.
+- 🔐 Keep secrets local; only enabled MCPs touch network.
 
-## 💥 Why Better Than ChatGPT
-- ✅ Repeatable projects, not one-off chats — every run is versioned and reproducible.
-- 🗂️ Real outputs, not screenshots — files, datasets, HTML/PDF reports saved in your project.
-- 🧪 Built-in quality gates — lint, type checks, and environment health run automatically.
-- 🤖 Autonomy with guardrails — multi-step workflows that execute, verify, and checkpoint.
-- 🔒 Local-first privacy — your code, data, and logs stay on your machine.
-- 🔌 Extensible on demand — add MCP integrations and Python deps with a single prompt.
+### ⚡ Do More, Faster
+- 🚣 Project‑centric flow — tidy, repeatable workspaces per project.
+- 🧷 Automatic git checkpoints — easy rollbacks and recovery.
+- 🌐 Web + docs context — Firecrawl + Context7 on tap when configured.
+- 📝 Elegant reporting — HTML, PDF, and Excel exports.
+- 🪟 Windows‑friendly — great on WSL2.
 
-### 🆚 Before / After
-- ChatGPT (before): copy/paste code snippets, manual setup, missing files, ephemeral chats.
-- Codex CLI (after): writes files, runs commands, renders reports, saves outputs, adds checkpoints.
-
-### ⏱️ 60‑Second Demo
-- Watch: docs/images/demo-60s.gif (add your short screencast here for maximum impact).
-- Flow: prompt → create project → fetch data → render HTML → export PDF → checkpoint.
-
-### ⚡ Quickstart (TL;DR)
+### 🚀 Quickstart
 - Setup: `bash ./scripts/setup.sh -y -p demo`
 - Verify: `uv run python main.py -v diagnose`
 - First project: `uv run python main.py workflow first-project --name demo --with-mcp`
 
-### ❓ Common Objections
-- "Isn’t this just ChatGPT with extra steps?" → No: it executes locally, writes files, and ships outputs.
-- "Setup looks heavy." → One script; everything isolated in `.venv` via `uv` and auto‑configured.
-- "Will I lose my chats?" → No: use your same prompts; Codex turns them into repeatable runs and artifacts.
-- "What about privacy?" → Local-first. Only MCPs you enable are networked; secrets live in `.env`.
+👉 Ready to go? See: [Get Started Now](#get-started-now)
+
+### 🔌 Add Capabilities (MCP)
+- MCP are proven “plugins” that add web/docs/search and service integrations.
+- Comes with Firecrawl + Context7; browse more at https://mcp.so/
+- Prompts you can use:
+  - `"Find an MCP for <your need>"`
+  - `"Install the <X> MCP server"`
+
+### 🧠 Smart Installs (via uv)
+- As you ask for features (PDFs, Excel, Parquet, charts), the right deps are added locally.
+- Examples: `weasyprint`/`pdfkit` (PDF), `openpyxl` (Excel), `pyarrow` (Parquet), `plotly` (charts).
+
+---
 
 ## 🥳 Supercharge Codex CLI With All the Tools You Need.
   > You'll need an existing ChatGPT Plus or Pro Subscription - Learn more: [`AGENTS.md`](AGENTS.md).
