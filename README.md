@@ -132,44 +132,37 @@ Want the technical bits? See [`AGENTS.md`](AGENTS.md).
 
 ## Real-Life Recipes 🎯
 
-Concrete, runnable flows you can copy and adapt. All commands run inside the local virtualenv via `uv run` and respect the current project context.
+Concrete, runnable flows you can copy and adapt. Use these natural language prompts in Codex CLI.
 
 ### 🏠 Smart Home: Nightly Energy Snapshot
 - What you get: a daily usage summary (CSV + HTML + optional PDF) to spot energy spikes.
-- How to try it:
-  - Create a project: `uv run python main.py projects create --name home-energy`
-  - Register a dataset: `uv run python main.py warehouse register --name energy_readings --format csv --partitioning date,source`
-  - Land a sample batch (stand‑in for your smart‑plug/API feed):
-    - `uv run python main.py warehouse write-sample --name energy_readings --partition "date=2025-01-01,source=smartplug"`
-  - Summarize usage (example query):
-    - `uv run python main.py warehouse sql --query "select event as device, sum(value) as kwh from ds_energy_readings group by device order by device" --output projects/home-energy/artifacts/energy_summary.csv`
-  - Render HTML: `uv run python main.py reports render-html --title "Home Energy Snapshot" --output projects/home-energy/reports/html/energy.html`
-  - Export PDF: `uv run python main.py reports export-pdf --html projects/home-energy/reports/html/energy.html --output projects/home-energy/reports/pdf/energy.pdf`
-- Next step: replace the sample write with your real fetch (create a DataFrame and use the Warehouse API to write it).
+- Try with prompts:
+  - "Create a project named home-energy and set it current."
+  - "Register a dataset energy_readings as CSV partitioned by date and source."
+  - "Write a sample batch to energy_readings for date=2025-01-01, source=smartplug."
+  - "Summarize total kWh by device from ds_energy_readings and save the CSV as energy_summary in the project."
+  - "Render an HTML report titled Home Energy Snapshot, then export it to PDF."
+- Next step: swap the sample batch for your real smart‑plug/API feed.
 
-### 👩‍⚕️ Professional Appointments App: Weekly Summary
+### 👩‍⚕️ Appointments: Weekly Summary
 - What you get: a weekly roll‑up of sessions per client (CSV + HTML + optional PDF) for quick billing.
-- How to try it:
-  - Create a project: `uv run python main.py projects create --name appointments`
-  - Register a dataset: `uv run python main.py warehouse register --name client_sessions --format csv --partitioning week`
-  - Land a sample batch: `uv run python main.py warehouse write-sample --name client_sessions --partition "week=2025-W01"`
-  - Summarize the week:
-    - `uv run python main.py warehouse sql --query "select event as client, count(*) as sessions, sum(value) as hours from ds_client_sessions group by client order by client" --output projects/appointments/artifacts/weekly_summary.csv`
-  - Report HTML → PDF:
-    - `uv run python main.py reports render-html --title "Weekly Appointments Summary" --output projects/appointments/reports/html/weekly.html`
-    - `uv run python main.py reports export-pdf --html projects/appointments/reports/html/weekly.html --output projects/appointments/reports/pdf/weekly.pdf`
-- Next step: add a custom template under `projects/appointments/templates/` to include your logo/fields.
+- Try with prompts:
+  - "Create a project called appointments and select it."
+  - "Register a dataset client_sessions as CSV partitioned by week."
+  - "Write a sample batch to client_sessions for week=2025-W01."
+  - "Summarize sessions and hours by client from ds_client_sessions and save as weekly_summary CSV."
+  - "Render an HTML report titled Weekly Appointments Summary and also export a PDF."
+- Next step: add a custom template under the project’s templates folder to include your logo/fields.
 
 ### 🔁 Vendor Policy Update Brief (MCP)
 - What you get: a concise brief of recent policy pages (HTML + optional PDF) so your team stays informed.
 - Requires: Firecrawl MCP configured (`.env` with `FIRECRAWL_API_KEY`) and `mcp.config.json` present.
-- How to try it:
-  - Create a project: `uv run python main.py projects create --name policy-briefs`
-  - Verify MCP: `uv run python main.py mcp info`
-  - Crawl and generate report:
-    - `uv run python main.py workflow mcp-web --url https://example.com/policy --limit 5`
-  - Output: HTML at `projects/policy-briefs/reports/html/mcp_report.html` and a PDF if a backend is installed.
-- Tip: add `--c7-query "your keywords"` to blend Context7 search results into the same report.
+- Try with prompts:
+  - "Create a project named policy-briefs and select it."
+  - "Check MCP status and confirm Firecrawl is configured."
+  - "Crawl https://example.com/policy (limit 5) and generate an HTML report under the project."
+  - "If a PDF backend is available, also export the report to PDF."
+- Tip: "Blend Context7 results using the query: your keywords."
 
 ## Contributing
 - License: MIT — see `LICENSE`.
