@@ -1,19 +1,25 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="720" height="260" viewBox="0 0 720 260">
-  <rect width="100%" height="100%" fill="#ffffff"/>
-  <rect x="20" y="20" width="680" height="220" rx="12" ry="12" fill="#f8fafc" stroke="#e5e7eb"/>
-  <text x="40" y="56" font-family="Inter, Segoe UI, Roboto, sans-serif" font-size="20" fill="#0f172a">Experiment Notebook — AB Test</text>
+  <defs>
+    <linearGradient id="bg6" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f2428"/>
+      <stop offset="100%" stop-color="#242b31"/>
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bg6)"/>
+  <rect x="20" y="20" width="680" height="220" rx="12" ry="12" fill="#111418" stroke="#2a3238"/>
+  <text x="40" y="56" font-family="Inter, Segoe UI, Roboto, sans-serif" font-size="20" fill="#d1d5da">Experiment Notebook — AB Test</text>
   <g font-family="Inter, Segoe UI, Roboto, sans-serif" font-size="14">
-    <rect x="40" y="72" width="640" height="34" fill="#e5e7eb"/>
-    <text x="56" y="94" fill="#0f172a">Variant</text>
-    <text x="360" y="94" fill="#0f172a">Mean</text>
-    <text x="600" y="94" fill="#0f172a">p-value</text>
-    <line x1="40" y1="106" x2="680" y2="106" stroke="#e2e8f0"/>
-    <text x="56" y="132" fill="#334155">A</text>
-    <text x="360" y="132" fill="#334155">4.12</text>
-    <text x="600" y="132" fill="#334155">—</text>
-    <line x1="40" y1="144" x2="680" y2="144" stroke="#e2e8f0"/>
-    <text x="56" y="170" fill="#334155">B</text>
-    <text x="360" y="170" fill="#334155">4.36</text>
-    <text x="600" y="170" fill="#334155">0.047</text>
+    <rect x="40" y="72" width="640" height="34" fill="#1f2428"/>
+    <text x="56" y="94" fill="#d1d5da">Variant</text>
+    <text x="360" y="94" fill="#d1d5da">Mean</text>
+    <text x="600" y="94" fill="#d1d5da">p-value</text>
+    <line x1="40" y1="106" x2="680" y2="106" stroke="#2a3238"/>
+    <text x="56" y="132" fill="#d1d5da">A</text>
+    <text x="360" y="132" fill="#9da7b1">4.12</text>
+    <text x="600" y="132" fill="#9da7b1">—</text>
+    <line x1="40" y1="144" x2="680" y2="144" stroke="#2a3238"/>
+    <text x="56" y="170" fill="#d1d5da">B</text>
+    <text x="360" y="170" fill="#9da7b1">4.36</text>
+    <text x="600" y="170" fill="#9da7b1">0.047</text>
   </g>
 </svg>

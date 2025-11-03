@@ -68,7 +68,7 @@
   - 👨‍🚀 — Add new integrations in minutes
   - What & How — [![MCP](https://img.shields.io/badge/MCP-Plugins-0EA5E9?style=flat-square&logo=puzzle&logoColor=white)](https://mcp.so/)
 
-## Try MCP (Plugins)
+## Extend Codex CLI's Capability with MCP Servers
 - MCP are "plugins" for AI tools — connect to services in a click.
 - 🔎 Browse MCP servers: https://mcp.so/ — pick one to add via Codex CLI.
 - Prompts:
@@ -88,15 +88,10 @@
 ---
 
 ## Showcase
-- Windows Terminal theme (CodexDarkGrey) + Nerd Font
+  ### Windows Terminal theme (CodexDarkGrey) + Nerd Font
 
   ![Windows Terminal dark grey theme](docs/images/windows-terminal-theme.svg)
-  Windows Terminal dark theme with Nerd Font
 
-- Sample HTML report preview
-
-  ![Sample report preview](docs/images/report-preview.svg)
-  Sample HTML report preview
 
 ### Use Case Samples (What You Can Build)
 
