@@ -23,6 +23,16 @@
   - 🧪 Adds quality gates (Ruff, Mypy) and reproducible workflows
   - 🧾 Produces real artifacts (datasets, HTML/PDF/Excel) in tidy project folders
   - 🔒 Keeps your code/data local by default
+  - 🌐 Crawls and scrapes websites/docs at scale; parse, extract, and save structured data
+  - 🧵 Automates multi‑step flows across git, Docker, SQL, Make, and shell tools
+  - 🗄️ Reads/writes databases and files; transforms large datasets; schedules recurring jobs
+  - 🔐 Works with private repos/SSH keys; searches, patches, and refactors codebases safely
+  - 🧠 Persists long context with projects, logs, datasets, and caches (reproducible runs)
+  - 🛡️ Enforces approvals/network controls; can run fully local/offline if you choose
+  - 🧩 Extends on demand with new CLIs, Python packages, MCP servers, and API clients
+  - 📈 Generates dashboards/reports/PDFs; exports CSV/Parquet/Excel to your project folders
+  - 🕸️ Orchestrates headless browsers for scraping and form automation (when configured)
+- Think of this as what any capable local AI agent can do — Codex CLI just makes it seamless for ChatGPT Plus/Pro users.
 - This repo is your quickstart: a batteries‑included workspace tailored for Codex CLI so you can go from “chat” to real, repeatable outputs in minutes.
 - Install Codex CLI via the official guide (see link below), open this repo in Codex, and run the setup to get moving fast.
 
