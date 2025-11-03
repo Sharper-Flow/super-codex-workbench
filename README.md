@@ -25,7 +25,7 @@ _Why this matters — Helps the right users self‑select and get value faster._
 _Why this matters — Shows concrete capabilities beyond chat so you can decide quickly._
 Level up from chat-only answers to a working, local workbench that produces and executes real code, reports, databases, and automation.
 
-## ChatGPT Can't:
+> ChatGPT Can't:
 
 1. **🖥️ Execute Commands** — Run shell commands to build, test, and deploy.
 2. **✍️ Write & Build Code** — Create new files, write code, and run build scripts.
