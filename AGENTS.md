@@ -16,6 +16,16 @@ Scope: Applies to the entire directory tree rooted at the repository's top‑lev
 - Maintain brevity and substance: prioritize actionable steps, outcomes, and next actions; avoid decorative overload.
 - Still follow the global CLI formatting rules (no tables by default, no heavy markup); combine them with emoji for emphasis.
 
+## Supplemental Rules (.clinerules)
+- A curated ruleset lives under `.clinerules/` (imported from another project and adapted for this repo).
+- Treat `AGENTS.md` as the source of truth; `.clinerules` content is subordinate and must respect all rules here.
+- Useful references:
+  - Debugging/quality: `systematic-debugging.md`, `quality-first-engineering.md`
+  - Decision frameworks: `decision-clarification.md`, `simplification-cascades.md`, `self-improving-reflection.md`
+  - Environment: `python-environment.md`, `workspace-venv.md`
+  - MCP: `mcp-integrations.md`
+  - Workflows: `workflows/speckit.*.md`
+
 ## Agent Playbook (Do This Every Time)
 
 1) Setup enforcement (repo‑name agnostic)

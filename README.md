@@ -102,7 +102,7 @@ ChatGPT Can't:
   - `"Will an MCP help us <your goal>?"`
   - `"Install the <X> MCP server"`
 
-## You ask for outcomes; Codex installs what’s needed behind the scenes
+## Codex nstalls what’s needed behind the scenes
 - 🧠 Smart installs — When you ask for something new (e.g., “export to Excel”, “render a PDF”, “save as Parquet”), Codex CLI installs the right Python packages automatically using `uv`.
 
 - 🔒 Safe & local — Everything lives in the project’s virtual environment; no global `pip`. Dependencies are tracked in `pyproject.toml` + `uv.lock` for repeatability.
@@ -117,22 +117,6 @@ ChatGPT Can't:
   - “Fetch and parse a page” → adds `httpx` + `beautifulsoup4` for lightweight scraping.
 
 - You just ask; Codex brings the pieces together so you can focus on outcomes.
-
-## Copy/paste starters to get moving fast
-- 🔧 `"Set up a demo and run the guided first-project workflow"`
-
-- 🗂️ `"Show my projects and resume demo (or create it)"`
-
-- 🗃️ `"Show recent outputs for the demo project"`
-
-- 🧠 `"Preview the events dataset with a simple SQL"`
-
-- 🌐 `"Crawl a website, summarize top pages, and generate a report"`
-
-- 📝 `"Render a sample HTML report and export to PDF"`
-
-- 📦 `"Run checks and fix formatting/typing issues"`
-
 
 ---
 
