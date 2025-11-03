@@ -1,5 +1,4 @@
 # Super Codex Workbench 🚀
-
 ### A Codex CLI Workspace with 🔋Batteries Included🔋
 
 
@@ -109,51 +108,38 @@
 - 📊 Sales insights app — Ingest weekly CSVs, run Python transforms, and generate an HTML+PDF dashboard with highlights.
   - Samples: [HTML](docs/samples/sales-insights.html)
   - Preview:
-
-    | Product | Units | Revenue | WoW |
-    | --- | ---:| ---:| ---:|
-    | Widget A | 1,240 | $24,800 | +8% |
-    | Widget B | 980 | $19,600 | -3% |
+    
+    ![Sales Insights sample](docs/images/samples/sales-insights.svg)
 
 - 🧾 Finance reconciler — Combine bank exports with invoices, flag mismatches, and email a PDF summary automatically.
   - Samples: [HTML](docs/samples/finance-reconciler.html)
   - Preview:
-
-    | Invoice | Bank | Invoice | Status |
-    | --- | ---:| ---:| --- |
-    | INV-1007 | $4,250 | $4,200 | Mismatch |
-    | INV-1011 | $3,990 | $3,990 | Matched |
+    
+    ![Finance Reconciler sample](docs/images/samples/finance-reconciler.svg)
 
 - 🧠 Docs summarizer — Crawl product docs with MCP, extract key points, and publish a one‑pager brief.
   - Samples: [HTML](docs/samples/docs-summarizer.html)
-  - Preview: “Summarized 12 pages, 3 themes, 5 action items.”
+  - Preview:
+    
+    ![Docs Summarizer sample](docs/images/samples/docs-summarizer.svg)
 
 - 📈 KPI tracker — Append telemetry to the warehouse daily, run DuckDB SQL, and render a monthly report.
   - Samples: [HTML](docs/samples/kpi-tracker.html)
   - Preview:
-
-    | KPI | Value |
-    | --- | ---:|
-    | MRR | $82,450 |
-    | Activation rate | 34% |
+    
+    ![KPI Tracker sample](docs/images/samples/kpi-tracker.svg)
 
 - 🔍 Data quality bot — Validate new batches, raise issues with details, and export a fix‑list for teams.
   - Samples: [HTML](docs/samples/data-quality-bot.html)
   - Preview:
-
-    | Dataset | Row | Issue | Severity |
-    | --- | ---:| --- | --- |
-    | events | 1024 | missing user_id | high |
-    | orders | 77 | invalid price format | medium |
+    
+    ![Data Quality sample](docs/images/samples/data-quality-bot.svg)
 
 - 🧪 Experiment notebook — Join datasets, run simple Python analyses, and export a shareable report for stakeholders.
   - Samples: [HTML](docs/samples/experiment-notebook.html)
   - Preview:
-
-    | Variant | Mean | p-value |
-    | --- | ---:| ---:|
-    | A | 4.12 | — |
-    | B | 4.36 | 0.047 |
+    
+    ![Experiment Notebook sample](docs/images/samples/experiment-notebook.svg)
 
 ## Notes
 No coding required — but you can peek under the hood anytime.
