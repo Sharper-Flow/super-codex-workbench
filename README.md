@@ -19,14 +19,14 @@
 - [Who Is This For?](#-who-is-this-for)
 - [Ready to Upgrade from ChatGPT?](#-ready-to-upgrade-from-chatgpt)
 - [Supercharge Codex CLI](#-supercharge-codex-cli-with-all-the-tools-you-need)
-- [MCP Servers](#extend-codex-clis-reach-with-mcp-servers)
-- [Auto‑Adding Features](#intelligent-autoadding-of-relevant-features)
-- [Actions (Prompts)](#actions-at-a-glance-prompts)
-- [Showcase](#showcase)
-- [Notes](#notes)
-- [Project Structure](#project-structure)
-- [License & Contributing](#license--contributing)
-- [User Setup](#user-setup)
+- [Add capabilities on demand (MCP plugins)](#add-capabilities-on-demand-via-proven-plugins-mcp)
+- [Ask for outcomes; Codex installs what's needed](#you-ask-for-outcomes-codex-installs-whats-needed-behind-the-scenes)
+- [Copy/paste starters](#copypaste-starters-to-get-moving-fast)
+- [See real outputs](#see-real-outputs-that-build-trust-and-momentum)
+- [Non-coders can succeed](#non‑coders-can-succeed-coders-can-go-deeper)
+- [Know where things live](#know-where-things-live-so-you-can-navigate-quickly)
+- [Use, share, contribute safely](#understand-how-to-use-share-and-contribute-safely)
+- [User setup](#get-up-and-running-fast-on-your-own-machine)
 
 ## 🤔 Who Is This For?
 _Why this matters — Helps the right users self‑select and get value faster._
@@ -106,8 +106,7 @@ _Why this matters — Maps features to the simple 3‑step flow you’ll actuall
 
      [![MCP](https://img.shields.io/badge/MCP-Plugins-0EA5E9?style=flat-square&logo=puzzle&logoColor=white)](https://mcp.so/)
 
-## Extend Codex CLI's Reach with MCP Servers
-_Why this matters — Add capabilities on demand via proven plugins (MCP)._ 
+## Add capabilities on demand via proven plugins (MCP)
 - MCP are "plugins" for AI tools — connect to services in a click.
 
 - 🔎 Browse MCP servers: https://mcp.so/ — pick one to add via Codex CLI.
@@ -119,8 +118,7 @@ _Why this matters — Add capabilities on demand via proven plugins (MCP)._
   - `"Will an MCP help us <your goal>?"`
   - `"Install the <X> MCP server"`
 
-## Intelligent Auto‑Adding of Relevant Features
-_Why this matters — You ask for outcomes; Codex installs what’s needed behind the scenes._
+## You ask for outcomes; Codex installs what’s needed behind the scenes
 - 🧠 Smart installs — When you ask for something new (e.g., “export to Excel”, “render a PDF”, “save as Parquet”), Codex CLI installs the right Python packages automatically using `uv`.
 
 - 🔒 Safe & local — Everything lives in the project’s virtual environment; no global `pip`. Dependencies are tracked in `pyproject.toml` + `uv.lock` for repeatability.
@@ -136,8 +134,7 @@ _Why this matters — You ask for outcomes; Codex installs what’s needed behin
 
 - You just ask; Codex brings the pieces together so you can focus on outcomes.
 
-## Actions at a Glance (Prompts)
-_Why this matters — Copy/paste starters to get moving fast._
+## Copy/paste starters to get moving fast
 - 🔧 `"Set up a demo and run the guided first-project workflow"`
 
 - 🗂️ `"Show my projects and resume demo (or create it)"`
@@ -154,8 +151,7 @@ _Why this matters — Copy/paste starters to get moving fast._
 
 ---
 
-## Showcase
-_Why this matters — See real outputs that build trust and momentum._
+## See real outputs that build trust and momentum
 ### Windows Terminal theme (CodexDarkGrey) + Nerd Font
 
   ![Windows Terminal dark grey theme](docs/images/windows-terminal-theme.svg)
@@ -187,14 +183,12 @@ _Why this matters — See real outputs that build trust and momentum._
 
   ![Experiment Notebook sample](docs/images/samples/experiment-notebook.svg)
 
-## Notes
-_Why this matters — Non‑coders can succeed; coders can go deeper._
+## Non‑coders can succeed; coders can go deeper
 No coding required — but you can peek under the hood anytime.
 
 Want the technical bits? See `AGENTS.md`.
 
-## Project Structure
-_Why this matters — Know where things live so you can navigate quickly._
+## Know where things live so you can navigate quickly
 - `apps/` — app‑specific logic (prefix dataset names to avoid collisions)
 
 - `data/` — ad‑hoc inputs and scratch during tasks
@@ -207,14 +201,12 @@ _Why this matters — Know where things live so you can navigate quickly._
 
 - `logs/` — structured logs for task runs
 
-## License & Contributing
-_Why this matters — Understand how to use, share, and contribute safely._
+## Understand how to use, share, and contribute safely
 - License: MIT — see `LICENSE`.
 
 - Contributing: Issues and PRs welcome. Keep diffs minimal, avoid secrets, and follow all instructions in `AGENTS.md`.
 
-## User Setup
-_Why this matters — Get up and running fast on your own machine._
+## Get up and running fast on your own machine
 
 - Windows (first‑time)
   - Open PowerShell as Administrator
