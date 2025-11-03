@@ -14,194 +14,161 @@
 
 <p align="center"><em>Made with ❤️ for friends by <strong>Sharper Flow LLC</strong></em></p>
 
+---
 
-## 💡 Skip The Browser: Use Codex CLI
-- If you have a ChatGPT Plus or Pro subscription, you already have access to Codex CLI — a terminal workspace that supercharges ChatGPT with real tooling.
-- Why it’s a big upgrade over the browser:
-  - 🧰 Executes commands and edits files locally
-  - 🔌 Uses MCP integrations (e.g., Firecrawl, Context7) for web/docs context
-  - 🧪 Adds quality gates (Ruff, Mypy) and reproducible workflows
-  - 🧾 Produces real artifacts (datasets, HTML/PDF/Excel) in tidy project folders
-  - 🔒 Keeps your code/data local by default
-  - 🌐 Crawls and scrapes websites/docs at scale; parse, extract, and save structured data
-  - 🧵 Automates multi‑step flows across git, Docker, SQL, Make, and shell tools
-  - 🗄️ Reads/writes databases and files; transforms large datasets; schedules recurring jobs
-  - 🔐 Works with private repos/SSH keys; searches, patches, and refactors codebases safely
-  - 🧠 Persists long context with projects, logs, datasets, and caches (reproducible runs)
-  - 🛡️ Enforces approvals/network controls; can run fully local/offline if you choose
-  - 🧩 Extends on demand with new CLIs, Python packages, MCP servers, and API clients
-  - 📈 Generates dashboards/reports/PDFs; exports CSV/Parquet/Excel to your project folders
-  - 🕸️ Orchestrates headless browsers for scraping and form automation (when configured)
-- Think of this as what any capable local AI agent can do — Codex CLI just makes it seamless for ChatGPT Plus/Pro users.
-- This repo is your quickstart: a batteries‑included workspace tailored for Codex CLI so you can go from “chat” to real, repeatable outputs in minutes.
-- Install Codex CLI via the official guide (see link below), open this repo in Codex, and run the setup to get moving fast.
+## 🥳 Skip The Browser: Use Codex CLI
 
-### ✨ For Everyone (No Coding Needed)
-- 🧭 Turn a vague idea into tidy folders, docs, and a finished report — automatically.
-- 🔎 Research a topic, pull key pages, and deliver a clean one‑page brief with sources.
-- 📥 Save whole web sections to PDF (or HTML) without copy‑paste or browser tabs.
-- 📊 Clean a messy spreadsheet and produce a polished summary you can share.
-- 📅 Generate a weekly update (PDF/Excel) from your files with one request.
-- 🗂️ Rename, organize, and version your files so nothing gets lost.
-- 🔒 Keep everything private on your computer — you choose what (if anything) goes online.
-- 🔁 Rerun your favorite tasks anytime — same steps, same results.
+### 💥 If you have ChatGPT Plus/Pro, Codex CLI turns chat into a local workstation that ships real outputs.
 
-### 🚀 Try These Prompts
-- “Create a project called trip‑planner. Research top 5 day hikes near Seattle, add sources, and export a PDF summary.”
-- “Summarize these PDFs in data/policies/ into a one‑page brief with key changes and a checklist.”
-- “Import data/expenses.csv, group by category and month, and export a Monthly Spend report as PDF and Excel.”
-- “Crawl https://example.com/blog (limit 5), extract post titles, authors, dates, and save a clean CSV to the project.”
+| Capability | Browser ChatGPT | Codex CLI with this workbench |
+|---|:--:|:--:|
+| Run local commands and edit files | ❌ | ✅ |
+| MCP integrations (web/docs/search, services) | ➖ limited | ✅ plug-and-play |
+| Reproducible runs with logs and git checkpoints | ❌ | ✅ |
+| Real artifacts (HTML/PDF/Excel/CSV/Parquet) in project folders | ❌ | ✅ |
+| Quality gates (Ruff, Mypy), env health checks | ❌ | ✅ |
+| Local-first privacy, offline option | ❌ | ✅ |
+| Orchestrate multi-step flows across git, Docker, SQL, Make, shell | ❌ | ✅ |
+| Data work at scale (Pandas, DuckDB) | ❌ | ✅ |
 
-
+---
 ## 🤔 Who Is This For?
-- 📊 Analysts, PMs, and ops who are comfortable with tools — not code
-- ⚡ Power users who want repeatable results without wiring everything manually
-- 🔨 Pros who want to work fast with the latest toolset, auto‑updated
 
-## 🥳 Supercharge Codex CLI With All the Tools You Need.
-  > Requires ChatGPT Plus/Pro access — details in `AGENTS.md`.
+- 📊 Analysts, PMs, ops who are comfortable with tools not code.
+- ⚡ Power users who want repeatable results without wiring everything manually.
+- 🔨 Pros who want to work fast with the latest toolset, auto-updated.
+
+## ⚡ Supercharge Codex CLI With All the Tools You Need.
+
+> Requires ChatGPT Plus/Pro — details in `AGENTS.md`.
 
 Level up from chat-only answers to a local, executable workbench that ships real outputs.
 
-👉 Ready to go? See: [Get Started Now](#get-started-now)
+---
 
-### 💥 Why It Beats ChatGPT
-- ✅ Repeatable projects — every run is versioned and reproducible.
-- 🗂️ Real artifacts — files, datasets, HTML/PDF/Excel saved in your project.
-- 🧪 Quality gates — Ruff, Mypy, and environment health checks baked in.
-- 🤖 Autonomy with guardrails — multi‑step workflows, verification, and git checkpoints.
-- 🔒 Local‑first privacy — your code/data/logs stay on your machine.
-- 🔌 Extensible — add MCP integrations and Python deps with one prompt.
+## 👉 Ready to go? Get Started Now 🚀
 
-### 🚫 What ChatGPT Can’t (We Do)
-- 🖥️ Execute commands and orchestrate builds/tests.
-- ✍️ Write, run, and refactor real code across files.
-- 📂 Read/write your project, env, and configs.
-- 🗄️ Query local data/DBs and manage a warehouse.
-- 🤖 Automate multi‑step, reliable workflows.
-- 🔐 Keep secrets local; only enabled MCPs touch network.
+> **Windows (first-time)**  
+> Download `windows-setup.ps1` → open PowerShell as Administrator → run:  
+> `./scripts/windows-setup.ps1 -ProvisionWSL -DefaultProfile Ubuntu`  
+> Reboot if prompted, open Ubuntu (WSL), and work under `~/`.
 
-### ⚡ Do More, Faster
-- 🚣 Project‑centric flow — tidy, repeatable workspaces per project.
-- 🧷 Automatic git checkpoints — easy rollbacks and recovery.
-- 🌐 Web + docs context — Firecrawl + Context7 on tap when configured.
-- 📝 Elegant reporting — HTML, PDF, and Excel exports.
-- 🪟 Windows‑friendly — great on WSL2.
+1. **Get the code**
+   - `git clone https://github.com/Sharper-Flow/super-codex-workbench.git`
+   - or fork then `git clone https://github.com/<your-username>/super-codex-workbench.git`
+   - `cd super-codex-workbench`
 
-### 🔌 Add Capabilities (MCP)
-- MCP are proven “plugins” that add web/docs/search and service integrations.
-- Comes with Firecrawl + Context7; browse more at https://mcp.so/
+2. **Install Codex CLI**
+   - Ensure ChatGPT Plus/Pro access
+   - Follow the **official Codex CLI install guide** for your OS
+   - Verify Codex launches and can open this repo
+
+3. **Launch Codex CLI and Run Setup**
+   - Open your terminal (or WSL2 Ubuntu on Windows)
+   - Run: `codex`
+   - In Codex, say: **“run the setup script”**
+
+---
+
+## 🔌 Add Capabilities (MCP)
+
+- MCP are “plugins” that add web/docs/search and service integrations.
+- Comes ready for Firecrawl + Context7; browse more at https://mcp.so/
 - Prompts you can use:
-  - `"Find an MCP for <your need>"`
-  - `"Install the <X> MCP server"`
+  - `Find an MCP for <your need>`
+  - `Install the <X> MCP server`
 
-### 🧠 Smart Installs (via uv)
-- As you ask for features (PDFs, Excel, Parquet, charts), the right deps are added locally.
-- Examples: `weasyprint`/`pdfkit` (PDF), `openpyxl` (Excel), `pyarrow` (Parquet), `plotly` (charts).
+## ⚡ Do More, Faster
+
+- 🚣 Project-centric flow with tidy, repeatable workspaces.
+- 🧷 Automatic git checkpoints for easy rollbacks.
+- 🌐 Web + docs context via Firecrawl + Context7 when configured.
+- 📝 Elegant reporting to HTML/PDF/Excel.
+- 🪟 Windows-friendly with WSL2.
 
 ---
 
 ## Use Case Samples
 
-- 📊 Sales insights app — Ingest weekly CSVs, run Python transforms, and generate an HTML+PDF dashboard with highlights.
-
+- 📊 **Sales insights app** — Ingest weekly CSVs, run Python transforms, and generate an HTML+PDF dashboard with highlights.  
   ![Sales Insights sample](docs/images/samples/sales-insights.svg)
 
-- 🧾 Finance reconciler — Combine bank exports with invoices, flag mismatches, and email a PDF summary automatically.
-
+- 🧾 **Finance reconciler** — Combine bank exports with invoices, flag mismatches, and email a PDF summary automatically.  
   ![Finance Reconciler sample](docs/images/samples/finance-reconciler.svg)
 
-- 🧠 Docs summarizer — Crawl product docs with MCP, extract key points, and publish a one‑pager brief.
-
+- 🧠 **Docs summarizer** — Crawl product docs with MCP, extract key points, and publish a one-pager brief.  
   ![Docs Summarizer sample](docs/images/samples/docs-summarizer.svg)
 
-- 🔍 Data quality bot — Validate new batches, raise issues with details, and export a fix‑list for teams.
-
+- 🔍 **Data quality bot** — Validate new batches, raise issues with details, and export a fix-list for teams.  
   ![Data Quality sample](docs/images/samples/data-quality-bot.svg)
 
-
-
-## Project Directory
-No coding required — but you can peek under the hood anytime.
-
-Want the technical bits? See [`AGENTS.md`](AGENTS.md).
-
-- `apps/` — app‑specific logic (prefix dataset names to avoid collisions)
-
-- `data/` — ad‑hoc inputs and scratch during tasks
-
-- `reports/` — user‑facing outputs (HTML/PDF/Excel) and templates
-
-- `warehouse/` — curated datasets managed by the Warehouse API
-
-- `scripts/` — helper scripts for setup, checks, and git checkpoints
-
-- `logs/` — structured logs for task runs
-
-## Get Started Now
-
-> First step for windows users only
-- Windows (first‑time)
-  - Download the `windows-setup.ps1` script from [**here**](scripts/windows-setup.ps1)
-  - Open PowerShell as Administrator
-  - Run: `./scripts/windows-setup.ps1 -ProvisionWSL -DefaultProfile Ubuntu`
-  - Reboot if prompted, open Ubuntu (WSL), and work inside your Linux home (e.g., `~/`)
-
-- Get the code
-  - Clone: `git clone https://github.com/Sharper-Flow/super-codex-workbench.git`
-  - Or fork on GitHub, then: `git clone https://github.com/<your‑username>/super-codex-workbench.git`
-  - Enter the folder: `cd super-codex-workbench`
-
-- Install Codex CLI
-  - Ensure ChatGPT Plus/Pro access
-  - Follow the [official Codex CLI install guide](https://platform.openai.com/docs/guides/tools/codex-cli) for your OS
-  - Verify it launches and can open this repo workspace
-
-- Launch Codex CLI and Run Setup
-  - Open your terminal (or WSL2 Ubuntu on Windows)
-  - Run: `codex`
-  - Once Codex CLI is running, tell it:
-    > "run the setup script"
+---
 
 ## Real-Life Recipes 🎯
 
-Concrete, runnable flows you can copy and adapt. Use these natural language prompts in Codex CLI.
+Concrete, runnable flows you can copy. Use these natural language prompts in Codex CLI.
 
 ### 🏠 Smart Home: Nightly Energy Snapshot
-- What you get: a daily usage summary (CSV + HTML + optional PDF) to spot energy spikes.
-- Try with prompts:
-  - "Create a project named home-energy and set it current."
-  - "Register a dataset energy_readings as CSV partitioned by date and source."
-  - "Write a sample batch to energy_readings for date=2025-01-01, source=smartplug."
-  - "Summarize total kWh by device from ds_energy_readings and save the CSV as energy_summary in the project."
-  - "Render an HTML report titled Home Energy Snapshot, then export it to PDF."
-- Next step: swap the sample batch for your real smart‑plug/API feed.
+- Output: daily usage summary (CSV + HTML + optional PDF).
+- Prompts:
+  - “Create a project named `home-energy` and set it current.”
+  - “Register a dataset `energy_readings` as CSV partitioned by `date` and `source`.”
+  - “Write a sample batch to `energy_readings` for `date=2025-01-01`, `source=smartplug`.”
+  - “Summarize total kWh by device from `ds_energy_readings` and save the CSV as `energy_summary` in the project.”
+  - “Render an HTML report titled `Home Energy Snapshot`, then export it to PDF.”
+- Next: swap the sample batch for your real smart-plug/API feed.
 
 ### 👩‍⚕️ Appointments: Weekly Summary
-- What you get: a weekly roll‑up of sessions per client (CSV + HTML + optional PDF) for quick billing.
-- Try with prompts:
-  - "Create a project called appointments and select it."
-  - "Register a dataset client_sessions as CSV partitioned by week."
-  - "Write a sample batch to client_sessions for week=2025-W01."
-  - "Summarize sessions and hours by client from ds_client_sessions and save as weekly_summary CSV."
-  - "Render an HTML report titled Weekly Appointments Summary and also export a PDF."
-- Next step: add a custom template under the project’s templates folder to include your logo/fields.
+- Output: weekly roll-up per client (CSV + HTML + optional PDF).
+- Prompts:
+  - “Create a project called `appointments` and select it.”
+  - “Register a dataset `client_sessions` as CSV partitioned by `week`.”
+  - “Write a sample batch to `client_sessions` for `week=2025-W01`.”
+  - “Summarize sessions and hours by client from `ds_client_sessions` and save as `weekly_summary` CSV.”
+  - “Render an HTML report titled `Weekly Appointments Summary` and also export a PDF.”
+- Next: add a custom template under the project’s `templates` folder.
 
 ### 🔁 Vendor Policy Update Brief (MCP)
-- What you get: a concise brief of recent policy pages (HTML + optional PDF) so your team stays informed.
-- Requires: Firecrawl MCP configured (`.env` with `FIRECRAWL_API_KEY`) and `mcp.config.json` present.
-- Try with prompts:
-  - "Create a project named policy-briefs and select it."
-  - "Check MCP status and confirm Firecrawl is configured."
-  - "Crawl https://example.com/policy (limit 5) and generate an HTML report under the project."
-  - "If a PDF backend is available, also export the report to PDF."
-- Tip: "Blend Context7 results using the query: your keywords."
+- Output: concise brief of recent policy pages (HTML + optional PDF).
+- Requires: Firecrawl MCP configured (`.env` with `FIRECRAWL_API_KEY`) and `mcp.config.json`.
+- Prompts:
+  - “Create a project named `policy-briefs` and select it.”
+  - “Check MCP status and confirm Firecrawl is configured.”
+  - “Crawl `https://example.com/policy` (limit 5) and generate an HTML report under the project.”
+  - “If a PDF backend is available, also export the report to PDF.”
+- Tip: “Blend Context7 results using the query: your keywords.”
+
+---
+
+## Project Directory
+
+No coding required — peek under the hood anytime. Technical details in [`AGENTS.md`](AGENTS.md).
+
+- `apps/` — app-specific logic (prefix dataset names to avoid collisions)
+- `data/` — ad-hoc inputs and scratch during tasks
+- `reports/` — user-facing outputs (HTML/PDF/Excel) and templates
+- `warehouse/` — curated datasets managed by the Warehouse API
+- `scripts/` — helper scripts for setup, checks, and git checkpoints
+- `logs/` — structured logs for task runs
+
+## 🧠 Smart Installs (via uv)
+
+As you request features, needed deps are added locally.
+
+- PDFs: `weasyprint` or `pdfkit`
+- Excel: `openpyxl`
+- Parquet: `pyarrow`
+- Charts: `plotly`
+
+---
 
 ## Contributing
+
 - License: MIT — see `LICENSE`.
-- Contributing: Issues and PRs welcome. Keep diffs minimal, avoid secrets, and follow all instructions in [`AGENTS.md`](AGENTS.md).
+- Contributing: Issues and PRs welcome. Keep diffs minimal, avoid secrets, and follow `AGENTS.md`.
 
 ### Bonus Fun
-### Windows Terminal Theme (CodexDarkGrey) + Nerd Font Included in Windows Setup Script
 
-  ![Windows Terminal dark grey theme](docs/images/windows-terminal-theme.svg)
+**Windows Terminal Theme (CodexDarkGrey) + Nerd Font** is included in the Windows setup script.
+
+![Windows Terminal dark grey theme](docs/images/windows-terminal-theme.svg)
