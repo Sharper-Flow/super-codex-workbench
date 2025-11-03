@@ -68,36 +68,6 @@ Level up from chat-only answers to a local, executable workbench that ships real
 
 ---
 
-
-- MCP are "plugins" for AI tools — connect to services in a click.
-
-- 🔎 Browse MCP servers: https://mcp.so/ — pick one to add via Codex CLI.
-
-- Comes with: [Firecrawl](https://github.com/firecrawl/firecrawl) and [Context7](https://github.com/upstash/context7)
-
-- Prompts:
-  - `"Find an MCP for <your need>"`
-  - `"Will an MCP help us <your goal>?"`
-  - `"Install the <X> MCP server"`
-
-## Codex installs what’s needed behind the scenes
-- 🧠 Smart installs — When you ask for something new (e.g., “export to Excel”, “render a PDF”, “save as Parquet”), Codex CLI installs the right Python packages automatically using `uv`.
-
-- 🔒 Safe & local — Everything lives in the project’s virtual environment; no global `pip`. Dependencies are tracked in `pyproject.toml` + `uv.lock` for repeatability.
-
-- 🧹 Clean by default — After adding deps, Codex runs project checks to keep things tidy.
-
-- Examples:
-  - “Render a PDF report” → adds `weasyprint` (or `pdfkit`) and configures the export.
-  - “Export results to Excel” → adds `openpyxl` (or `xlsxwriter`).
-  - “Save as data tables for querying” → adds `pyarrow` for fast columnar files.
-  - “Plot a quick chart” → adds `plotly` (or `matplotlib`) when needed.
-  - “Fetch and parse a page” → adds `httpx` + `beautifulsoup4` for lightweight scraping.
-
-- You just ask; Codex brings the pieces together so you can focus on outcomes.
-
----
-
 ## Use Case Samples
 
 - 📊 Sales insights app — Ingest weekly CSVs, run Python transforms, and generate an HTML+PDF dashboard with highlights.
