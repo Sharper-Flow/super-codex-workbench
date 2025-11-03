@@ -71,6 +71,7 @@
 ## Extend Codex CLI's Reach with MCP Servers
 - MCP are "plugins" for AI tools — connect to services in a click.
 - 🔎 Browse MCP servers: https://mcp.so/ — pick one to add via Codex CLI.
+- Comes with: [Firecrawl](https://github.com/firecrawl/firecrawl) and [Context7](https://github.com/upstash/context7)
 - Prompts:
   - `"Find an MCP for <your need>"`
   - `"Will an MCP help us <your goal>?"`
@@ -84,7 +85,7 @@
 - Examples:
   - “Render a PDF report” → adds `weasyprint` (or `pdfkit`) and configures the export.
   - “Export results to Excel” → adds `openpyxl` (or `xlsxwriter`).
-  - “Save tables as Parquet” → adds `pyarrow` for fast columnar files.
+  - “Save as data tables for querying” → adds `pyarrow` for fast columnar files.
   - “Plot a quick chart” → adds `plotly` (or `matplotlib`) when needed.
   - “Fetch and parse a page” → adds `httpx` + `beautifulsoup4` for lightweight scraping.
 
