@@ -106,40 +106,28 @@
 ### Use Case Samples (What You Can Build)
 
 - 📊 Sales insights app — Ingest weekly CSVs, run Python transforms, and generate an HTML+PDF dashboard with highlights.
-  - Samples: [HTML](docs/samples/sales-insights.html)
-  - Preview:
-    
-    ![Sales Insights sample](docs/images/samples/sales-insights.svg)
+  
+  ![Sales Insights sample](docs/images/samples/sales-insights.svg)
 
 - 🧾 Finance reconciler — Combine bank exports with invoices, flag mismatches, and email a PDF summary automatically.
-  - Samples: [HTML](docs/samples/finance-reconciler.html)
-  - Preview:
-    
-    ![Finance Reconciler sample](docs/images/samples/finance-reconciler.svg)
+  
+  ![Finance Reconciler sample](docs/images/samples/finance-reconciler.svg)
 
 - 🧠 Docs summarizer — Crawl product docs with MCP, extract key points, and publish a one‑pager brief.
-  - Samples: [HTML](docs/samples/docs-summarizer.html)
-  - Preview:
-    
-    ![Docs Summarizer sample](docs/images/samples/docs-summarizer.svg)
+  
+  ![Docs Summarizer sample](docs/images/samples/docs-summarizer.svg)
 
 - 📈 KPI tracker — Append telemetry to the warehouse daily, run DuckDB SQL, and render a monthly report.
-  - Samples: [HTML](docs/samples/kpi-tracker.html)
-  - Preview:
-    
-    ![KPI Tracker sample](docs/images/samples/kpi-tracker.svg)
+  
+  ![KPI Tracker sample](docs/images/samples/kpi-tracker.svg)
 
 - 🔍 Data quality bot — Validate new batches, raise issues with details, and export a fix‑list for teams.
-  - Samples: [HTML](docs/samples/data-quality-bot.html)
-  - Preview:
-    
-    ![Data Quality sample](docs/images/samples/data-quality-bot.svg)
+  
+  ![Data Quality sample](docs/images/samples/data-quality-bot.svg)
 
 - 🧪 Experiment notebook — Join datasets, run simple Python analyses, and export a shareable report for stakeholders.
-  - Samples: [HTML](docs/samples/experiment-notebook.html)
-  - Preview:
-    
-    ![Experiment Notebook sample](docs/images/samples/experiment-notebook.svg)
+  
+  ![Experiment Notebook sample](docs/images/samples/experiment-notebook.svg)
 
 ## Notes
 No coding required — but you can peek under the hood anytime.
