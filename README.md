@@ -35,6 +35,8 @@ ChatGPT Can't:
 8. **💡 Add Custom Features** — Define new tools and capabilities for the agent.
 9. **🔒 Ensure Privacy** — Keep sensitive data local (no cloud required).
 
+<p align="center"><strong>🚀 <a href="#get-started-now">Get Started</a></strong></p>
+
 ## 🥳 Supercharge Codex CLI With All the Tools You Need.
   > You'll need an existing ChatGPT Plus or Pro Subscription - Learn more: [`AGENTS.md`](AGENTS.md).
 
@@ -138,14 +140,11 @@ ChatGPT Can't:
 
   ![Data Quality sample](docs/images/samples/data-quality-bot.svg)
 
-
 ## Project Directory
-## Non‑Coders Can Succeed; Coders Can Go Deeper
 No coding required — but you can peek under the hood anytime.
 
 Want the technical bits? See [`AGENTS.md`](AGENTS.md).
 
-## Know Where Things Live So You Can Navigate Quickly
 - `apps/` — app‑specific logic (prefix dataset names to avoid collisions)
 
 - `data/` — ad‑hoc inputs and scratch during tasks
