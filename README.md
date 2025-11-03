@@ -37,6 +37,33 @@ ChatGPT Can't:
 
 ### 🚀 [Get Started - Click Here For Instructions](#get-started-now)
 
+## 💥 Why Better Than ChatGPT
+- ✅ Repeatable projects, not one-off chats — every run is versioned and reproducible.
+- 🗂️ Real outputs, not screenshots — files, datasets, HTML/PDF reports saved in your project.
+- 🧪 Built-in quality gates — lint, type checks, and environment health run automatically.
+- 🤖 Autonomy with guardrails — multi-step workflows that execute, verify, and checkpoint.
+- 🔒 Local-first privacy — your code, data, and logs stay on your machine.
+- 🔌 Extensible on demand — add MCP integrations and Python deps with a single prompt.
+
+### 🆚 Before / After
+- ChatGPT (before): copy/paste code snippets, manual setup, missing files, ephemeral chats.
+- Codex CLI (after): writes files, runs commands, renders reports, saves outputs, adds checkpoints.
+
+### ⏱️ 60‑Second Demo
+- Watch: docs/images/demo-60s.gif (add your short screencast here for maximum impact).
+- Flow: prompt → create project → fetch data → render HTML → export PDF → checkpoint.
+
+### ⚡ Quickstart (TL;DR)
+- Setup: `bash ./scripts/setup.sh -y -p demo`
+- Verify: `uv run python main.py -v diagnose`
+- First project: `uv run python main.py workflow first-project --name demo --with-mcp`
+
+### ❓ Common Objections
+- "Isn’t this just ChatGPT with extra steps?" → No: it executes locally, writes files, and ships outputs.
+- "Setup looks heavy." → One script; everything isolated in `.venv` via `uv` and auto‑configured.
+- "Will I lose my chats?" → No: use your same prompts; Codex turns them into repeatable runs and artifacts.
+- "What about privacy?" → Local-first. Only MCPs you enable are networked; secrets live in `.env`.
+
 ## 🥳 Supercharge Codex CLI With All the Tools You Need.
   > You'll need an existing ChatGPT Plus or Pro Subscription - Learn more: [`AGENTS.md`](AGENTS.md).
 
@@ -140,6 +167,8 @@ ChatGPT Can't:
 
   ![Data Quality sample](docs/images/samples/data-quality-bot.svg)
 
+
+
 ## Project Directory
 No coding required — but you can peek under the hood anytime.
 
@@ -181,6 +210,47 @@ Want the technical bits? See [`AGENTS.md`](AGENTS.md).
   - Run: `codex`
   - Once Codex CLI is running, tell it:
     > "run the setup script"
+
+## Real-Life Recipes 🎯
+
+Concrete, runnable flows you can copy and adapt. All commands run inside the local virtualenv via `uv run` and respect the current project context.
+
+### 🏠 Smart Home: Nightly Energy Snapshot
+- What you get: a daily usage summary (CSV + HTML + optional PDF) to spot energy spikes.
+- How to try it:
+  - Create a project: `uv run python main.py projects create --name home-energy`
+  - Register a dataset: `uv run python main.py warehouse register --name energy_readings --format csv --partitioning date,source`
+  - Land a sample batch (stand‑in for your smart‑plug/API feed):
+    - `uv run python main.py warehouse write-sample --name energy_readings --partition "date=2025-01-01,source=smartplug"`
+  - Summarize usage (example query):
+    - `uv run python main.py warehouse sql --query "select event as device, sum(value) as kwh from ds_energy_readings group by device order by device" --output projects/home-energy/artifacts/energy_summary.csv`
+  - Render HTML: `uv run python main.py reports render-html --title "Home Energy Snapshot" --output projects/home-energy/reports/html/energy.html`
+  - Export PDF: `uv run python main.py reports export-pdf --html projects/home-energy/reports/html/energy.html --output projects/home-energy/reports/pdf/energy.pdf`
+- Next step: replace the sample write with your real fetch (create a DataFrame and use the Warehouse API to write it).
+
+### 👩‍⚕️ Professional Appointments App: Weekly Summary
+- What you get: a weekly roll‑up of sessions per client (CSV + HTML + optional PDF) for quick billing.
+- How to try it:
+  - Create a project: `uv run python main.py projects create --name appointments`
+  - Register a dataset: `uv run python main.py warehouse register --name client_sessions --format csv --partitioning week`
+  - Land a sample batch: `uv run python main.py warehouse write-sample --name client_sessions --partition "week=2025-W01"`
+  - Summarize the week:
+    - `uv run python main.py warehouse sql --query "select event as client, count(*) as sessions, sum(value) as hours from ds_client_sessions group by client order by client" --output projects/appointments/artifacts/weekly_summary.csv`
+  - Report HTML → PDF:
+    - `uv run python main.py reports render-html --title "Weekly Appointments Summary" --output projects/appointments/reports/html/weekly.html`
+    - `uv run python main.py reports export-pdf --html projects/appointments/reports/html/weekly.html --output projects/appointments/reports/pdf/weekly.pdf`
+- Next step: add a custom template under `projects/appointments/templates/` to include your logo/fields.
+
+### 🔁 Vendor Policy Update Brief (MCP)
+- What you get: a concise brief of recent policy pages (HTML + optional PDF) so your team stays informed.
+- Requires: Firecrawl MCP configured (`.env` with `FIRECRAWL_API_KEY`) and `mcp.config.json` present.
+- How to try it:
+  - Create a project: `uv run python main.py projects create --name policy-briefs`
+  - Verify MCP: `uv run python main.py mcp info`
+  - Crawl and generate report:
+    - `uv run python main.py workflow mcp-web --url https://example.com/policy --limit 5`
+  - Output: HTML at `projects/policy-briefs/reports/html/mcp_report.html` and a PDF if a backend is installed.
+- Tip: add `--c7-query "your keywords"` to blend Context7 search results into the same report.
 
 ## Contributing
 - License: MIT — see `LICENSE`.

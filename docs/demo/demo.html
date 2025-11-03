@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Super Codex Workbench — 60s Demo</title>
+    <style>
+      :root {
+        --bg: #0f1116;
+        --panel: #171923;
+        --text: #e6edf3;
+        --muted: #94a3b8;
+        --green: #22c55e;
+        --blue: #60a5fa;
+        --yellow: #facc15;
+        --orange: #fb923c;
+        --pink: #f472b6;
+      }
+      html, body { height: 100%; margin: 0; background: var(--bg); color: var(--text); font: 14px/1.5 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+      .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 16px; padding: 18px; height: 100%; box-sizing: border-box; }
+      .panel { background: var(--panel); border-radius: 10px; padding: 14px; box-shadow: 0 0 0 1px rgba(255,255,255,0.04) inset; }
+      .title { margin: 0 0 8px; color: var(--muted); font-size: 13px; letter-spacing: .3px; text-transform: uppercase; }
+      .terminal { position: relative; height: calc(100% - 24px); background: #0b0d12; border-radius: 8px; padding: 12px; overflow: hidden; }
+      .prompt { color: #7dd3fc; }
+      .cmd { color: #e6edf3; }
+      .ok { color: var(--green); }
+      .step { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border-radius: 8px; margin-bottom: 6px; color: var(--muted); background: rgba(255,255,255,0.02); }
+      .step .badge { width: 8px; height: 8px; border-radius: 50%; background: #334155; }
+      .step.active { color: var(--text); background: rgba(96,165,250,0.12); }
+      .step.active .badge { background: var(--blue); box-shadow: 0 0 0 3px rgba(96,165,250,0.2); }
+      .log { white-space: pre-wrap; height: 100%; overflow: auto; }
+      .note { color: var(--muted); margin-top: 8px; font-size: 12px; }
+      .kpi { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+      .kpi .box { background: rgba(255,255,255,0.02); padding: 10px; border-radius: 8px; text-align: center; }
+      .kpi .val { font-size: 18px; color: var(--yellow); }
+      .footer { color: var(--muted); text-align: center; font-size: 12px; padding-top: 8px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="panel">
+        <h3 class="title">Run (Simulated)</h3>
+        <div class="terminal" id="term">
+          <div class="log" id="log"></div>
+          <div class="note">This is a scripted preview of a typical flow.</div>
+        </div>
+      </section>
+      <section class="panel">
+        <h3 class="title">Flow</h3>
+        <div id="steps">
+          <div class="step" data-id="1"><span class="badge"></span>Create project</div>
+          <div class="step" data-id="2"><span class="badge"></span>Fetch web/data</div>
+          <div class="step" data-id="3"><span class="badge"></span>Query + transform</div>
+          <div class="step" data-id="4"><span class="badge"></span>Render HTML report</div>
+          <div class="step" data-id="5"><span class="badge"></span>Export PDF</div>
+          <div class="step" data-id="6"><span class="badge"></span>Git checkpoint</div>
+        </div>
+        <div class="kpi" style="margin-top:10px">
+          <div class="box"><div>Time to first PDF</div><div class="val" id="kpi-time">—</div></div>
+          <div class="box"><div>Artifacts saved</div><div class="val" id="kpi-artifacts">—</div></div>
+          <div class="box"><div>Re-run speed</div><div class="val" id="kpi-rerun">—</div></div>
+        </div>
+        <div class="footer">Super Codex Workbench • Local‑first • Reproducible</div>
+      </section>
+    </div>
+
+    <script>
+      const logEl = document.getElementById('log');
+      const steps = Array.from(document.querySelectorAll('.step'));
+      const kpiTime = document.getElementById('kpi-time');
+      const kpiArtifacts = document.getElementById('kpi-artifacts');
+      const kpiRerun = document.getElementById('kpi-rerun');
+
+      const lines = [
+        ['\n$ ', 'codex'],
+        ['\n', '▶ run: setup script'],
+        ['\n', '✓ env ready (uv, venv, deps)'],
+        ['\n\n$ ', 'uv run python main.py projects create --name demo'],
+        ['\n', '✓ project selected: demo'],
+        ['\n\n$ ', 'uv run python main.py workflow mcp-web --url https://example.com --limit 5'],
+        ['\n', '… crawling pages (Firecrawl)…'],
+        ['\n', '✓ content saved to warehouse'],
+        ['\n\n$ ', 'uv run python main.py warehouse sql --query "select 1 as x"'],
+        ['\n', '✓ query OK (1 row)'],
+        ['\n\n$ ', 'uv run python main.py reports render-html --title "Demo" --output projects/demo/reports/html/demo.html'],
+        ['\n', '✓ HTML written'],
+        ['\n\n$ ', 'uv run python main.py reports export-pdf --html projects/demo/reports/html/demo.html --output projects/demo/reports/pdf/demo.pdf'],
+        ['\n', '✓ PDF saved'],
+        ['\n\n$ ', './scripts/git-save.sh "chore: demo run"'],
+        ['\n', '✓ checkpoint created'],
+      ];
+
+      function typeChunk(text, delay=16) {
+        return new Promise((resolve) => {
+          let i = 0;
+          const id = setInterval(() => {
+            logEl.textContent += text[i++];
+            logEl.scrollTop = logEl.scrollHeight;
+            if (i >= text.length) { clearInterval(id); resolve(); }
+          }, delay);
+        });
+      }
+
+      async function run() {
+        let step = 0;
+        const activate = (n) => {
+          steps.forEach(s => s.classList.toggle('active', s.dataset.id == String(n)));
+        };
+
+        // timings to fit ~60s
+        const stepDurations = [6, 12, 8, 10, 10, 6];
+        let total = 0;
+        for (const d of stepDurations) total += d;
+
+        // KPIs revealed near the end
+        setTimeout(() => { kpiTime.textContent = '52s'; }, 44000);
+        setTimeout(() => { kpiArtifacts.textContent = 'HTML + PDF'; }, 46000);
+        setTimeout(() => { kpiRerun.textContent = '11s'; }, 48000);
+
+        let cursor = 0;
+        for (let si = 0; si < stepDurations.length; si++) {
+          activate(si + 1);
+          const chunk = lines.slice(cursor, cursor + 3); // approx. 3 lines per step
+          for (const [prefix, content] of chunk) {
+            await typeChunk(prefix, 6);
+            await typeChunk(content, 12);
+          }
+          cursor += 3;
+          await new Promise(r => setTimeout(r, stepDurations[si]*500));
+        }
+      }
+
+      run();
+    </script>
+  </body>
+  </html>
+
