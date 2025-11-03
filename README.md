@@ -68,13 +68,27 @@
   - 👨‍🚀 — Add new integrations in minutes
   - What & How — [![MCP](https://img.shields.io/badge/MCP-Plugins-0EA5E9?style=flat-square&logo=puzzle&logoColor=white)](https://mcp.so/)
 
-## Extend Codex CLI's Capability with MCP Servers
+## Extend Codex CLI's Reach with MCP Servers
 - MCP are "plugins" for AI tools — connect to services in a click.
 - 🔎 Browse MCP servers: https://mcp.so/ — pick one to add via Codex CLI.
 - Prompts:
   - `"Find an MCP for <your need>"`
   - `"Will an MCP help us <your goal>?"`
   - `"Install the <X> MCP server"`
+
+## Intelligent Auto‑Adding of Relevant Features
+- 🧠 Smart installs — When you ask for something new (e.g., “export to Excel”, “render a PDF”, “save as Parquet”), Codex CLI installs the right Python packages automatically using `uv`.
+- 🔒 Safe & local — Everything lives in the project’s virtual environment; no global `pip`. Dependencies are tracked in `pyproject.toml` + `uv.lock` for repeatability.
+- 🧹 Clean by default — After adding deps, Codex runs project checks to keep things tidy.
+
+- Examples:
+  - “Render a PDF report” → adds `weasyprint` (or `pdfkit`) and configures the export.
+  - “Export results to Excel” → adds `openpyxl` (or `xlsxwriter`).
+  - “Save tables as Parquet” → adds `pyarrow` for fast columnar files.
+  - “Plot a quick chart” → adds `plotly` (or `matplotlib`) when needed.
+  - “Fetch and parse a page” → adds `httpx` + `beautifulsoup4` for lightweight scraping.
+
+- You just ask; Codex brings the pieces together so you can focus on outcomes.
 
 ## Actions at a Glance (Prompts)
 - 🔧 `"Set up a demo and run the guided first-project workflow"`
