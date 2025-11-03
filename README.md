@@ -21,18 +21,17 @@
 - 🔨 Pros who want to work fast with the latest toolset, auto-updated
 
 ## 😎 Ready to Upgrade from ChatGPT?
-Level up from chat-only answers to a working, local workbench that produces and executes real code.
+Level up from chat-only answers to a working, local workbench that produces and executes real code, reports,.
 
-1.  **🖥️ Execute Commands**: Run any shell command to build, test, and deploy.
-
-2.  **✍️ Write & Build Code**: Create new files, write code, and run build scripts.
-3.  **📂 Access Files**: Read, write, and modify local project files.
-4.  **🌱 Understand Your Environment**: Access your local environment variables and running processes.
-5.  **🌐 Access External Resources**: Scrape websites, download files, and interact with APIs.
-6.  **🗄️ Query Local Data**: Interact with local databases, warehouses, and data files.
-7.  **🤖 Automate Workflows**: Run complex, multi-step tasks autonomously.
-8.  **💡 Add Custom Features**: Define new tools and capabilities for the agent to use.
-9.  **🔒 Ensure Privacy**: Work with sensitive data locally without sending it to the cloud.
+1. **🖥️ Execute Commands** — Run shell commands to build, test, and deploy.
+2. **✍️ Write & Build Code** — Create new files, write code, and run build scripts.
+3. **📂 Access Files** — Read, write, and modify local project files.
+4. **🌱 Understand Your Environment** — Access local env vars and running processes.
+5. **🌐 Access External Resources** — Scrape websites, download files, interact with APIs.
+6. **🗄️ Query Local Data** — Work with local databases, warehouses, and data files.
+7. **🤖 Automate Workflows** — Run complex, multi-step tasks autonomously.
+8. **💡 Add Custom Features** — Define new tools and capabilities for the agent.
+9. **🔒 Ensure Privacy** — Keep sensitive data local (no cloud required).
 
 ## 🥳 Supercharge Codex CLI With All the Tools You Need.
   > You'll need an existing ChatGPT Plus or Pro Subscription - Learn more: [Codex CLI](AGENTS.md).
@@ -91,8 +90,11 @@ Level up from chat-only answers to a working, local workbench that produces and 
 
 ## Extend Codex CLI's Reach with MCP Servers
 - MCP are "plugins" for AI tools — connect to services in a click.
+
 - 🔎 Browse MCP servers: https://mcp.so/ — pick one to add via Codex CLI.
+
 - Comes with: [Firecrawl](https://github.com/firecrawl/firecrawl) and [Context7](https://github.com/upstash/context7)
+
 - Prompts:
   - `"Find an MCP for <your need>"`
   - `"Will an MCP help us <your goal>?"`
@@ -100,7 +102,9 @@ Level up from chat-only answers to a working, local workbench that produces and 
 
 ## Intelligent Auto‑Adding of Relevant Features
 - 🧠 Smart installs — When you ask for something new (e.g., “export to Excel”, “render a PDF”, “save as Parquet”), Codex CLI installs the right Python packages automatically using `uv`.
+
 - 🔒 Safe & local — Everything lives in the project’s virtual environment; no global `pip`. Dependencies are tracked in `pyproject.toml` + `uv.lock` for repeatability.
+
 - 🧹 Clean by default — After adding deps, Codex runs project checks to keep things tidy.
 
 - Examples:
@@ -114,17 +118,23 @@ Level up from chat-only answers to a working, local workbench that produces and 
 
 ## Actions at a Glance (Prompts)
 - 🔧 `"Set up a demo and run the guided first-project workflow"`
+
 - 🗂️ `"Show my projects and resume demo (or create it)"`
+
 - 🗃️ `"Show recent outputs for the demo project"`
+
 - 🧠 `"Preview the events dataset with a simple SQL"`
+
 - 🌐 `"Crawl a website, summarize top pages, and generate a report"`
+
 - 📝 `"Render a sample HTML report and export to PDF"`
+
 - 📦 `"Run checks and fix formatting/typing issues"`
 
 ---
 
 ## Showcase
-  ### Windows Terminal theme (CodexDarkGrey) + Nerd Font
+### Windows Terminal theme (CodexDarkGrey) + Nerd Font
 
   ![Windows Terminal dark grey theme](docs/images/windows-terminal-theme.svg)
 
@@ -157,16 +167,23 @@ Level up from chat-only answers to a working, local workbench that produces and 
 
 ## Notes
 No coding required — but you can peek under the hood anytime.
+
 Want the technical bits? See `AGENTS.md`.
 
 ## Project Structure
 - `apps/` — app‑specific logic (prefix dataset names to avoid collisions)
+
 - `data/` — ad‑hoc inputs and scratch during tasks
+
 - `reports/` — user‑facing outputs (HTML/PDF/Excel) and templates
+
 - `warehouse/` — curated datasets managed by the Warehouse API
+
 - `scripts/` — helper scripts for setup, checks, and git checkpoints
+
 - `logs/` — structured logs for task runs
 
 ## License & Contributing
 - License: MIT — see `LICENSE`.
-- Contributing: Issues and PRs welcome. Keep diffs minimal, avoid secrets, and follow the style in `AGENTS.md`.
+
+- Contributing: Issues and PRs welcome. Keep diffs minimal, avoid secrets, and follow all instructions in `AGENTS.md`.
