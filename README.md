@@ -15,6 +15,19 @@
 <p align="center"><em>Made with ❤️ for friends by <strong>Sharper Flow LLC</strong></em></p>
 
 
+## Table of Contents
+- [Who Is This For?](#-who-is-this-for)
+- [Ready to Upgrade from ChatGPT?](#-ready-to-upgrade-from-chatgpt)
+- [Supercharge Codex CLI](#-supercharge-codex-cli-with-all-the-tools-you-need)
+- [MCP Servers](#extend-codex-clis-reach-with-mcp-servers)
+- [Auto‑Adding Features](#intelligent-autoadding-of-relevant-features)
+- [Actions (Prompts)](#actions-at-a-glance-prompts)
+- [Showcase](#showcase)
+- [Notes](#notes)
+- [Project Structure](#project-structure)
+- [License & Contributing](#license--contributing)
+- [User Setup](#user-setup)
+
 ## 🤔 Who Is This For?
 _Why this matters — Helps the right users self‑select and get value faster._
 - 📊 Analysts, PMs, and ops who are comfortable with tools — not code
@@ -199,3 +212,42 @@ _Why this matters — Understand how to use, share, and contribute safely._
 - License: MIT — see `LICENSE`.
 
 - Contributing: Issues and PRs welcome. Keep diffs minimal, avoid secrets, and follow all instructions in `AGENTS.md`.
+
+## User Setup
+_Why this matters — Get up and running fast on your own machine._
+
+- Windows (first‑time)
+  - Open PowerShell as Administrator
+  - Run: `./scripts/windows-setup.ps1 -ProvisionWSL -DefaultProfile Ubuntu`
+  - Reboot if prompted, open Ubuntu (WSL), and work inside your Linux home (e.g., `~/`)
+
+- Get the code
+  - Clone: `git clone https://github.com/<you>/<repo>.git`
+  - Or fork on GitHub, then: `git clone https://github.com/<your‑org>/<your‑fork>.git`
+  - Enter the folder: `cd <repo>`
+
+- Install Codex CLI
+  - Ensure ChatGPT Plus/Pro access (for the agent backend)
+  - Follow the official Codex CLI install guide for your OS
+  - Verify it launches and can open this repo workspace
+
+- Create local environment
+  - Copy env: `cp .env.example .env` (add API keys later if using MCP)
+  - Run setup: `bash ./scripts/setup.sh -y -p demo`
+  - Verify: `uv run python main.py -v diagnose`
+
+- Start with a guided workflow
+  - Resume or create a project: `uv run python main.py projects resume --name demo`
+  - Try the first‑project flow: `uv run python main.py workflow first-project --name demo`
+  - Render a sample report: `uv run python main.py reports render-html --template sample.html.j2`
+
+- Optional: enable MCP
+  - Add keys to `.env` (keep values private):
+    - `FIRECRAWL_API_KEY` (required for Firecrawl MCP)
+    - `CONTEXT7_API_KEY` (optional)
+  - Check status: `uv run python main.py mcp info`
+  - Web workflow: `uv run python main.py workflow mcp-web --url https://example.com --limit 5`
+
+- Save your progress
+  - Create a checkpoint: `./scripts/git-save.sh "chore: checkpoint"`
+  - Push if desired: `./scripts/git-push.sh`
