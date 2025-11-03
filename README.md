@@ -21,10 +21,10 @@
 - 🔨 Pros who want to work fast with the latest toolset, auto-updated
 
 ## 😎 Ready to Upgrade from ChatGPT?
-Level up from chat-only answers to a working, local workbench that executes real tasks and produces artifacts.
+Level up from chat-only answers to a working, local workbench that executes real tasks and produces real code.
 
 - ⚡ Blazing web scraping/crawling — via Firecrawl MCP (fast, reliable)
-- 📚 Live docs + code context — via Context7 MCP (up-to-date libraries)
+- 📚 Live docs + code context via Context7 MCP (up-to-date libraries)
 - 🗄️ Fast local data store — DuckDB SQL on auto-registered views
 - 📝 Real reports — HTML → PDF/Excel with templates (Jinja2, WeasyPrint, OpenPyXL)
 - 🔌 Add plugins — Install new MCP servers to reach more services
@@ -49,40 +49,40 @@ Level up from chat-only answers to a working, local workbench that executes real
 
 ## Feature Highlights
 
-- 🚀 Agent‑first, prompt‑driven experience
-  - 👩‍💻 — You ask; it builds fast
-  - What & How — [![Codex CLI](https://img.shields.io/badge/Codex_CLI-Prompts-1F6FEB?style=flat-square&logo=gnubash&logoColor=white)](AGENTS.md)
-- 🚣 Project‑centric flow
-  - 👮‍♂️ — Keep everything tidy and repeatable
-  - What & How — [![Projects](https://img.shields.io/badge/Projects-Organized-4A5568?style=flat-square&logo=openproject&logoColor=white)](#how-it-works-in-60-seconds)
-- 📦 Built‑in data store (warehouse)
-  - 👩‍🔬 — Store data safely; query quickly
-  - What & How — [![DuckDB](https://img.shields.io/badge/DuckDB-SQL-FFCB05?style=flat-square&logo=duckdb&logoColor=white)](https://duckdb.org/) [![Pandas](https://img.shields.io/badge/Pandas-Data-150458?style=flat-square&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-- 📝 Elegant reporting
-  - 👩‍🎨 — Share clean, polished outputs
-  - What & How — [![Jinja2](https://img.shields.io/badge/Jinja2-Templates-000000?style=flat-square&logo=jinja&logoColor=white)](https://github.com/pallets/jinja) [![WeasyPrint](https://img.shields.io/badge/PDF-WeasyPrint-EE1F25?style=flat-square&logo=adobeacrobatreader&logoColor=white)](https://weasyprint.org/) [![Excel](https://img.shields.io/badge/Excel-OpenPyXL-217346?style=flat-square&logo=microsoftexcel&logoColor=white)](https://openpyxl.readthedocs.io/)
-- 🌐 Web context built‑in
-  - 🕵️‍♂️ — Pull the right docs and pages
-  - What & How — [![Context7](https://img.shields.io/badge/Context7-Docs%2FCode-0EA5E9?style=flat-square&logo=readthedocs&logoColor=white)](https://context7.dev/) [![Firecrawl](https://img.shields.io/badge/Firecrawl-Web_Fetch-F97316?style=flat-square&logo=firefoxbrowser&logoColor=white)](https://firecrawl.dev/)
-- 🌈 Great logs
-  - 👩‍🏫 — Skim progress; spot issues fast
-  - What & How — [![Rich](https://img.shields.io/badge/Rich-Logs-6E56CF?style=flat-square&logo=python&logoColor=white)](https://github.com/Textualize/rich) [![Loguru](https://img.shields.io/badge/Loguru-Logger-0B84F3?style=flat-square&logo=python&logoColor=white)](https://github.com/Delgan/loguru)
-- 🛣️ Guided workflows
-  - 👩‍🚒 — Get results with guided steps
-  - What & How — [![Workflows](https://img.shields.io/badge/Workflows-Guided-2563EB?style=flat-square&logo=githubactions&logoColor=white)](#actions-at-a-glance-prompts)
-- 🧰 Quality gates
-  - 🧑‍🏭 — Keep things neat behind the scenes
-  - What & How — [![uv](https://img.shields.io/badge/uv-Dependencies-2D3748?style=flat-square&logo=python&logoColor=white)](https://github.com/astral-sh/uv) [![Ruff](https://img.shields.io/badge/Ruff-Lint-ff3860?style=flat-square&logo=python&logoColor=white)](https://github.com/astral-sh/ruff) [![Mypy](https://img.shields.io/badge/Mypy-Types-5383EC?style=flat-square&logo=python&logoColor=white)](https://github.com/python/mypy)
-- 🪟 Windows‑friendly
-  - 👷 — Works great on Windows (WSL2)
-  - What & How — [![WSL2](https://img.shields.io/badge/Windows-WSL2-00BCF2?style=flat-square&logo=windows&logoColor=white)](https://learn.microsoft.com/windows/wsl/) [![Windows Terminal](https://img.shields.io/badge/Windows_Terminal-Theme-4A4A4A?style=flat-square&logo=windowsterminal&logoColor=white)](https://github.com/microsoft/terminal)
-- 🔌 Extensible
-  - 👨‍🚀 — Add new integrations in minutes
-  - What & How — [![MCP](https://img.shields.io/badge/MCP-Plugins-0EA5E9?style=flat-square&logo=puzzle&logoColor=white)](https://mcp.so/)
+### 🚀 Agent‑first, prompt‑driven experience
+- 👩‍💻 You ask; it builds fast
+- [![Codex CLI](https://img.shields.io/badge/Codex_CLI-Prompts-1F6FEB?style=flat-square&logo=gnubash&logoColor=white)](AGENTS.md)
+### 🚣 Project‑centric flow
+- 👮‍♂️ Keep everything tidy and repeatable
+- [![Projects](https://img.shields.io/badge/Projects-Organized-4A5568?style=flat-square&logo=openproject&logoColor=white)](#how-it-works-in-60-seconds)
+### 📦 Built‑in data store (warehouse)
+- 👩‍🔬 Store data safely; query quickly
+- [![DuckDB](https://img.shields.io/badge/DuckDB-SQL-FFCB05?style=flat-square&logo=duckdb&logoColor=white)](https://duckdb.org/) [![Pandas](https://img.shields.io/badge/Pandas-Data-150458?style=flat-square&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+### 📝 Elegant reporting
+- 👩‍🎨 Share clean, polished outputs
+- [![Jinja2](https://img.shields.io/badge/Jinja2-Templates-000000?style=flat-square&logo=jinja&logoColor=white)](https://github.com/pallets/jinja) [![WeasyPrint](https://img.shields.io/badge/PDF-WeasyPrint-EE1F25?style=flat-square&logo=adobeacrobatreader&logoColor=white)](https://weasyprint.org/) [![Excel](https://img.shields.io/badge/Excel-OpenPyXL-217346?style=flat-square&logo=microsoftexcel&logoColor=white)](https://openpyxl.readthedocs.io/)
+### 🌐 Web context built‑in
+- 🕵️‍♂️ Pull the right docs and pages
+- [![Context7](https://img.shields.io/badge/Context7-Docs%2FCode-0EA5E9?style=flat-square&logo=readthedocs&logoColor=white)](https://context7.dev/) [![Firecrawl](https://img.shields.io/badge/Firecrawl-Web_Fetch-F97316?style=flat-square&logo=firefoxbrowser&logoColor=white)](https://firecrawl.dev/)
+### 🌈 Great logs
+- 👩‍🏫 Skim progress; spot issues fast
+- [![Rich](https://img.shields.io/badge/Rich-Logs-6E56CF?style=flat-square&logo=python&logoColor=white)](https://github.com/Textualize/rich) [![Loguru](https://img.shields.io/badge/Loguru-Logger-0B84F3?style=flat-square&logo=python&logoColor=white)](https://github.com/Delgan/loguru)
+### 🛣️ Guided workflows
+- 👩‍🚒 Get results with guided steps
+- [![Workflows](https://img.shields.io/badge/Workflows-Guided-2563EB?style=flat-square&logo=githubactions&logoColor=white)](#actions-at-a-glance-prompts)
+### 🧰 Quality gates
+- 🧑‍🏭 Keep things neat behind the scenes
+- [![uv](https://img.shields.io/badge/uv-Dependencies-2D3748?style=flat-square&logo=python&logoColor=white)](https://github.com/astral-sh/uv) [![Ruff](https://img.shields.io/badge/Ruff-Lint-ff3860?style=flat-square&logo=python&logoColor=white)](https://github.com/astral-sh/ruff) [![Mypy](https://img.shields.io/badge/Mypy-Types-5383EC?style=flat-square&logo=python&logoColor=white)](https://github.com/python/mypy)
+### 🪟 Windows‑friendly
+- 👷 Works great on Windows (WSL2)
+- [![WSL2](https://img.shields.io/badge/Windows-WSL2-00BCF2?style=flat-square&logo=windows&logoColor=white)](https://learn.microsoft.com/windows/wsl/) [![Windows Terminal](https://img.shields.io/badge/Windows_Terminal-Theme-4A4A4A?style=flat-square&logo=windowsterminal&logoColor=white)](https://github.com/microsoft/terminal)
+### 🔌 Extensible
+- 👨‍🚀 Add new integrations in minutes
+- [![MCP](https://img.shields.io/badge/MCP-Plugins-0EA5E9?style=flat-square&logo=puzzle&logoColor=white)](https://mcp.so/)
 
-- 🧷 Automatic git checkpoints
-  - 👩‍🎤 — Rewind or recover any point in your work
-  - What & How — [![Git_Save](https://img.shields.io/badge/Git_Save-Checkpoint-F05032?style=flat-square&logo=git&logoColor=white)](scripts/git-save.sh) [![Git_Start](https://img.shields.io/badge/Git_Start-Branch-2ea44f?style=flat-square&logo=git&logoColor=white)](scripts/git-start.sh) [![Git_Push](https://img.shields.io/badge/Git_Push-Sync-0366d6?style=flat-square&logo=github&logoColor=white)](scripts/git-push.sh)
+### 🧷 Automatic git checkpoints
+- 👩‍🎤 Rewind or recover any point in your work
+- [![Git_Save](https://img.shields.io/badge/Git_Save-Checkpoint-F05032?style=flat-square&logo=git&logoColor=white)](scripts/git-save.sh) [![Git_Start](https://img.shields.io/badge/Git_Start-Branch-2ea44f?style=flat-square&logo=git&logoColor=white)](scripts/git-start.sh) [![Git_Push](https://img.shields.io/badge/Git_Push-Sync-0366d6?style=flat-square&logo=github&logoColor=white)](scripts/git-push.sh)
 
 ## Extend Codex CLI's Reach with MCP Servers
 - MCP are "plugins" for AI tools — connect to services in a click.
