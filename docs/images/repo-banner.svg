@@ -6,7 +6,18 @@
     </linearGradient>
   </defs>
   <rect width="1200" height="400" fill="url(#bg)"/>
+  <!-- Left rocket emoji -->
+  <text x="40" y="172" font-family="'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji','Twemoji Mozilla','Segoe UI Symbol',sans-serif" font-size="88" aria-label="rocket">🚀</text>
+
+  <!-- Title -->
   <text x="100" y="180" font-family="Segoe UI, system-ui, -apple-system, Roboto, Arial" font-size="64" font-weight="700" fill="#d1d5da">Super Codex Workbench</text>
+
+  <!-- Subtitle -->
   <text x="100" y="230" font-family="Segoe UI, system-ui, -apple-system, Roboto, Arial" font-size="26" fill="#9da7b1">Agent‑first, batteries‑included workspace for Codex CLI</text>
+
+  <!-- Capabilities strip -->
   <text x="100" y="280" font-family="Segoe UI, system-ui, -apple-system, Roboto, Arial" font-size="20" fill="#9da7b1">Data • Reports • APIs • Warehouse • MCP</text>
+
+  <!-- Right batteries emoji (double) -->
+  <text x="1020" y="172" font-family="'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji','Twemoji Mozilla','Segoe UI Symbol',sans-serif" font-size="88" aria-label="batteries">🔋🔋</text>
 </svg>
