@@ -36,6 +36,22 @@
 - This repo is your quickstart: a batteries‑included workspace tailored for Codex CLI so you can go from “chat” to real, repeatable outputs in minutes.
 - Install Codex CLI via the official guide (see link below), open this repo in Codex, and run the setup to get moving fast.
 
+### ✨ For Everyone (No Coding Needed)
+- 🧭 Turn a vague idea into tidy folders, docs, and a finished report — automatically.
+- 🔎 Research a topic, pull key pages, and deliver a clean one‑page brief with sources.
+- 📥 Save whole web sections to PDF (or HTML) without copy‑paste or browser tabs.
+- 📊 Clean a messy spreadsheet and produce a polished summary you can share.
+- 📅 Generate a weekly update (PDF/Excel) from your files with one request.
+- 🗂️ Rename, organize, and version your files so nothing gets lost.
+- 🔒 Keep everything private on your computer — you choose what (if anything) goes online.
+- 🔁 Rerun your favorite tasks anytime — same steps, same results.
+
+### 🚀 Try These Prompts
+- “Create a project called trip‑planner. Research top 5 day hikes near Seattle, add sources, and export a PDF summary.”
+- “Summarize these PDFs in data/policies/ into a one‑page brief with key changes and a checklist.”
+- “Import data/expenses.csv, group by category and month, and export a Monthly Spend report as PDF and Excel.”
+- “Crawl https://example.com/blog (limit 5), extract post titles, authors, dates, and save a clean CSV to the project.”
+
 
 ## 🤔 Who Is This For?
 - 📊 Analysts, PMs, and ops who are comfortable with tools — not code
