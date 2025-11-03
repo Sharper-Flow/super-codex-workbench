@@ -15,6 +15,18 @@
 <p align="center"><em>Made with ❤️ for friends by <strong>Sharper Flow LLC</strong></em></p>
 
 
+## 💡 Skip The Browser: Use Codex CLI
+- If you have a ChatGPT Plus or Pro subscription, you already have access to Codex CLI — a terminal workspace that supercharges ChatGPT with real tooling.
+- Why it’s a big upgrade over the browser:
+  - 🧰 Executes commands and edits files locally
+  - 🔌 Uses MCP integrations (e.g., Firecrawl, Context7) for web/docs context
+  - 🧪 Adds quality gates (Ruff, Mypy) and reproducible workflows
+  - 🧾 Produces real artifacts (datasets, HTML/PDF/Excel) in tidy project folders
+  - 🔒 Keeps your code/data local by default
+- This repo is your quickstart: a batteries‑included workspace tailored for Codex CLI so you can go from “chat” to real, repeatable outputs in minutes.
+- Install Codex CLI via the official guide (see link below), open this repo in Codex, and run the setup to get moving fast.
+
+
 ## 🤔 Who Is This For?
 - 📊 Analysts, PMs, and ops who are comfortable with tools — not code
 - ⚡ Power users who want repeatable results without wiring everything manually
