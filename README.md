@@ -18,7 +18,7 @@
 ## Who Is This For?
 - 📊 Analysts, PMs, and ops who are comfortable with tools — not code
 - ⚡ Power users who want repeatable results without wiring everything manually
-- 🤝 Teams that want a simple, standard way to work locally
+- 🔨 Pros who want to work fast with the latest toolset, auto-updated
 
 ## ⚡ Supercharge Codex CLI With All the Tools You Need.
   > You'll need an existing ChatGPT Plus or Pro Subscription - Learn more: [Codex CLI](AGENTS.md).

@@ -104,6 +104,23 @@ Scope: Applies to the entire directory tree rooted at the repository's top‑lev
   `uv run python main.py workflow first-project --name <NAME> [--with-mcp]`.
 - Increase verbosity with `-v`/`-vv` for rich logs.
 
+### Weekly Maintenance (Agents)
+- Sync environment to the lockfile (always):
+  - `uv sync`
+- Try upgrading to latest compatible packages (weekly or as needed):
+  - `uv lock --upgrade`
+  - `uv sync`
+- Validate after upgrades:
+  - `./scripts/check.sh` (Ruff format/lint + Mypy) and fix any issues
+  - `uv run python main.py -v diagnose`
+  - `uv run python main.py mcp info`
+- Version control:
+  - Create a checkpoint: `./scripts/git-save.sh "chore: weekly deps/tooling sync"`
+  - Prefer a feature branch for risky upgrades: `./scripts/git-start.sh feature/weekly-sync`
+  - Push if a remote is configured: `./scripts/git-push.sh`
+- Rollback guidance:
+  - If an upgrade breaks things, revert `uv.lock` (and `pyproject.toml` if changed) using your last checkpoint, then resync with `uv sync`.
+
 ### Setup Requirements Enforcement
 - Codex CLI must read `setup-requirements.json` and ensure all required items are satisfied before executing tasks.
 - If the file is missing or any required item is false (e.g., `uv_installed`, `venv_ready`, `deps_synced`, `env_file_present`, `folders_initialized`), assume a fresh environment and run `bash scripts/setup.sh -y`.
