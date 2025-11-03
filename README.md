@@ -1,5 +1,5 @@
 <h1 align="center">Super Codex Workbench 🚀</h1>
-<h3 align="center">A Codex CLI Workspace with Batteries Included🔋</h3>
+<h3 align="center">⚡A Supercharged Codex CLI Workspace with Batteries Included🔋</h3>
 
 <p align="center">
   <a href="./LICENSE"><img alt="License" src="https://img.shields.io/badge/license-MIT-blue.svg?style=for-the-badge"></a>
@@ -20,7 +20,7 @@
 - ⚡ Power users who want repeatable results without wiring everything manually
 - 🔨 Pros who want to work fast with the latest toolset, auto-updated
 
-## Ready to Upgrade from ChatGPT?
+## 😎 Ready to Upgrade from ChatGPT?
 Level up from chat-only answers to a working, local workbench that executes real tasks and produces artifacts.
 
 - ⚡ Blazing web scraping/crawling — via Firecrawl MCP (fast, reliable)
@@ -32,7 +32,7 @@ Level up from chat-only answers to a working, local workbench that executes real
 - 🧠 Smart installs — Auto-add Python packages with `uv` based on your prompts
 - 🗂️ Project-scoped — Everything organized under a named project for repeatability
 
-## ⚡ Supercharge Codex CLI With All the Tools You Need.
+## 🥳 Supercharge Codex CLI With All the Tools You Need.
   > You'll need an existing ChatGPT Plus or Pro Subscription - Learn more: [Codex CLI](AGENTS.md).
 
 1) Create or resume a project — your work is foldered automatically.
