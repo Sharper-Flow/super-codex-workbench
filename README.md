@@ -35,7 +35,7 @@ ChatGPT Can't:
 8. **💡 Add Custom Features** — Define new tools and capabilities for the agent.
 9. **🔒 Ensure Privacy** — Keep sensitive data local (no cloud required).
 
-<p align="center"><strong>🚀 <a href="#get-started-now">Get Started</a></strong></p>
+### 🚀 [Get Started - Click Here For Instructions](#get-started-now)
 
 ## 🥳 Supercharge Codex CLI With All the Tools You Need.
   > You'll need an existing ChatGPT Plus or Pro Subscription - Learn more: [`AGENTS.md`](AGENTS.md).
@@ -173,7 +173,7 @@ Want the technical bits? See [`AGENTS.md`](AGENTS.md).
 
 - Install Codex CLI
   - Ensure ChatGPT Plus/Pro access
-  - Follow the official Codex CLI install guide for your OS
+  - Follow the [official Codex CLI install guide](https://platform.openai.com/docs/guides/tools/codex-cli) for your OS
   - Verify it launches and can open this repo workspace
 
 - Launch Codex CLI and Run Setup
