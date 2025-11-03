@@ -68,6 +68,10 @@
   - 👨‍🚀 — Add new integrations in minutes
   - What & How — [![MCP](https://img.shields.io/badge/MCP-Plugins-0EA5E9?style=flat-square&logo=puzzle&logoColor=white)](https://mcp.so/)
 
+- 🧷 Automatic git checkpoints
+  - 👩‍🎤 — Rewind or recover any point in your work
+  - What & How — [![Git_Save](https://img.shields.io/badge/Git_Save-Checkpoint-F05032?style=flat-square&logo=git&logoColor=white)](scripts/git-save.sh) [![Git_Start](https://img.shields.io/badge/Git_Start-Branch-2ea44f?style=flat-square&logo=git&logoColor=white)](scripts/git-start.sh) [![Git_Push](https://img.shields.io/badge/Git_Push-Sync-0366d6?style=flat-square&logo=github&logoColor=white)](scripts/git-push.sh)
+
 ## Extend Codex CLI's Reach with MCP Servers
 - MCP are "plugins" for AI tools — connect to services in a click.
 - 🔎 Browse MCP servers: https://mcp.so/ — pick one to add via Codex CLI.
