@@ -40,44 +40,54 @@ Level up from chat-only answers to a working, local workbench that produces and 
 1. Create or resume a project — your work is foldered automatically.
    - `"Show my 2026 projections project and resume demo"`
    - `"Create a project named sales-2024"`
-   - 🚀 Agent‑first, prompt‑driven experience
-     - 👩‍💻 You ask; it builds fast
-     - [![Codex CLI](https://img.shields.io/badge/Codex_CLI-Prompts-1F6FEB?style=flat-square&logo=gnubash&logoColor=white)](AGENTS.md)
-   - 🚣 Project‑centric flow
-     - 👮‍♂️ Keep everything tidy and repeatable
-     - [![Projects](https://img.shields.io/badge/Projects-Organized-4A5568?style=flat-square&logo=openproject&logoColor=white)](#supercharge-codex-cli-with-all-the-tools-you-need)
-   - 🧷 Automatic git checkpoints
-     - 👩‍🎤 Rewind or recover any point in your work
-     - [![Git_Save](https://img.shields.io/badge/Git_Save-Checkpoint-F05032?style=flat-square&logo=git&logoColor=white)](scripts/git-save.sh) [![Git_Start](https://img.shields.io/badge/Git_Start-Branch-2ea44f?style=flat-square&logo=git&logoColor=white)](scripts/git-start.sh) [![Git_Push](https://img.shields.io/badge/Git_Push-Sync-0366d6?style=flat-square&logo=github&logoColor=white)](scripts/git-push.sh)
-   - 🧰 Quality gates
-     - 🧑‍🏭 Keep things neat behind the scenes
-     - [![uv](https://img.shields.io/badge/uv-Dependencies-2D3748?style=flat-square&logo=python&logoColor=white)](https://github.com/astral-sh/uv) [![Ruff](https://img.shields.io/badge/Ruff-Lint-ff3860?style=flat-square&logo=python&logoColor=white)](https://github.com/astral-sh/ruff) [![Mypy](https://img.shields.io/badge/Mypy-Types-5383EC?style=flat-square&logo=python&logoColor=white)](https://github.com/python/mypy)
-   - 🪟 Windows‑friendly
-     - 👷 Works great on Windows (WSL2)
-     - [![WSL2](https://img.shields.io/badge/Windows-WSL2-00BCF2?style=flat-square&logo=windows&logoColor=white)](https://learn.microsoft.com/windows/wsl/) [![Windows Terminal](https://img.shields.io/badge/Windows_Terminal-Theme-4A4A4A?style=flat-square&logo=windowsterminal&logoColor=white)](https://github.com/microsoft/terminal)
+
+   - 🚀 Agent‑first, prompt‑driven experience — You ask; it builds fast
+
+     [![Codex CLI](https://img.shields.io/badge/Codex_CLI-Prompts-1F6FEB?style=flat-square&logo=gnubash&logoColor=white)](AGENTS.md)
+
+   - 🚣 Project‑centric flow — Keep everything tidy and repeatable
+
+     [![Projects](https://img.shields.io/badge/Projects-Organized-4A5568?style=flat-square&logo=openproject&logoColor=white)](#supercharge-codex-cli-with-all-the-tools-you-need)
+
+   - 🧷 Automatic git checkpoints — Rewind or recover any point in your work
+
+     [![Git](https://img.shields.io/badge/Git-Sync-0366d6?style=flat-square&logo=github&logoColor=white)](scripts/git-push.sh)
+
+   - 🧰 Quality gates — Keep things neat behind the scenes
+
+     [![uv](https://img.shields.io/badge/uv-Dependencies-2D3748?style=flat-square&logo=python&logoColor=white)](https://github.com/astral-sh/uv) [![Ruff](https://img.shields.io/badge/Ruff-Lint-ff3860?style=flat-square&logo=python&logoColor=white)](https://github.com/astral-sh/ruff) [![Mypy](https://img.shields.io/badge/Mypy-Types-5383EC?style=flat-square&logo=python&logoColor=white)](https://github.com/python/mypy)
+
+   - 🪟 Windows‑friendly — Works great on Windows (WSL2)
+
+     [![WSL2](https://img.shields.io/badge/Windows-WSL2-00BCF2?style=flat-square&logo=windows&logoColor=white)](https://learn.microsoft.com/windows/wsl/) [![Windows Terminal](https://img.shields.io/badge/Windows_Terminal-Theme-4A4A4A?style=flat-square&logo=windowsterminal&logoColor=white)](https://github.com/microsoft/terminal)
 
 2. Bring in data — or ask the agent to fetch it.
    - `"Ingest data/sales.csv as dataset sales (date=2024-10-01)"`
    - `"Crawl https://example.com/docs and save the top pages"`
-   - 📦 Built‑in data store (warehouse)
-     - 👩‍🔬 Store data safely; query quickly
-     - [![DuckDB](https://img.shields.io/badge/DuckDB-SQL-FFCB05?style=flat-square&logo=duckdb&logoColor=white)](https://duckdb.org/) [![Pandas](https://img.shields.io/badge/Pandas-Data-150458?style=flat-square&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
-   - 🌐 Web context built‑in
-     - 🕵️‍♂️ Pull the right docs and pages
-     - [![Context7](https://img.shields.io/badge/Context7-Docs%2FCode-0EA5E9?style=flat-square&logo=readthedocs&logoColor=white)](https://context7.dev/) [![Firecrawl](https://img.shields.io/badge/Firecrawl-Web_Fetch-F97316?style=flat-square&logo=firefoxbrowser&logoColor=white)](https://firecrawl.dev/)
+
+   - 📦 Built‑in data store (warehouse) — Store data safely; query quickly
+
+     [![DuckDB](https://img.shields.io/badge/DuckDB-SQL-FFCB05?style=flat-square&logo=duckdb&logoColor=white)](https://duckdb.org/) [![Pandas](https://img.shields.io/badge/Pandas-Data-150458?style=flat-square&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+
+   - 🌐 Web context built‑in — Pull the right docs and pages
+
+     [![Context7](https://img.shields.io/badge/Context7-Docs%2FCode-0EA5E9?style=flat-square&logo=readthedocs&logoColor=white)](https://context7.dev/) [![Firecrawl](https://img.shields.io/badge/Firecrawl-Web_Fetch-F97316?style=flat-square&logo=firefoxbrowser&logoColor=white)](https://firecrawl.dev/)
 
 3. Ask for outputs — get HTML, PDF, or Excel.
    - `"Make a datatable on all Japanese car makes and models from 1991"`
    - `"Render a PDF report summarizing the top 10 makes with charts"`
-   - 📝 Elegant reporting
-     - 👩‍🎨 Share clean, polished outputs
-     - [![Jinja2](https://img.shields.io/badge/Jinja2-Templates-000000?style=flat-square&logo=jinja&logoColor=white)](https://github.com/pallets/jinja) [![WeasyPrint](https://img.shields.io/badge/PDF-WeasyPrint-EE1F25?style=flat-square&logo=adobeacrobatreader&logoColor=white)](https://weasyprint.org/) [![Excel](https://img.shields.io/badge/Excel-OpenPyXL-217346?style=flat-square&logo=microsoftexcel&logoColor=white)](https://openpyxl.readthedocs.io/)
-   - 🌈 Great logs
-     - 👩‍🏫 Skim progress; spot issues fast
-     - [![Rich](https://img.shields.io/badge/Rich-Logs-6E56CF?style=flat-square&logo=python&logoColor=white)](https://github.com/Textualize/rich) [![Loguru](https://img.shields.io/badge/Loguru-Logger-0B84F3?style=flat-square&logo=python&logoColor=white)](https://github.com/Delgan/loguru)
-   - 🔌 Extensible
-     - 👨‍🚀 Add new integrations in minutes
-     - [![MCP](https://img.shields.io/badge/MCP-Plugins-0EA5E9?style=flat-square&logo=puzzle&logoColor=white)](https://mcp.so/)
+
+   - 📝 Elegant reporting — Share clean, polished outputs
+
+     [![Jinja2](https://img.shields.io/badge/Jinja2-Templates-000000?style=flat-square&logo=jinja&logoColor=white)](https://github.com/pallets/jinja) [![WeasyPrint](https://img.shields.io/badge/PDF-WeasyPrint-EE1F25?style=flat-square&logo=adobeacrobatreader&logoColor=white)](https://weasyprint.org/) [![Excel](https://img.shields.io/badge/Excel-OpenPyXL-217346?style=flat-square&logo=microsoftexcel&logoColor=white)](https://openpyxl.readthedocs.io/)
+
+   - 🌈 Great logs — Skim progress; spot issues fast
+
+     [![Rich](https://img.shields.io/badge/Rich-Logs-6E56CF?style=flat-square&logo=python&logoColor=white)](https://github.com/Textualize/rich) [![Loguru](https://img.shields.io/badge/Loguru-Logger-0B84F3?style=flat-square&logo=python&logoColor=white)](https://github.com/Delgan/loguru)
+
+   - 🔌 Extensible — Add new integrations in minutes
+
+     [![MCP](https://img.shields.io/badge/MCP-Plugins-0EA5E9?style=flat-square&logo=puzzle&logoColor=white)](https://mcp.so/)
 
 ## Extend Codex CLI's Reach with MCP Servers
 - MCP are "plugins" for AI tools — connect to services in a click.
