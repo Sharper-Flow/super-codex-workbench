@@ -16,9 +16,9 @@ Scope: Applies to the entire directory tree rooted at the repository's top‑lev
 - Maintain brevity and substance: prioritize actionable steps, outcomes, and next actions; avoid decorative overload.
 - Still follow the global CLI formatting rules (no tables by default, no heavy markup); combine them with emoji for emphasis.
 
-## Supplemental Rules (.clinerules)
-- A curated ruleset lives under `.clinerules/` (imported from another project and adapted for this repo).
-- Treat `AGENTS.md` as the source of truth; `.clinerules` content is subordinate and must respect all rules here.
+## Supplemental Rules (.codex-cli-rules)
+- A curated ruleset lives under `.codex-cli-rules/` (imported from another project and adapted for this repo).
+- Treat `AGENTS.md` as the source of truth; `.codex-cli-rules` content is subordinate and must respect all rules here.
 - Useful references:
   - Debugging/quality: `systematic-debugging.md`, `quality-first-engineering.md`
   - Decision frameworks: `decision-clarification.md`, `simplification-cascades.md`, `self-improving-reflection.md`
@@ -134,7 +134,7 @@ Scope: Applies to the entire directory tree rooted at the repository's top‑lev
 ### Setup Requirements Enforcement
 - Codex CLI must read `setup-requirements.json` and ensure all required items are satisfied before executing tasks.
 - If the file is missing or any required item is false (e.g., `uv_installed`, `venv_ready`, `deps_synced`, `env_file_present`, `folders_initialized`), assume a fresh environment and run `bash scripts/setup.sh -y`.
-- Firecrawl requires an API key; if `mcp_firecrawl_configured` is false and a Firecrawl-backed action is requested, prompt the user to add `FIRECRAWL_API_KEY` to `.env`, then re-run setup.
+- Firecrawl requires an API key; if `mcp_firecrawl_configured` is false and a Firecrawl-backed action is requested, prompt the user to add `FIRECRAWL_API_KEY` to `.env`, then re‑run setup.
 - Context7 is optional (free tier assumed); lack of an API key should not block Context7-backed tasks.
 
 ## Principles
