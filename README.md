@@ -15,33 +15,18 @@
 <p align="center"><em>Made with ❤️ for friends by <strong>Sharper Flow LLC</strong></em></p>
 
 
-## Table of Contents
-- [Who Is This For?](#-who-is-this-for)
-- [Ready to Upgrade from ChatGPT?](#-ready-to-upgrade-from-chatgpt)
-- [Supercharge Codex CLI](#-supercharge-codex-cli-with-all-the-tools-you-need)
-- [Add capabilities on demand (MCP plugins)](#add-capabilities-on-demand-via-proven-plugins-mcp)
-- [Ask for outcomes; Codex installs what's needed](#you-ask-for-outcomes-codex-installs-whats-needed-behind-the-scenes)
-- [Copy/paste starters](#copypaste-starters-to-get-moving-fast)
-- [See real outputs](#see-real-outputs-that-build-trust-and-momentum)
-- [Non-coders can succeed](#non‑coders-can-succeed-coders-can-go-deeper)
-- [Know where things live](#know-where-things-live-so-you-can-navigate-quickly)
-- [Use, share, contribute safely](#understand-how-to-use-share-and-contribute-safely)
-- [User setup](#get-up-and-running-fast-on-your-own-machine)
-
 ## 🤔 Who Is This For?
-_Why this matters — Helps the right users self‑select and get value faster._
 - 📊 Analysts, PMs, and ops who are comfortable with tools — not code
 - ⚡ Power users who want repeatable results without wiring everything manually
 - 🔨 Pros who want to work fast with the latest toolset, auto-updated
 
 ## 😎 Ready to Upgrade from ChatGPT?
-_Why this matters — Shows concrete capabilities beyond chat so you can decide quickly._
-Level up from chat-only answers to a working, local workbench that produces and executes real code, reports, databases, and automation.
+_Level up from chat-only answers to a working, local workbench that produces and executes real code, reports, databases, and automation._
 
-> ChatGPT Can't:
+ChatGPT Can't:
 
 1. **🖥️ Execute Commands** — Run shell commands to build, test, and deploy.
-2. **✍️ Write & Build Code** — Create new files, write code, and run build scripts.
+2. **✍️ Write & Build Runnable Code** — Create new files, write code, and run build scripts.
 3. **📂 Access Files** — Read, write, and modify local project files.
 4. **🌱 Understand Your Environment** — Access local env vars and running processes.
 5. **🌐 Access External Resources** — Scrape websites, download files, interact with APIs.
@@ -51,8 +36,7 @@ Level up from chat-only answers to a working, local workbench that produces and 
 9. **🔒 Ensure Privacy** — Keep sensitive data local (no cloud required).
 
 ## 🥳 Supercharge Codex CLI With All the Tools You Need.
-_Why this matters — Maps features to the simple 3‑step flow you’ll actually use._
-  > You'll need an existing ChatGPT Plus or Pro Subscription - Learn more: [Codex CLI](AGENTS.md).
+  > You'll need an existing ChatGPT Plus or Pro Subscription - Learn more: [`AGENTS.md`](AGENTS.md).
 
 1. Create or resume a project — your work is foldered automatically.
    - `"Show my 2026 projections project and resume demo"`
@@ -151,13 +135,7 @@ _Why this matters — Maps features to the simple 3‑step flow you’ll actuall
 
 ---
 
-## See real outputs that build trust and momentum
-### Windows Terminal theme (CodexDarkGrey) + Nerd Font
-
-  ![Windows Terminal dark grey theme](docs/images/windows-terminal-theme.svg)
-
-
-### Use Case Samples (What You Can Build)
+## Use Case Samples
 
 - 📊 Sales insights app — Ingest weekly CSVs, run Python transforms, and generate an HTML+PDF dashboard with highlights.
 
@@ -171,24 +149,18 @@ _Why this matters — Maps features to the simple 3‑step flow you’ll actuall
 
   ![Docs Summarizer sample](docs/images/samples/docs-summarizer.svg)
 
-- 📈 KPI tracker — Append telemetry to the warehouse daily, run DuckDB SQL, and render a monthly report.
-
-  ![KPI Tracker sample](docs/images/samples/kpi-tracker.svg)
-
 - 🔍 Data quality bot — Validate new batches, raise issues with details, and export a fix‑list for teams.
 
   ![Data Quality sample](docs/images/samples/data-quality-bot.svg)
 
-- 🧪 Experiment notebook — Join datasets, run simple Python analyses, and export a shareable report for stakeholders.
 
-  ![Experiment Notebook sample](docs/images/samples/experiment-notebook.svg)
-
-## Non‑coders can succeed; coders can go deeper
+## Project Directory
+## Non‑Coders Can Succeed; Coders Can Go Deeper
 No coding required — but you can peek under the hood anytime.
 
-Want the technical bits? See `AGENTS.md`.
+Want the technical bits? See [`AGENTS.md`](AGENTS.md).
 
-## Know where things live so you can navigate quickly
+## Know Where Things Live So You Can Navigate Quickly
 - `apps/` — app‑specific logic (prefix dataset names to avoid collisions)
 
 - `data/` — ad‑hoc inputs and scratch during tasks
@@ -201,14 +173,11 @@ Want the technical bits? See `AGENTS.md`.
 
 - `logs/` — structured logs for task runs
 
-## Understand how to use, share, and contribute safely
-- License: MIT — see `LICENSE`.
+## Get Started Now
 
-- Contributing: Issues and PRs welcome. Keep diffs minimal, avoid secrets, and follow all instructions in `AGENTS.md`.
-
-## Get up and running fast on your own machine
-
+> First step for windows users only
 - Windows (first‑time)
+  - Download the `windows-setup.ps1` script from [**here**](scripts/windows-setup.ps1)
   - Open PowerShell as Administrator
   - Run: `./scripts/windows-setup.ps1 -ProvisionWSL -DefaultProfile Ubuntu`
   - Reboot if prompted, open Ubuntu (WSL), and work inside your Linux home (e.g., `~/`)
@@ -219,7 +188,7 @@ Want the technical bits? See `AGENTS.md`.
   - Enter the folder: `cd <repo>`
 
 - Install Codex CLI
-  - Ensure ChatGPT Plus/Pro access (for the agent backend)
+  - Ensure ChatGPT Plus/Pro access
   - Follow the official Codex CLI install guide for your OS
   - Verify it launches and can open this repo workspace
 
@@ -243,3 +212,14 @@ Want the technical bits? See `AGENTS.md`.
 - Save your progress
   - Create a checkpoint: `./scripts/git-save.sh "chore: checkpoint"`
   - Push if desired: `./scripts/git-push.sh`
+
+## Contributing
+- License: MIT — see `LICENSE`.
+
+MUST READ ALL INSTRUCTIONS IN `AGENTS.md`.
+- Contributing: Issues and PRs welcome. Keep diffs minimal, avoid secrets, and follow all instructions in `AGENTS.md`.
+
+### Bonus Fun
+### Windows Terminal theme (CodexDarkGrey) + Nerd Font Included in Windows Setup Script
+
+  ![Windows Terminal dark grey theme](docs/images/windows-terminal-theme.svg)
