@@ -6,8 +6,7 @@
 .DESCRIPTION
   What this script does (idempotent where practical):
   - Ensures Windows features for WSL2 and virtualization are enabled
-  - Installs/updates: Windows Terminal, CaskaydiaCove Nerd Font, Starship prompt
-  - Adds a sleek dark grey color scheme to Windows Terminal and sets font face
+  - Installs/updates: Windows Terminal and your preferred prompt
   - Installs WSL (Ubuntu latest LTS) and sets WSL default to version 2
   - Optionally provisions minimal tools in the Ubuntu distro
 
@@ -69,17 +68,7 @@ function Install-WindowsTerminal {
   winget install --id Microsoft.WindowsTerminal -e --source winget --silent --accept-package-agreements --accept-source-agreements | Out-Null
 }
 
-function Install-NerdFont {
-  Write-Host '[Font] Installing CaskaydiaCove Nerd Font...' -ForegroundColor Cyan
-  # Primary package (Nerd Fonts official)
-  $ok = $true
-  try {
-    winget install --id NerdFonts.CaskaydiaCove -e --source winget --silent --accept-package-agreements --accept-source-agreements | Out-Null
-  } catch { $ok = $false }
-  if (-not $ok) {
-    Write-Warning 'Failed to install NerdFonts.CaskaydiaCove via winget. You can manually install the font from https://www.nerdfonts.com/font-downloads'
-  }
-}
+ 
 
 function Install-Prompt {
   param([string]$Type)
@@ -210,74 +199,19 @@ fi
   wsl -d Ubuntu -- bash -lc "$cmd"
 }
 
-function Set-WindowsTerminal-ThemeAndFont {
-  Write-Host '[Terminal] Applying dark grey color scheme and Nerd Font...' -ForegroundColor Cyan
-  $settingsPath = Join-Path $env:LOCALAPPDATA 'Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json'
-  if (-not (Test-Path $settingsPath)) {
-    Write-Warning "Windows Terminal settings not found at $settingsPath. Launch Windows Terminal once and re-run to apply theming."
-    return
-  }
-  $json = Get-Content $settingsPath -Raw | ConvertFrom-Json
-  if (-not $json.schemes) { $json | Add-Member -Name schemes -MemberType NoteProperty -Value @() }
-  $schemeName = 'CodexDarkGrey'
-  $scheme = $json.schemes | Where-Object { $_.name -eq $schemeName }
-  if (-not $scheme) {
-    $new = [PSCustomObject]@{
-      name = $schemeName
-      background = '#1f2428'
-      foreground = '#d1d5da'
-      black = '#000000'
-      blue = '#79b8ff'
-      cyan = '#56d4dd'
-      green = '#85e89d'
-      purple = '#b392f0'
-      red = '#f97583'
-      white = '#e5e5e5'
-      yellow = '#ffea7f'
-      brightBlack = '#586069'
-      brightBlue = '#c8e1ff'
-      brightCyan = '#a5f0ff'
-      brightGreen = '#bef5cb'
-      brightPurple = '#d1bcf9'
-      brightRed = '#fdaeb7'
-      brightWhite = '#ffffff'
-      brightYellow = '#fffbdd'
-    }
-    $json.schemes += $new
-  }
-
-  # Apply to profiles: PowerShell and Ubuntu, set fontFace
-  foreach ($p in $json.profiles.list) {
-    $name = $p.name
-    if ($name -match 'PowerShell' -or $name -match 'Ubuntu') {
-      $p.font = @{ face = 'CaskaydiaCove Nerd Font' }
-      $p.colorScheme = $schemeName
-      $p.useAcrylic = $true
-      $p.acrylicOpacity = 0.9
-    }
-  }
-
-  # Set default profile
-  if ($DefaultProfile -eq 'Ubuntu') {
-    $ubuntu = $json.profiles.list | Where-Object { $_.name -match 'Ubuntu' } | Select-Object -First 1
-    if ($ubuntu) { $json.defaultProfile = $ubuntu.guid }
-  } else {
-    $ps = $json.profiles.list | Where-Object { $_.name -match 'PowerShell' } | Select-Object -First 1
-    if ($ps) { $json.defaultProfile = $ps.guid }
-  }
-
-  $json | ConvertTo-Json -Depth 10 | Set-Content -Path $settingsPath -Encoding UTF8
-}
+ 
 
 # Main
 Assert-Admin
 Ensure-WinGet
 Enable-WSLFeatures
 Install-WindowsTerminal
-Install-NerdFont
 Install-Prompt -Type $Prompt
 Install-WSL
 if ($ProvisionWSL) { Provision-WSLUbuntu }
-Set-WindowsTerminal-ThemeAndFont
 
-Write-Host "`n[Done] Close and reopen Windows Terminal to see the theme and font. If Ubuntu prompts for a UNIX user, complete that first." -ForegroundColor Green
+if ($DefaultProfile -eq 'Ubuntu') {
+  Write-Host "`n[Note] To make Ubuntu the default in Windows Terminal, open Settings > Default profile > Ubuntu." -ForegroundColor Yellow
+}
+
+Write-Host "`n[Done] Close and reopen Windows Terminal. If Ubuntu prompts for a UNIX user, complete that first." -ForegroundColor Green
