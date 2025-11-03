@@ -17,10 +17,9 @@
 ---
 
 ## 🥳 Skip The Browser: Use Codex CLI
+#### If you have ChatGPT Plus/Pro, Codex CLI turns chat into a local workstation that ships real outputs.
 
-### 💥 If you have ChatGPT Plus/Pro, Codex CLI turns chat into a local workstation that ships real outputs.
-
-| Capability | Browser ChatGPT | Codex CLI with this workbench |
+| Capability | Browser ChatGPT | Super Codex CLI |
 |---|:--:|:--:|
 | Run local commands and edit files | ❌ | ✅ |
 | MCP integrations (web/docs/search, services) | ➖ limited | ✅ plug-and-play |
@@ -39,6 +38,12 @@
 - 🔨 Pros who want to work fast with the latest toolset, auto-updated.
 
 ## ⚡ Supercharge Codex CLI With All the Tools You Need.
+
+- 🚣 Project-centric flow with tidy, repeatable workspaces.
+- 🧷 Automatic git checkpoints for easy rollbacks.
+- 🌐 Web + docs context via Firecrawl + Context7 when configured.
+- 📝 Elegant reporting to HTML/PDF/Excel.
+- 🪟 Windows-friendly with WSL2.
 
 > Requires ChatGPT Plus/Pro — details in `AGENTS.md`.
 
@@ -77,14 +82,6 @@ Level up from chat-only answers to a local, executable workbench that ships real
 - Prompts you can use:
   - `Find an MCP for <your need>`
   - `Install the <X> MCP server`
-
-## ⚡ Do More, Faster
-
-- 🚣 Project-centric flow with tidy, repeatable workspaces.
-- 🧷 Automatic git checkpoints for easy rollbacks.
-- 🌐 Web + docs context via Firecrawl + Context7 when configured.
-- 📝 Elegant reporting to HTML/PDF/Excel.
-- 🪟 Windows-friendly with WSL2.
 
 ---
 
