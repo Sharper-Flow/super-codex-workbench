@@ -104,7 +104,7 @@ ChatGPT Can't:
   - `"Will an MCP help us <your goal>?"`
   - `"Install the <X> MCP server"`
 
-## Codex nstalls what’s needed behind the scenes
+## Codex installs what’s needed behind the scenes
 - 🧠 Smart installs — When you ask for something new (e.g., “export to Excel”, “render a PDF”, “save as Parquet”), Codex CLI installs the right Python packages automatically using `uv`.
 
 - 🔒 Safe & local — Everything lives in the project’s virtual environment; no global `pip`. Dependencies are tracked in `pyproject.toml` + `uv.lock` for repeatability.
