@@ -15,10 +15,22 @@
 <p align="center"><em>Made with ❤️ for friends by <strong>Sharper Flow LLC</strong></em></p>
 
 
-## Who Is This For?
+## 🤔 Who Is This For?
 - 📊 Analysts, PMs, and ops who are comfortable with tools — not code
 - ⚡ Power users who want repeatable results without wiring everything manually
 - 🔨 Pros who want to work fast with the latest toolset, auto-updated
+
+## Ready to Upgrade from ChatGPT?
+Level up from chat-only answers to a working, local workbench that executes real tasks and produces artifacts.
+
+- ⚡ Blazing web scraping/crawling — via Firecrawl MCP (fast, reliable)
+- 📚 Live docs + code context — via Context7 MCP (up-to-date libraries)
+- 🗄️ Fast local data store — DuckDB SQL on auto-registered views
+- 📝 Real reports — HTML → PDF/Excel with templates (Jinja2, WeasyPrint, OpenPyXL)
+- 🔌 Add plugins — Install new MCP servers to reach more services
+- 🧷 History you can trust — Automatic git checkpoints for rewind/recover
+- 🧠 Smart installs — Auto-add Python packages with `uv` based on your prompts
+- 🗂️ Project-scoped — Everything organized under a named project for repeatability
 
 ## ⚡ Supercharge Codex CLI With All the Tools You Need.
   > You'll need an existing ChatGPT Plus or Pro Subscription - Learn more: [Codex CLI](AGENTS.md).
