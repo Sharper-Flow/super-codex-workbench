@@ -25,6 +25,8 @@
 
 Level up from chat-only answers to a local, executable workbench that ships real outputs.
 
+👉 Ready to go? See: [Get Started Now](#get-started-now)
+
 ### 💥 Why It Beats ChatGPT
 - ✅ Repeatable projects — every run is versioned and reproducible.
 - 🗂️ Real artifacts — files, datasets, HTML/PDF/Excel saved in your project.
@@ -47,13 +49,6 @@ Level up from chat-only answers to a local, executable workbench that ships real
 - 🌐 Web + docs context — Firecrawl + Context7 on tap when configured.
 - 📝 Elegant reporting — HTML, PDF, and Excel exports.
 - 🪟 Windows‑friendly — great on WSL2.
-
-### 🚀 Quickstart
-- Setup: `bash ./scripts/setup.sh -y -p demo`
-- Verify: `uv run python main.py -v diagnose`
-- First project: `uv run python main.py workflow first-project --name demo --with-mcp`
-
-👉 Ready to go? See: [Get Started Now](#get-started-now)
 
 ### 🔌 Add Capabilities (MCP)
 - MCP are proven “plugins” that add web/docs/search and service integrations.
