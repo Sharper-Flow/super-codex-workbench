@@ -21,17 +21,18 @@
 - 🔨 Pros who want to work fast with the latest toolset, auto-updated
 
 ## 😎 Ready to Upgrade from ChatGPT?
-Level up from chat-only answers to a working, local workbench that executes and produces real code.
+Level up from chat-only answers to a working, local workbench that produces and executes real code.
 
-- ⚡ Blazing fast **web scraping/crawling** — via Firecrawl MCP (fast, reliable)
+1.  **🖥️ Execute Commands**: Run any shell command to build, test, and deploy.
 
-- 📚 Live **docs + code** context — via Context7 MCP (up-to-date libraries)
-- 🗄️ Fast **local data store** — DuckDB SQL on auto-registered views
-- 📝 Real **reports** — HTML → PDF/Excel with templates (Jinja2, WeasyPrint, OpenPyXL)
-- 🔌 Add **plugins** — Install new MCP servers to reach more services
-- 🧷 History **auto backups** you can trust — Automatic git checkpoints for rewind/recover
-- 🧠 **AI** Expansion — Auto-add Python packages for additional functionality with `uv` based on your prompts
-- 🗂️ **Project-scoped** — Everything organized under a named project for repeatability
+2.  **✍️ Write & Build Code**: Create new files, write code, and run build scripts.
+3.  **📂 Access Files**: Read, write, and modify local project files.
+4.  **🌱 Understand Your Environment**: Access your local environment variables and running processes.
+5.  **🌐 Access External Resources**: Scrape websites, download files, and interact with APIs.
+6.  **🗄️ Query Local Data**: Interact with local databases, warehouses, and data files.
+7.  **🤖 Automate Workflows**: Run complex, multi-step tasks autonomously.
+8.  **💡 Add Custom Features**: Define new tools and capabilities for the agent to use.
+9.  **🔒 Ensure Privacy**: Work with sensitive data locally without sending it to the cloud.
 
 ## 🥳 Supercharge Codex CLI With All the Tools You Need.
   > You'll need an existing ChatGPT Plus or Pro Subscription - Learn more: [Codex CLI](AGENTS.md).
