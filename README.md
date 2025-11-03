@@ -18,7 +18,7 @@
 ## 🤔 Who Is This For?
 - 📊 Analysts, PMs, and ops who are comfortable with tools — not code
 - ⚡ Power users who want repeatable results without wiring everything manually
-- 🔨 Pros who want to work fast with the latest toolset, auto-updated
+- 🔨 Pros who want to work fast with the latest toolset, auto‑updated
 
 ## 😎 Ready to Upgrade from ChatGPT?
 _Level up from chat-only answers to a working, local workbench that produces and executes real code, reports, databases, and automation._
@@ -133,6 +133,7 @@ ChatGPT Can't:
 
 - 📦 `"Run checks and fix formatting/typing issues"`
 
+
 ---
 
 ## Use Case Samples
@@ -183,43 +184,26 @@ Want the technical bits? See [`AGENTS.md`](AGENTS.md).
   - Reboot if prompted, open Ubuntu (WSL), and work inside your Linux home (e.g., `~/`)
 
 - Get the code
-  - Clone: `git clone https://github.com/<you>/<repo>.git`
-  - Or fork on GitHub, then: `git clone https://github.com/<your‑org>/<your‑fork>.git`
-  - Enter the folder: `cd <repo>`
+  - Clone: `git clone https://github.com/Sharper-Flow/super-codex-workbench.git`
+  - Or fork on GitHub, then: `git clone https://github.com/<your‑username>/super-codex-workbench.git`
+  - Enter the folder: `cd super-codex-workbench`
 
 - Install Codex CLI
   - Ensure ChatGPT Plus/Pro access
   - Follow the official Codex CLI install guide for your OS
   - Verify it launches and can open this repo workspace
 
-- Create local environment
-  - Copy env: `cp .env.example .env` (add API keys later if using MCP)
-  - Run setup: `bash ./scripts/setup.sh -y -p demo`
-  - Verify: `uv run python main.py -v diagnose`
-
-- Start with a guided workflow
-  - Resume or create a project: `uv run python main.py projects resume --name demo`
-  - Try the first‑project flow: `uv run python main.py workflow first-project --name demo`
-  - Render a sample report: `uv run python main.py reports render-html --template sample.html.j2`
-
-- Optional: enable MCP
-  - Add keys to `.env` (keep values private):
-    - `FIRECRAWL_API_KEY` (required for Firecrawl MCP)
-    - `CONTEXT7_API_KEY` (optional)
-  - Check status: `uv run python main.py mcp info`
-  - Web workflow: `uv run python main.py workflow mcp-web --url https://example.com --limit 5`
-
-- Save your progress
-  - Create a checkpoint: `./scripts/git-save.sh "chore: checkpoint"`
-  - Push if desired: `./scripts/git-push.sh`
+- Launch Codex CLI and Run Setup
+  - Open your terminal (or WSL2 Ubuntu on Windows)
+  - Run: `codex`
+  - Once Codex CLI is running, tell it:
+    > "run the setup script"
 
 ## Contributing
 - License: MIT — see `LICENSE`.
-
-MUST READ ALL INSTRUCTIONS IN `AGENTS.md`.
-- Contributing: Issues and PRs welcome. Keep diffs minimal, avoid secrets, and follow all instructions in `AGENTS.md`.
+- Contributing: Issues and PRs welcome. Keep diffs minimal, avoid secrets, and follow all instructions in [`AGENTS.md`](AGENTS.md).
 
 ### Bonus Fun
-### Windows Terminal theme (CodexDarkGrey) + Nerd Font Included in Windows Setup Script
+### Windows Terminal Theme (CodexDarkGrey) + Nerd Font Included in Windows Setup Script
 
   ![Windows Terminal dark grey theme](docs/images/windows-terminal-theme.svg)
