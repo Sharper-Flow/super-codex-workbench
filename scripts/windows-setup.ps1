@@ -57,10 +57,22 @@ function Ensure-WinGet {
   }
 }
 
+function Test-RebootPending {
+  try {
+    $keys = @(
+      'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\RebootPending',
+      'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\RebootRequired'
+    )
+    foreach ($k in $keys) { if (Test-Path $k) { return $true } }
+  } catch { }
+  return $false
+}
+
 function Enable-WSLFeatures {
   Write-Host '[WSL] Enabling required Windows features...' -ForegroundColor Cyan
-  Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart -All | Out-Null
-  Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart -All | Out-Null
+  $r1 = Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart -All
+  $r2 = Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart -All
+  $script:RebootNeeded = ($r1.RestartNeeded -or $r2.RestartNeeded -or (Test-RebootPending))
 }
 
 function Install-WindowsTerminal {
@@ -109,6 +121,10 @@ error_symbol = "[❯](bold red)"
 
 function Install-WSL {
   Write-Host '[WSL] Installing Ubuntu (latest LTS) and setting WSL2...' -ForegroundColor Cyan
+  if ($script:RebootNeeded) {
+    Write-Warning 'A system restart is required before continuing with WSL installation. Please reboot and re-run this script.'
+    return
+  }
   try {
     wsl --install -d Ubuntu
   } catch {
@@ -119,6 +135,14 @@ function Install-WSL {
 
 function Provision-WSLUbuntu {
   Write-Host '[WSL] Provisioning packages inside Ubuntu...' -ForegroundColor Cyan
+  # Ensure Ubuntu is installed and first-run has completed
+  try {
+    $distros = & wsl -l -q 2>$null
+  } catch { $distros = '' }
+  if (-not ($distros -match 'Ubuntu')) {
+    Write-Warning 'Ubuntu distro not detected. Launch Ubuntu once to complete first-run, then re-run with -ProvisionWSL.'
+    return
+  }
   $cmd = @'
 set -e
 sudo apt-get update -y
