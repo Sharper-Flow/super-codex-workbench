@@ -13,8 +13,11 @@
 </p>
 
 <p align="center"><em>Made with ❤️ for friends by <strong>Sharper Flow LLC</strong></em></p>
+        
 
 ---
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/N4N31NW03T)
 
 ## 🥳 Skip The Browser: Use Codex CLI
 #### If you have ChatGPT Plus/Pro, Codex CLI turns chat into a local workstation that ships real outputs.
