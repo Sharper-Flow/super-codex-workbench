@@ -157,15 +157,19 @@ Say these in Codex CLI. They create/choose a project, do the work, and save real
 - Clone and enter the repo:
   - `git clone https://github.com/Sharper-Flow/super-codex-workbench.git`
   - `cd super-codex-workbench`
-- Launch Codex CLI and run setup:
-  - `codex` → say: “run the setup script”
-  - The script prepares your environment, installs dependencies, and scaffolds `.env`
+- Install Codex CLI (one time):
+  - 📥 Download: https://github.com/openai/codex-cli/releases
+  - 🧭 First‑time auth guide: https://github.com/openai/codex-cli#first-time-auth
+- Launch Codex and run setup:
+  - Open Codex CLI
+  - Say: “run the setup script”
+  - It prepares your environment, installs dependencies, and scaffolds `.env`
 - Run the guided first‑project workflow:
-  - In Codex, say: “Run the first‑project workflow for a project named ‘demo’.”
+  - Say: “Run the first‑project workflow for a project named ‘demo’.”
 - Open your outputs under:
   - `projects/demo/reports` and `projects/demo/...`
 
-Windows first-time? Use `./scripts/windows-setup.ps1 -ProvisionWSL -DefaultProfile Ubuntu`
+Windows first‑time? Use `./scripts/windows-setup.ps1 -ProvisionWSL -DefaultProfile Ubuntu` 
 then work inside Ubuntu under `~/`.
 
 ---
