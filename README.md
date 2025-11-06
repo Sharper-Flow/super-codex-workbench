@@ -3,7 +3,24 @@
 
 <p align="center"><em>Made with ❤️ by <strong>Sharper Flow LLC</strong></em></p>
 
+<p align="center"><strong>Requires ChatGPT Plus/Pro</strong> for Codex CLI</p>
+
 ---
+
+## Start Here 🧭
+
+- For non‑coders who don’t want “vibe coding.”
+- A strict workbench for Codex CLI that keeps projects tidy, manages context step‑by‑step, and produces real files.
+- Get ~70% of a full coding environment’s power at ~30% of the effort and knowledge.
+
+### What is Codex CLI?
+- Codex CLI turns your ChatGPT into a local operator that can run commands, edit files, manage projects, and integrate tools (MCP servers like Firecrawl/Context7).
+- You speak in plain English; Codex performs actions on your machine with logs and checkpoints.
+
+### What this Workbench adds (beyond a chatbot)
+- Tight structure: project‑scoped runs, reproducible outputs, and automatic git checkpoints.
+- Managed context: datasets, SQL views, and reports that build on each other as you go.
+- Real artifacts: HTML/PDF/Excel/CSV/Parquet in `projects/<name>/...` you can share immediately.
 
 ## Why It Exists 💡
 
@@ -110,4 +127,3 @@ Deeper details and rules are in `AGENTS.md`.
 
 - License: MIT (see `LICENSE`)
 - Issues and PRs welcome — keep diffs small and follow `AGENTS.md`
-
