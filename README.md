@@ -92,24 +92,25 @@ Why it matters: your ideas don’t stall at “cool” — they convert into usa
 Say these in Codex CLI. They create/choose a project, do the work, and save real outputs.
 
 - 🏀 NBA Player Glow‑Up
-  - “Create a project `nba-research` and set it current. Find recent game logs for [PLAYER NAME] and [TEAM] from trusted public sources. Build a fast table of games with points, rebounds, assists, and efficiency. Highlight trends week‑over‑week. Render an HTML brief and export a PDF under the project.”
+  - “Create a project called ‘nba-research’ and set it current. Find the last 10 games for Stephen Curry on the Golden State Warriors from trusted public sources. Build a fast table with points, rebounds, assists, and shooting efficiency. Highlight week‑over‑week trends. Render an HTML brief and export a PDF under the project.”
 
 - 🏚️ Closed Business Detective
-  - “Create a project `business-check` and select it. Crawl the web for information on whether ‘[BUSINESS NAME]’ is closed, when it closed, last known address, and any successor company. Summarize findings with dates and source links. Produce an HTML one‑pager and a CSV of sources.”
+  - “Create a project called ‘business-check’ and select it. Crawl the web to confirm whether Bed Bath & Beyond is closed, when it closed, the last known headquarters address, and any successor brand. Summarize findings with dates and source links. Produce an HTML one‑pager and a CSV of sources.”
 
 - 💸 eBay Price Pulse
-  - “Create `price-pulse` and set it current. Collect recent sold listings for ‘[PRODUCT]’ from marketplaces. Clean titles, remove outliers, and estimate typical price ranges (low/median/high). Generate a pricing brief with a simple visual and export CSV + PDF.”
+  - “Create a project called ‘price-pulse’ and set it current. Collect recent sold listings for ‘Nintendo Switch OLED’ from major marketplaces. Clean titles, remove outliers, and estimate typical price ranges (low/median/high). Generate a pricing brief with a simple visual and export CSV + PDF.”
 
 - 🧾 Office Automation Hero
-  - “Resume `ops-automation`. Combine the latest CRM export and invoicing export. Match by customer and month, flag mismatches, and prepare a ‘fix list’ CSV. Draft a short summary I can paste into Slack with counts and top issues. Render an HTML report too.”
+  - “Resume the project ‘ops-automation’. Combine the latest HubSpot contacts export and QuickBooks invoices export. Match by customer and month, flag mismatches, and prepare a fix‑list CSV. Draft a short summary I can paste into Slack with counts and top issues. Render an HTML report too.”
 
 - 🧠 Curious → Pivot → Mini‑App
-  - “Create `topic-pivot`. Research ‘[TOPIC A]’ and summarize three key insights with sources. Now pivot: research ‘[TOPIC B]’ the same way. Build a small helper that lets me pick insights from both and outputs a merged brief as HTML + PDF.”
+  - “Create a project called ‘micro-mobility’. Research ‘electric bikes’ and summarize three key insights with sources. Now pivot: research ‘folding scooters’ the same way. Build a small helper that lets me pick insights from both and output a merged brief as HTML + PDF.”
 
 - 🗺️ Venue Shortlist in a Flash
-  - “Create `event-venues`. Gather venues in [CITY] that fit 80–150 guests, budget under $[X], and available within [DATES]. Build a shortlist table with capacity, location, notes, and links. Export to Excel and render a one‑page summary.”
+  - “Create a project called ‘event-venues’. Gather venues in Austin that fit 80–150 guests, budget under $5,000, and availability around May 10–12. Build a shortlist table with capacity, neighborhood, notes, and links. Export to Excel and render a one‑page summary.”
 
-Tip: Replace bracketed fields like [PLAYER NAME], [PRODUCT], and [CITY] with your specifics.
+- 🔄 Project Switch Magic
+  - “Switch back to my project on baseball cards and show me the latest outputs.”
 
 ---
 
@@ -136,6 +137,7 @@ then work inside Ubuntu under `~/`.
 - “Diagnose the environment and show details.”
 - “List all projects.”
 - “Resume the project named ‘demo’.”
+- “Switch back to my project on baseball cards.”
 - “Use the MCP web workflow to summarize https://example.com, limit to 5 pages, and create a brief under the current project.”
 - “Render an HTML report using the sample template, then export that HTML to a PDF.”
 
