@@ -1,5 +1,6 @@
-<h1 align="center">Super Codex Workbench 🚀</h1>
-<h3 align="center">Turn AI chat into real, local outputs</h3>
+<p align="center">
+  <img src="docs/images/banners/hero.svg" alt="Super Codex Workbench - Turn AI chat into real, local outputs" />
+</p>
 
 <p align="center"><em>Made with ❤️ by <strong>Sharper Flow LLC</strong></em></p>
 
@@ -14,6 +15,8 @@
 - Get ~70% of a full coding environment’s power at ~30% of the effort and knowledge.
 
 ### Why this is a great find ✨
+
+> You bring curiosity. It brings structure — and ships real outputs.
 - Ask in plain English. Get fast, reliable results — not loose notes.
 - Pivot between topics without losing your place; each project keeps its own context.
 - Turn research into shareable briefs and simple apps in minutes, not days.
@@ -21,6 +24,8 @@
 - Automatic safety nets: logs and git checkpoints after meaningful steps.
 
 ### What is Codex CLI?
+
+> Your chat, upgraded. Codex acts on your machine with logs and checkpoints.
 - Codex CLI turns your ChatGPT into a local operator that can run commands, edit files, manage projects, and integrate tools (MCP servers like Firecrawl/Context7).
 - You speak in plain English; Codex performs actions on your machine with logs and checkpoints.
 
@@ -76,6 +81,8 @@ Result: a tidy `projects/<name>/...` folder with datasets, HTML/PDF, and logs.
 
 ## What You Can Build 🧩
 
+> Real files you can share — not just answers in a chat thread.
+
 - 📈 Price Check Researcher — Scrape marketplaces (e.g., eBay), compare pricing, and produce a clean brief with highlights.
   ![Sales Insights sample](docs/images/samples/sales-insights.svg)
 - 🧾 Office Automation Hero — Pull exports from different tools, clean them up, and generate reports that replace tedious data entry.
@@ -86,6 +93,10 @@ Result: a tidy `projects/<name>/...` folder with datasets, HTML/PDF, and logs.
 Why it matters: your ideas don’t stall at “cool” — they convert into usable files you can send to a teammate or client.
 
 ---
+
+<p>
+  <img src="docs/images/banners/snippets.svg" alt="Prompt Snippets" />
+</p>
 
 ## Prompt Snippets 🎮
 
@@ -116,6 +127,8 @@ Say these in Codex CLI. They create/choose a project, do the work, and save real
 
 ## Try It In 3 Minutes ⚡
 
+> Start simple. You can explore more once you see your first outputs.
+
 - Clone and enter the repo:
   - `git clone https://github.com/Sharper-Flow/super-codex-workbench.git`
   - `cd super-codex-workbench`
@@ -134,6 +147,8 @@ then work inside Ubuntu under `~/`.
 
 ## Minimal Prompts 🧭
 
+> Small phrases, big results. Speak plainly — Codex handles the rest.
+
 - “Diagnose the environment and show details.”
 - “List all projects.”
 - “Resume the project named ‘demo’.”
@@ -146,6 +161,8 @@ More quick prompts live in AGENTS.md.
 ---
 
 ## Configure MCP 🔌
+
+> Optional power‑ups for web and docs context.
 
 - Firecrawl requires `FIRECRAWL_API_KEY`; Context7 is optional.
 - Copy `.env.example` → `.env` and set keys if you have them.

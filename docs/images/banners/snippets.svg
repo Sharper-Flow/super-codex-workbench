@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="180" viewBox="0 0 1200 180">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0b1220"/>
+      <stop offset="100%" stop-color="#121826"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="50%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="180" rx="14" fill="url(#bg)"/>
+  <text x="52" y="110" font-family="Inter, ui-sans-serif, system-ui" font-size="34" font-weight="700" fill="#e5e7eb">Prompt Snippets</text>
+  <path d="M52 130 H1148" stroke="url(#line)" stroke-width="4" stroke-linecap="round"/>
+</svg>
+
