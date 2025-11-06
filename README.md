@@ -120,9 +120,9 @@ Tip: Replace bracketed fields like [PLAYER NAME], [PRODUCT], and [CITY] with you
   - `cd super-codex-workbench`
 - Launch Codex CLI and run setup:
   - `codex` → say: “run the setup script”
-  - The script ensures `uv`, venv, dependencies, and `.env` scaffolding
-- Run the guided first-project workflow:
-  - `uv run python main.py workflow first-project --name demo`
+  - The script prepares your environment, installs dependencies, and scaffolds `.env`
+- Run the guided first‑project workflow:
+  - In Codex, say: “Run the first‑project workflow for a project named ‘demo’.”
 - Open your outputs under:
   - `projects/demo/reports` and `projects/demo/...`
 
@@ -131,19 +131,15 @@ then work inside Ubuntu under `~/`.
 
 ---
 
-## Minimal Commands 🧭
+## Minimal Prompts 🧭
 
-- Diagnose environment: `uv run python main.py -v diagnose`
-- List or resume a project:
-  - `uv run python main.py projects list`
-  - `uv run python main.py projects resume --name demo`
-- Web context + brief (MCP):
-  - `uv run python main.py workflow mcp-web --url https://example.com --limit 5`
-- Render a report:
-  - `uv run python main.py reports render-html --template sample.html`
-  - `uv run python main.py reports export-pdf --html sample.html`
+- “Diagnose the environment and show details.”
+- “List all projects.”
+- “Resume the project named ‘demo’.”
+- “Use the MCP web workflow to summarize https://example.com, limit to 5 pages, and create a brief under the current project.”
+- “Render an HTML report using the sample template, then export that HTML to a PDF.”
 
-More quick commands live in AGENTS.md.
+More quick prompts live in AGENTS.md.
 
 ---
 
@@ -152,8 +148,8 @@ More quick commands live in AGENTS.md.
 - Firecrawl requires `FIRECRAWL_API_KEY`; Context7 is optional.
 - Copy `.env.example` → `.env` and set keys if you have them.
 - Verify MCP:
-  - `uv run python main.py mcp info`
-  - `uv run python main.py check-mcp`
+  - In Codex, say: “Show MCP info.”
+  - Then: “Check MCP status.”
 
 No keys? You can still run local data + reporting flows.
 
