@@ -87,6 +87,32 @@ Why it matters: your ideas don’t stall at “cool” — they convert into usa
 
 ---
 
+## Prompt Snippets 🎮
+
+Say these in Codex CLI. They create/choose a project, do the work, and save real outputs.
+
+- 🏀 NBA Player Glow‑Up
+  - “Create a project `nba-research` and set it current. Find recent game logs for [PLAYER NAME] and [TEAM] from trusted public sources. Build a fast table of games with points, rebounds, assists, and efficiency. Highlight trends week‑over‑week. Render an HTML brief and export a PDF under the project.”
+
+- 🏚️ Closed Business Detective
+  - “Create a project `business-check` and select it. Crawl the web for information on whether ‘[BUSINESS NAME]’ is closed, when it closed, last known address, and any successor company. Summarize findings with dates and source links. Produce an HTML one‑pager and a CSV of sources.”
+
+- 💸 eBay Price Pulse
+  - “Create `price-pulse` and set it current. Collect recent sold listings for ‘[PRODUCT]’ from marketplaces. Clean titles, remove outliers, and estimate typical price ranges (low/median/high). Generate a pricing brief with a simple visual and export CSV + PDF.”
+
+- 🧾 Office Automation Hero
+  - “Resume `ops-automation`. Combine the latest CRM export and invoicing export. Match by customer and month, flag mismatches, and prepare a ‘fix list’ CSV. Draft a short summary I can paste into Slack with counts and top issues. Render an HTML report too.”
+
+- 🧠 Curious → Pivot → Mini‑App
+  - “Create `topic-pivot`. Research ‘[TOPIC A]’ and summarize three key insights with sources. Now pivot: research ‘[TOPIC B]’ the same way. Build a small helper that lets me pick insights from both and outputs a merged brief as HTML + PDF.”
+
+- 🗺️ Venue Shortlist in a Flash
+  - “Create `event-venues`. Gather venues in [CITY] that fit 80–150 guests, budget under $[X], and available within [DATES]. Build a shortlist table with capacity, location, notes, and links. Export to Excel and render a one‑page summary.”
+
+Tip: Replace bracketed fields like [PLAYER NAME], [PRODUCT], and [CITY] with your specifics.
+
+---
+
 ## Try It In 3 Minutes ⚡
 
 - Clone and enter the repo:
