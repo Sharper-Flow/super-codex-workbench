@@ -7,49 +7,56 @@
 
 ---
 
-## Start Here 🧭
+## You Found Your Workbench 🎉
 
 - For non‑coders who don’t want “vibe coding.”
-- A strict workbench for Codex CLI that keeps projects tidy, manages context step‑by‑step, and produces real files.
+- A strict workbench for Codex CLI that keeps projects tidy, manages context step‑by‑step, and produces real files you can share.
 - Get ~70% of a full coding environment’s power at ~30% of the effort and knowledge.
+
+### Why this is a great find ✨
+- Ask in plain English. Get fast, reliable results — not loose notes.
+- Pivot between topics without losing your place; each project keeps its own context.
+- Turn research into shareable briefs and simple apps in minutes, not days.
+- Fast tables for large lists and quick lookups; no tech jargon required.
+- Automatic safety nets: logs and git checkpoints after meaningful steps.
 
 ### What is Codex CLI?
 - Codex CLI turns your ChatGPT into a local operator that can run commands, edit files, manage projects, and integrate tools (MCP servers like Firecrawl/Context7).
 - You speak in plain English; Codex performs actions on your machine with logs and checkpoints.
 
 ### What this Workbench adds (beyond a chatbot)
-- Tight structure: project‑scoped runs, reproducible outputs, and automatic git checkpoints.
-- Managed context: datasets, SQL views, and reports that build on each other as you go.
+- Tight structure: project‑scoped runs, reproducible outputs, and automatic checkpoints.
+- Managed context: datasets, views, and reports that build on each other as you go.
 - Real artifacts: HTML/PDF/Excel/CSV/Parquet in `projects/<name>/...` you can share immediately.
 
 ## Why It Exists 💡
 
 You talk; it ships. With Codex CLI + this repo, a plain English request becomes
-repeatable, local work: datasets, SQL, and polished HTML/PDF/Excel — all under a
-project folder with logs and git checkpoints.
+repeatable, local work: datasets, fast tables and analysis, and polished HTML/PDF/Excel — all
+under a project folder with logs and git checkpoints.
 
 This is for people who want results, not glue work:
 
-- ✅ Project-scoped workflows that stay tidy and reproducible
+- ✅ Project‑scoped workflows that stay tidy and reproducible
 - ✅ Web/docs context via MCP (Firecrawl, Context7) when available
-- ✅ Data + SQL + reporting out of the box (DuckDB, Pandas)
-- ✅ Quality gates (Ruff/Mypy) and environment health checks
+- ✅ Data steps + reporting out of the box (no jargon, just outputs)
+- ✅ Health checks to keep things working as you go
 - ✅ Git checkpoints so every run is reversible
-- ✅ Windows-friendly (WSL2) and local-first privacy
+- ✅ Windows‑friendly (WSL2) and local‑first privacy
 
 ---
 
 ## What It’s Best At 🎯
 
 - Turning a vague prompt into a concrete artifact (HTML/PDF/CSV/Parquet)
-- Orchestrating multi-step flows across shell, SQL, Python, and MCP
+- Orchestrating multi‑step flows across shell, data steps, and web context
 - Keeping everything inside a clean project directory you can trust
 - Making “do it again next week” a single command, not a rebuild
 
 When to use it:
 
-- Use when you want repeatable, file-backed outputs with light automation
-- Use when web/docs context matters (MCP) and you need a brief/report
+- Use when you want repeatable, file‑backed outputs with light automation
+- Use when web/docs context matters and you need a brief/report
 - Skip when pure chat is enough or you need heavy backend services
 
 ---
@@ -59,11 +66,24 @@ When to use it:
 - You: “Summarize the latest competitor pricing and produce a one‑page brief.”
 - Workbench: checks environment, creates/selects a project, and sets guardrails.
 - MCP: fetches relevant pages (Firecrawl) and optional docs context (Context7).
-- Data: writes a dataset, registers it as `ds_*`, and runs SQL via DuckDB.
+- Data: builds a dataset, registers a view, and lets you run quick summaries.
 - Report: renders an HTML brief and (if configured) exports a PDF.
 - Safety: saves a git checkpoint so you can diff or roll back anytime.
 
 Result: a tidy `projects/<name>/...` folder with datasets, HTML/PDF, and logs.
+
+---
+
+## What You Can Build 🧩
+
+- 📈 Price Check Researcher — Scrape marketplaces (e.g., eBay), compare pricing, and produce a clean brief with highlights.
+  ![Sales Insights sample](docs/images/samples/sales-insights.svg)
+- 🧾 Office Automation Hero — Pull exports from different tools, clean them up, and generate reports that replace tedious data entry.
+  ![Finance Reconciler sample](docs/images/samples/finance-reconciler.svg)
+- 🧠 Curious → App Builder — Ask questions, pivot to a new project, then combine both into a lightweight “mini‑app” with shareable outputs.
+  ![Docs Summarizer sample](docs/images/samples/docs-summarizer.svg)
+
+Why it matters: your ideas don’t stall at “cool” — they convert into usable files you can send to a teammate or client.
 
 ---
 
