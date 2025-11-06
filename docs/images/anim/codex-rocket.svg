@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="220" viewBox="0 0 920 220">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0f17"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <style>
+      @font-face { font-family: ui-mono; src: local("SFMono-Regular"), local("Consolas"), local("Menlo"), local("Monaco"), local("Courier New"); }
+      .panel { fill: url(#bg); }
+      .ascii { font: 16px/1.2 ui-mono, monospace; fill: #e5e7eb; white-space: pre; }
+      .accent { fill: #60a5fa; }
+      .zap { fill: #22d3ee; }
+      .muted { fill: #64748b; }
+    </style>
+  </defs>
+
+  <rect class="panel" x="0" y="0" width="920" height="220" rx="14"/>
+
+  <!-- Frame 1: CODEX CLI logo made of ASCII blocks -->
+  <g id="f1" opacity="1">
+    <text class="ascii accent" x="40" y="60">  ██████  ██████  ██████  ███████ ███    ██</text>
+    <text class="ascii accent" x="40" y="78"> ██      ██    ██ ██   ██ ██      ████   ██</text>
+    <text class="ascii accent" x="40" y="96"> ██      ██    ██ ██████  █████   ██ ██  ██</text>
+    <text class="ascii accent" x="40" y="114"> ██      ██    ██ ██   ██ ██      ██  ██ ██</text>
+    <text class="ascii accent" x="40" y="132">  ██████  ██████  ██   ██ ███████ ██   ████</text>
+    <text class="ascii muted" x="40" y="164"> codex cli • local workbench</text>
+    <animate attributeName="opacity" values="1;0" dur="0.3s" begin="0s;f6.end" fill="freeze" id="f1fade"/>
+  </g>
+
+  <!-- Frame 2: spark appears -->
+  <g id="f2" opacity="0">
+    <text class="ascii accent" x="40" y="96">   [ CODEX  CLI ]</text>
+    <text class="ascii zap" x="300" y="96">  ✧</text>
+    <text class="ascii muted" x="40" y="132"> assembling project • setting guardrails</text>
+    <animate attributeName="opacity" values="0;1;0" dur="0.3s" begin="f1fade.end" fill="freeze" id="f2"/>
+  </g>
+
+  <!-- Frame 3: transformation bars -->
+  <g id="f3" opacity="0">
+    <text class="ascii" x="40" y="90">  ➜ ➜ ➜  transforming context …</text>
+    <text class="ascii zap" x="40" y="110">  ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒</text>
+    <animate attributeName="opacity" values="0;1;0" dur="0.3s" begin="f2.end" fill="freeze" id="f3"/>
+  </g>
+
+  <!-- Frame 4: rocket outline (ASCII style) -->
+  <g id="f4" opacity="0">
+    <text class="ascii" x="40" y="70">      /\</text>
+    <text class="ascii" x="40" y="86">     /  \</text>
+    <text class="ascii" x="40" y="102">    |    |</text>
+    <text class="ascii" x="40" y="118">    |🚀  |</text>
+    <text class="ascii" x="40" y="134">     \  /</text>
+    <text class="ascii" x="40" y="150">      \/</text>
+    <text class="ascii muted" x="100" y="150">  ignition</text>
+    <animate attributeName="opacity" values="0;1;0" dur="0.3s" begin="f3.end" fill="freeze" id="f4"/>
+  </g>
+
+  <!-- Frame 5: zaps + motion -->
+  <g id="f5" opacity="0">
+    <text class="ascii zap" x="32" y="120">   ⚡</text>
+    <text class="ascii zap" x="84" y="128">      ⚡</text>
+    <text class="ascii" x="40" y="100">     🚀</text>
+    <text class="ascii muted" x="120" y="160">  lift‑off</text>
+    <animate attributeName="opacity" values="0;1;0" dur="0.3s" begin="f4.end" fill="freeze" id="f5"/>
+  </g>
+
+  <!-- Frame 6: streak to the right -->
+  <g id="f6" opacity="0">
+    <text class="ascii" x="40" y="100">🚀 ─────────────────────────── ✦</text>
+    <text class="ascii muted" x="40" y="136"> from chat → artifact</text>
+    <animate attributeName="opacity" values="0;1;0" dur="0.3s" begin="f5.end" fill="freeze" id="f6"/>
+  </g>
+</svg>
+

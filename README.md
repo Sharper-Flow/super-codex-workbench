@@ -2,6 +2,10 @@
   <img src="docs/images/banners/hero.svg" alt="Super Codex Workbench - Turn AI chat into real, local outputs" />
 </p>
 
+<p align="center">
+  <img src="docs/images/anim/codex-rocket.svg" alt="ASCII animation: Codex CLI morphs into a zappy rocket" />
+</p>
+
 <p align="center"><em>Made with ❤️ by <strong>Sharper Flow LLC</strong></em></p>
 
 <p align="center"><strong>Requires ChatGPT Plus/Pro</strong> for Codex CLI</p>
