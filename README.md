@@ -3,12 +3,15 @@
 </p>
 
 <p align="center">
-  <img src="docs/images/anim/codex-rocket.svg" alt="ASCII animation: Codex CLI morphs into a zappy rocket" />
+  <picture>
+    <source srcset="docs/images/anim/codex-rocket.svg" type="image/svg+xml" />
+    <img src="docs/images/anim/codex-rocket.gif" alt="ASCII animation: Codex CLI morphs into a zappy rocket" />
+  </picture>
 </p>
 
 <p align="center"><em>Made with ❤️ by <strong>Sharper Flow LLC</strong></em></p>
 
-<p align="center"><strong>Requires ChatGPT Plus/Pro</strong> for Codex CLI</p>
+<p align="center">👉 <strong>Just requires a ChatGPT Plus/Pro subscription</strong> — Codex CLI does the rest.</p>
 
 ---
 
@@ -95,6 +98,24 @@ Result: a tidy `projects/<name>/...` folder with datasets, HTML/PDF, and logs.
   ![Docs Summarizer sample](docs/images/samples/docs-summarizer.svg)
 
 Why it matters: your ideas don’t stall at “cool” — they convert into usable files you can send to a teammate or client.
+
+---
+
+## Applicationize Your Ideas 🛠️
+
+> Start with a question. End with an app‑shaped result.
+
+- Begin with a research brief or a tidy dataset.
+- Add lightweight steps: clean data, join sources, summarize, export.
+- Wrap useful actions into repeatable prompts (or a tiny helper).
+- Grow into a “mini‑app” that teammates can re‑run and extend.
+
+Try this:
+
+- “Create a project called ‘pricing-lab’. Pull recent marketplace prices for Nintendo Switch OLED and summarize typical ranges. Then add a step that lets me paste in a new product name and re‑run the same flow, saving a fresh brief each time.”
+- “Build a small helper in the current project that merges a ‘competitors’ table and a ‘features’ table and exports a comparison sheet plus a one‑page summary.”
+
+Outcome: a reproducible, shareable workflow that can grow into a full application when you’re ready.
 
 ---
 
