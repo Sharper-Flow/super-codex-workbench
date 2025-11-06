@@ -25,19 +25,19 @@
 
 ### What is Codex CLI?
 
-> Your chat, upgraded. Codex acts on your machine with logs and checkpoints.
-- Codex CLI turns your ChatGPT into a local operator that can run commands, edit files, manage projects, and integrate tools (MCP servers like Firecrawl/Context7).
-- You speak in plain English; Codex performs actions on your machine with logs and checkpoints.
+> Your chat, upgraded. Codex acts on your machine — with logs and checkpoints.
+- Codex CLI turns your ChatGPT into a local operator that can run commands, edit files, manage projects, and use optional integrations for web/docs context (MCP).
+- You speak in plain English; Codex performs the work on your computer.
 
 ### What this Workbench adds (beyond a chatbot)
 - Tight structure: project‑scoped runs, reproducible outputs, and automatic checkpoints.
 - Managed context: datasets, views, and reports that build on each other as you go.
-- Real artifacts: HTML/PDF/Excel/CSV/Parquet in `projects/<name>/...` you can share immediately.
+- Real artifacts: shareable files (reports, tables, briefings) under `projects/<name>/...`.
 
 ## Why It Exists 💡
 
 You talk; it ships. With Codex CLI + this repo, a plain English request becomes
-repeatable, local work: datasets, fast tables and analysis, and polished HTML/PDF/Excel — all
+repeatable, local work: datasets, fast tables and analysis, and polished reports — all
 under a project folder with logs and git checkpoints.
 
 This is for people who want results, not glue work:
@@ -83,7 +83,7 @@ Result: a tidy `projects/<name>/...` folder with datasets, HTML/PDF, and logs.
 
 > Real files you can share — not just answers in a chat thread.
 
-- 📈 Price Check Researcher — Scrape marketplaces (e.g., eBay), compare pricing, and produce a clean brief with highlights.
+- 📈 Price Check Researcher — Scrape marketplaces, compare pricing, and produce a clean brief with highlights.
   ![Sales Insights sample](docs/images/samples/sales-insights.svg)
 - 🧾 Office Automation Hero — Pull exports from different tools, clean them up, and generate reports that replace tedious data entry.
   ![Finance Reconciler sample](docs/images/samples/finance-reconciler.svg)
@@ -100,7 +100,7 @@ Why it matters: your ideas don’t stall at “cool” — they convert into usa
 
 ## Prompt Snippets 🎮
 
-Say these in Codex CLI. They create/choose a project, do the work, and save real outputs.
+Say these in Codex CLI. They create/choose a project, do the work, and save real outputs. Copy, paste, smile 🙂
 
 - 🏀 NBA Player Glow‑Up
   - “Create a project called ‘nba-research’ and set it current. Find the last 10 games for Stephen Curry on the Golden State Warriors from trusted public sources. Build a fast table with points, rebounds, assists, and shooting efficiency. Highlight week‑over‑week trends. Render an HTML brief and export a PDF under the project.”
@@ -156,7 +156,7 @@ then work inside Ubuntu under `~/`.
 - “Use the MCP web workflow to summarize https://example.com, limit to 5 pages, and create a brief under the current project.”
 - “Render an HTML report using the sample template, then export that HTML to a PDF.”
 
-More quick prompts live in AGENTS.md.
+More quick prompts live in [AGENTS.md](AGENTS.md).
 
 ---
 
